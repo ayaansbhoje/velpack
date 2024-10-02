@@ -90,44 +90,45 @@ const AboutUsPage = () => {
         <div className="h-16"></div>
 
        
-         <div className="relative">
-        <div className="bg-black w-full py-6">
-          <div className="container mx-auto flex justify-center items-center px-4 space-x-12">
+{/* Third section - updated button styling */}
+      <div className="relative">
+        <div className="bg-black w-full py-4">
+          <div className="container mx-auto flex justify-between items-center px-16">
             <button 
-              className={`px-4 py-2 text-lg transition-all ${
+              className={`text-lg transition-colors ${
                 activeButton === 'sustainability' 
                   ? 'text-red-500 font-bold' 
-                  : 'text-white font-normal'
+                  : 'text-white'
               }`}
               onClick={() => setActiveButton('sustainability')}
             >
               Sustainability
             </button>
             <button 
-              className={`px-4 py-2 text-lg transition-all ${
+              className={`text-lg transition-colors ${
                 activeButton === 'environment' 
                   ? 'text-red-500 font-bold' 
-                  : 'text-white font-normal'
+                  : 'text-white'
               }`}
               onClick={() => setActiveButton('environment')}
             >
               Environment Protection
             </button>
             <button 
-              className={`px-4 py-2 text-lg transition-all ${
+              className={`text-lg transition-colors ${
                 activeButton === 'health' 
                   ? 'text-red-500 font-bold' 
-                  : 'text-white font-normal'
+                  : 'text-white'
               }`}
               onClick={() => setActiveButton('health')}
             >
               Employee Health and Safety
             </button>
             <button 
-              className={`px-4 py-2 text-lg transition-all ${
+              className={`text-lg transition-colors ${
                 activeButton === 'audits' 
                   ? 'text-red-500 font-bold' 
-                  : 'text-white font-normal'
+                  : 'text-white'
               }`}
               onClick={() => setActiveButton('audits')}
             >
@@ -143,8 +144,9 @@ const AboutUsPage = () => {
             className="w-full h-full object-cover"
           />
           
-          <div className="absolute bottom-8 right-8 w-1/3 bg-red-700 p-6 shadow-lg">
-            <p className="text-white">
+          {/* Adjusted positioning of the red box */}
+          <div className="absolute bottom-8 right-4 w-1/4 bg-red-700 p-6">
+            <p className="text-white text-lg">
               {contentData[activeButton].text}
             </p>
           </div>
