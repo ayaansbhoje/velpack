@@ -2,6 +2,9 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 // import { fadeIn } from './variant'
+import Navbar  from '../components/navbar'
+import Footer from '../components/footer';
+
 
 const AboutUsPage = () => {
   const sections = {
@@ -31,6 +34,7 @@ const AboutUsPage = () => {
 
   return (
     <>
+    <Navbar />
       <div className="bg-white min-h-screen">
         <div className="text-center py-8">
           <h1 className="text-4xl font-bold mb-2">
@@ -119,6 +123,7 @@ const AboutUsPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
