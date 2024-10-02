@@ -299,7 +299,7 @@ const TrustedBrandsSection = () => {
             <img src="/assets/Marksans.(3).png" alt="Logo 1" className="h-14 mx-10" />
             <img src="/assets/Lupin.png" alt="Logo 2" className="h-14 mx-10" />
             <img src="/assets/Indoco_2.png" alt="Logo 3" className="h-14 mx-10" />
-            <img src="/assets/Ipca_1.png" alt="Logo 4" className="h-14 mx-10" />
+            <img src="/assets/FDC.png" alt="Logo 4" className="h-14 mx-10" />
             <img src="/assets/LG5Jge_2.png" alt="Logo 5" className="h-14 mx-10" />
           </div>
           <div className="flex shrink-0">
