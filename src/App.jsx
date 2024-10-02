@@ -1,16 +1,14 @@
 // import React from 'react';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { fadeIn } from './variant'
-import { BrowserRouter, Route, Routes,Link } from 'react-router-dom';
-import AboutUsPage from './pages/aboutUs'
-
+import { fadeIn } from './variant';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import AboutUsPage from './pages/aboutUs';
 
 const Navbar = () => (
   <nav className="w-full bg-white py-4 px-8 flex justify-between items-center">
     <div className="flex items-center">
-      <img src="src\Velpack_logo_fullcolor_rgb.png" alt="Velpack Logo" className="h-8" />
-
+      <img src="/assets/Velpack_logo_fullcolor_rgb.png" alt="Velpack Logo" className="h-8" />
     </div>
     <div className="flex items-center space-x-6">
       {/* <a href="/aboutus.jsx" className="text-sm text-black hover:text-red-600">About Us</a> */}
@@ -31,9 +29,9 @@ const Navbar = () => (
 
 const HeroSection = () => {
   const images = [
-    "src/2B_01679.JPG",
-    "src/_DSC0076 (1).JPG",
-    "src/2B_01718.JPG"
+    "/assets/2B_01679.JPG",
+    "/assets/_DSC0076 (1).JPG",
+    "/assets/2B_01718.JPG"
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -66,7 +64,6 @@ const HeroSection = () => {
           variants={fadeIn("left", 1.2)}
           initial="hidden"
           whileInView={"show"}
-
           className="text-4xl font-bold mb-8 text-white text-center tracking-wider">
           PAPER-BASED PACKAGING SOLUTIONS SINCE 1956
         </motion.h1>
@@ -74,7 +71,7 @@ const HeroSection = () => {
           variants={fadeIn("up", 0.3)}
           initial="hidden"
           whileInView="show"
-          className="px-6 py-2 border-2 border-red-600 text-white bg-white-600 rounded-md hover:bg-red-700 hover:text-white transition duration-300">
+          className="px-6 py-2 border-2 border-red-600 text-white bg-red-600 rounded-md hover:bg-red-700 hover:text-white transition duration-300">
           GET IN TOUCH
         </motion.button>
       </div>
@@ -92,13 +89,11 @@ const HeroSection = () => {
   );
 };
 
-
 const AboutUs = () => (
   <motion.section
     variants={fadeIn("up", 0.3)}
     initial="hidden"
     whileInView="show"
-
     className="mt-8 bg-red-700 text-white overflow-hidden relative">
     <div className="container mx-auto flex">
       <div className="w-1/2 p-14 flex flex-col justify-center">
@@ -141,7 +136,7 @@ const ServicesSection = () => (
           whileInView="show"
           className="w-1/2 relative h-96">
           <img
-            src="src\pharmaceutical.png"
+            src="/assets/pharmaceutical.png"
             alt="Pharmaceutical Packaging"
             className="w-full h-64 object-cover"
           />
@@ -159,7 +154,7 @@ const ServicesSection = () => (
           whileInView="show"
           className="w-1/2 relative">
           <img
-            src="src\P2-1.webp"
+            src="/assets/P2-1.webp"
             alt="FMCG Packaging"
             className="w-full h-64 object-cover"
           />
@@ -274,11 +269,11 @@ const CapabilitiesSection = () => (
           whileInView="show"
           className="text-2xl font-bold text-center mb-4 text-red-600">WE ARE CERTIFIED BY</motion.h3>
         <div className="flex justify-around items-center">
-          <img src="path_to_iso_image.png" alt="ISO" className="h-12" />
-          <img src="path_to_ps_image.png" alt="PS" className="h-12" />
-          <img src="path_to_brc_image.png" alt="BRC" className="h-12" />
-          <img src="path_to_sedex_image.png" alt="Sedex" className="h-12" />
-          <img src="path_to_psci_image.png" alt="PSCI" className="h-12" />
+          <img src="/assets/iso_image.png" alt="ISO" className="h-12" />
+          <img src="/assets/ps_image.png" alt="PS" className="h-12" />
+          <img src="/assets/brc_image.png" alt="BRC" className="h-12" />
+          <img src="/assets/sedex_image.png" alt="Sedex" className="h-12" />
+          <img src="/assets/psci_image.png" alt="PSCI" className="h-12" />
         </div>
       </motion.div>
 
@@ -288,7 +283,7 @@ const CapabilitiesSection = () => (
         whileInView="show"
         className="text-4xl font-bold text-center mb-4">OUR FOOTPRINT</motion.h2>
       <div className="relative">
-        <img src="path_to_world_map.png" alt="World Map" className="w-full" />
+        <img src="/assets/world_map.png" alt="World Map" className="w-full" />
       </div>
     </motion.div>
   </motion.section>
@@ -301,18 +296,18 @@ const TrustedBrandsSection = () => {
       <div className="relative">
         <div className="flex animate-scroll bg-white py-6 h-xl">
           <div className="flex shrink-0">
-            <img src="src\Asset 20 (2).png" alt="Logo 1" className="h-14 mx-10" />
-            <img src="src\Asset 19 (3).png" alt="Logo 2" className="h-14 mx-10" />
-            <img src="src\Indoco (2).png" alt="Logo 3" className="h-14 mx-10" />
-            <img src="src\Ipca (1).png" alt="Logo 4" className="h-14 mx-10" />
-            <img src="src\LG5Jge (2).png" alt="Logo 5" className="h-14 mx-10" />
+            <img src="/assets/Asset20_2.png" alt="Logo 1" className="h-14 mx-10" />
+            <img src="/assets/Asset19_3.png" alt="Logo 2" className="h-14 mx-10" />
+            <img src="/assets/Indoco_2.png" alt="Logo 3" className="h-14 mx-10" />
+            <img src="/assets/Ipca_1.png" alt="Logo 4" className="h-14 mx-10" />
+            <img src="/assets/LG5Jge_2.png" alt="Logo 5" className="h-14 mx-10" />
           </div>
           <div className="flex shrink-0">
-            <img src="src\Asset 20 (2).png" alt="Logo 1" className="h-14 mx-10" />
-            <img src="src\Asset 19 (3).png" alt="Logo 2" className="h-14 mx-10" />
-            <img src="src\Indoco (2).png" alt="Logo 3" className="h-14 mx-10" />
-            <img src="src\Ipca (1).png" alt="Logo 4" className="h-14 mx-10" />
-            <img src="src\LG5Jge (2).png" alt="Logo 5" className="h-14 mx-10" />
+            <img src="/assets/Asset20_2.png" alt="Logo 1" className="h-14 mx-10" />
+            <img src="/assets/Asset19_3.png" alt="Logo 2" className="h-14 mx-10" />
+            <img src="/assets/Indoco_2.png" alt="Logo 3" className="h-14 mx-10" />
+            <img src="/assets/Ipca_1.png" alt="Logo 4" className="h-14 mx-10" />
+            <img src="/assets/LG5Jge_2.png" alt="Logo 5" className="h-14 mx-10" />
           </div>
         </div>
       </div>
@@ -340,17 +335,19 @@ const FeaturesSection = () => (
         whileInView="show"
         className="grid grid-cols-4 gap-8">
         {[
-          { name: "EMBOSSING", image: "path_to_embossing_image.jpg" },
-          { name: "MICRO EMBOSSING", image: "path_to_micro_embossing_image.jpg" },
-          { name: "GRAINING", image: "path_to_graining_image.jpg" },
-          { name: "ACCUBRAILLE", image: "path_to_accubraille_image.jpg" },
-          { name: "SPOT GLOSS", image: "path_to_spot_gloss_image.jpg" },
-          { name: "FOIL STAMPING", image: "path_to_foil_stamping_image.jpg" },
-          { name: "TEXTURE UV", image: "path_to_texture_uv_image.jpg" },
-          { name: "TEXTURE UV", image: "path_to_texture_uv_image2.jpg" },
+          { name: "EMBOSSING", image: "/assets/embossing_image.jpg" },
+          { name: "MICRO EMBOSSING", image: "/assets/micro_embossing_image.jpg" },
+          { name: "GRAINING", image: "/assets/graining_image.jpg" },
+          { name: "ACCUBRAILLE", image: "/assets/accubraille_image.jpg" },
+          { name: "SPOT GLOSS", image: "/assets/spot_gloss_image.jpg" },
+          { name: "FOIL STAMPING", image: "/assets/foil_stamping_image.jpg" },
+          { name: "TEXTURE UV", image: "/assets/texture_uv_image.jpg" },
+          { name: "TEXTURE UV", image: "/assets/texture_uv_image2.jpg" },
         ].map((feature, index) => (
           <div key={index} className="flex flex-col items-center">
-            <div className="w-full aspect-square bg-gray-200 mb-4 rounded-lg overflow-hidden"></div>
+            <div className="w-full aspect-square bg-gray-200 mb-4 rounded-lg overflow-hidden">
+              <img src={feature.image} alt={feature.name} className="w-full h-full object-cover" />
+            </div>
             <p className="text-center font-bold">{feature.name}</p>
           </div>
         ))}
@@ -358,6 +355,7 @@ const FeaturesSection = () => (
     </div>
   </motion.section>
 );
+
 const SecurityFeaturesSection = () => (
   <motion.section
     variants={fadeIn("up", 0.3)}
@@ -379,7 +377,6 @@ const SecurityFeaturesSection = () => (
     </div>
   </motion.section>
 );
-
 
 const ReviewCard = ({ review, isCenter }) => (
   <div className={`bg-red-500 rounded-lg p-6 text-white ${isCenter ? 'bg-red-800 shadow-lg transform scale-105 z-10' : 'z-0'} w-96 h-64 flex flex-col justify-between`}>
@@ -441,7 +438,7 @@ const Footer = () => (
     <div className="container mx-auto px-4 pt-8">
       <div className="flex">
         <div className="w-1/3 pr-8">
-          <img src="src\Velpack_logo_fullcolor_rgb.png" alt="Velpack Logo" className="h-10 mb-3" />
+          <img src="/assets/Velpack_logo_fullcolor_rgb.png" alt="Velpack Logo" className="h-10 mb-3" />
           <p className="text-sm mb-1">Velpack Pvt. Ltd.</p>
           <p className="text-sm mb-1">A-233, TTC Area, MIDC, Mahape,</p>
           <p className="text-sm mb-1">Navi Mumbai 400 710, India</p>
@@ -472,12 +469,10 @@ const App = () => {
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <Routes>
-
-          <Route path="/aboutus" element={<AboutUsPage />} />
-
-          {/* <Route path="/" element={<HeroSection />} /> */}
-
+          <Route path="/aboutUs" element={<AboutUsPage />} />
+          {/* Add more routes as needed */}
         </Routes>
+        {/* It's generally better to place Routes above the main content sections */}
         <HeroSection />
         <AboutUs />
         <ServicesSection />
@@ -491,5 +486,5 @@ const App = () => {
     </BrowserRouter>
   )
 };
-export default App;
 
+export default App;
