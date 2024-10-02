@@ -25,9 +25,9 @@ const AboutUsPage = () => {
 
       <div className="relative">
       
-        <div className="relative h-[300px] overflow-hidden">
+        <div className="relative h-[400px] overflow-hidden">
           <img 
-            src="/assets/Aboutus.jpg"
+            src="/assets/Aboutus.JPG"
             alt="Manufacturing equipment" 
             className="w-full h-full object-cover"
           />
