@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 // import { fadeIn } from './variant'
 
 const AboutUsPage = () => {
-  // Content for sustainability sections
   const sections = {
     sustainability: {
       image: "/assets/sustain.JPG",
@@ -52,7 +51,7 @@ const AboutUsPage = () => {
               />
               <div className="absolute top-0 right-0 w-1/5 h-full bg-red-700" />
               <div className="absolute bottom-8 right-1/4 transform translate-x-1/2 w-1/4 bg-stone-300 p-8 shadow-lg z-10">
-                <p className="text-gray-800">
+                <p className="text-gray-800 text-centre">
                   Founded in 1956, Velpack has grown from a small family business into a global supplier of premium paper-based packaging. Our state-of-the-art facility in Navi Mumbai spans 42,000 sq. ft., enabling us to produce millions of cartons and inserts daily.
                 </p>
               </div>
@@ -90,7 +89,7 @@ const AboutUsPage = () => {
         </div>
 
         <div className="mt-16">
-          {/* Black navigation bar */}
+          
           <div className="bg-black py-4 flex justify-between px-32">
             {Object.keys(sections).map((section) => (
               <button
@@ -105,7 +104,6 @@ const AboutUsPage = () => {
             ))}
           </div>
           
-          {/* Image and text box container */}
           <div className="relative w-full h-[400px]">
             <img 
               src={sections[activeSection].image}
@@ -113,8 +111,7 @@ const AboutUsPage = () => {
               className="w-full h-full object-cover"
             />
             
-            {/* Red text box in bottom right corner */}
-            <div className="absolute bottom-8 right-8 w-1/3 bg-red-600 p-6 text-white">
+            <div className="absolute bottom-8 right-8 w-1/3 bg-red-600 p-6 text-centre text-white">
               <p>
                 {sections[activeSection].text}
               </p>
