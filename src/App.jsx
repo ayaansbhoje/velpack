@@ -71,7 +71,7 @@ const HeroSection = () => {
           variants={fadeIn("up", 0.3)}
           initial="hidden"
           whileInView="show"
-          className="px-6 py-2 border-2 border-red-600 text-white bg-red-600 rounded-md hover:bg-red-700 hover:text-white transition duration-300">
+          className="px-6 py-2 border-2 border-red-600 text-white bg-white-600 rounded-md hover:bg-red-700 hover:text-white transition duration-300">
           GET IN TOUCH
         </motion.button>
       </div>
