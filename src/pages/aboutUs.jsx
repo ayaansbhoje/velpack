@@ -91,53 +91,66 @@ const AboutUsPage = () => {
 
        
         <div className="relative">
-          
-          <div className="bg-black w-full py-4">
-            <div className="container mx-auto flex justify-between items-center px-4">
-              <button 
-                className={`px-4 py-2 ${activeButton === 'sustainability' ? 'text-red-500 bg-white' : 'text-white'}`}
-                onClick={() => setActiveButton('sustainability')}
-              >
-                Sustainability
-              </button>
-              <button 
-                className={`px-4 py-2 ${activeButton === 'environment' ? 'text-red-500 bg-white' : 'text-white'}`}
-                onClick={() => setActiveButton('environment')}
-              >
-                Environment Protection
-              </button>
-              <button 
-                className={`px-4 py-2 ${activeButton === 'health' ? 'text-red-500 bg-white' : 'text-white'}`}
-                onClick={() => setActiveButton('health')}
-              >
-                Employee Health and Safety
-              </button>
-              <button 
-                className={`px-4 py-2 ${activeButton === 'audits' ? 'text-red-500 bg-white' : 'text-white'}`}
-                onClick={() => setActiveButton('audits')}
-              >
-                Regular Audits
-              </button>
-            </div>
+        <div className="bg-black w-full py-6">
+          <div className="container mx-auto flex justify-center items-center px-4 space-x-12">
+            <button 
+              className={`px-4 py-2 text-lg transition-all ${
+                activeButton === 'sustainability' 
+                  ? 'text-red-500 font-bold' 
+                  : 'text-white font-normal'
+              }`}
+              onClick={() => setActiveButton('sustainability')}
+            >
+              Sustainability
+            </button>
+            <button 
+              className={`px-4 py-2 text-lg transition-all ${
+                activeButton === 'environment' 
+                  ? 'text-red-500 font-bold' 
+                  : 'text-white font-normal'
+              }`}
+              onClick={() => setActiveButton('environment')}
+            >
+              Environment Protection
+            </button>
+            <button 
+              className={`px-4 py-2 text-lg transition-all ${
+                activeButton === 'health' 
+                  ? 'text-red-500 font-bold' 
+                  : 'text-white font-normal'
+              }`}
+              onClick={() => setActiveButton('health')}
+            >
+              Employee Health and Safety
+            </button>
+            <button 
+              className={`px-4 py-2 text-lg transition-all ${
+                activeButton === 'audits' 
+                  ? 'text-red-500 font-bold' 
+                  : 'text-white font-normal'
+              }`}
+              onClick={() => setActiveButton('audits')}
+            >
+              Regular Audits
+            </button>
           </div>
+        </div>
+        
+        <div className="relative w-full aspect-[16/9] max-h-[500px]">
+          <img 
+            src={contentData[activeButton].image}
+            alt={`${activeButton} illustration`}
+            className="w-full h-full object-cover"
+          />
           
-          <div className="relative w-full aspect-[16/9] max-h-[500px]">
-            <img 
-              src={contentData[activeButton].image}
-              alt={`${activeButton} illustration`}
-              className="w-full h-full object-cover"
-            />
-            
-            <div className="absolute bottom-8 right-8 w-1/3 bg-red-700 p-6 shadow-lg">
-              <p className="text-white">
-                {contentData[activeButton].text}
-              </p>
-            </div>
+          <div className="absolute bottom-8 right-8 w-1/3 bg-red-700 p-6 shadow-lg">
+            <p className="text-white">
+              {contentData[activeButton].text}
+            </p>
           </div>
         </div>
       </div>
     </>
   );
-};
-
+      
 export default AboutUsPage;
