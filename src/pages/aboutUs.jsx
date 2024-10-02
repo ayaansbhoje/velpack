@@ -33,7 +33,6 @@ const AboutUsPage = () => {
   return (
     <>
       <div className="bg-white min-h-screen">
-        {/* Journey Section */}
         <div className="text-center py-8">
           <h1 className="text-4xl font-bold mb-2">
             VELPACKS JOURNEY:
@@ -43,7 +42,6 @@ const AboutUsPage = () => {
           </h2>
         </div>
 
-        {/* First section with image and red box */}
         <div className="relative w-full aspect-[16/9] max-h-[600px]">
           <div className="absolute inset-0">
             <div className="relative w-full h-full">
@@ -62,7 +60,6 @@ const AboutUsPage = () => {
           </div>
         </div>
         
-        {/* Team section */}
         <div className="bg-red-700 py-16 mt-16">
           <div className="container mx-auto px-4">
             <h2 className="text-white text-4xl font-bold text-center mb-4">OUR TEAM</h2>
@@ -70,18 +67,17 @@ const AboutUsPage = () => {
               Combining seasoned expertise with dynamic innovation, our leadership team drives Velpack's success.
             </p>
             
-            {/* Grid for team members */}
             <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto">
               {[1, 2, 3, 4].map((index) => (
                 <div key={index} className="bg-white p-6 rounded-lg text-center">
                   <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
-                  <h3 className="text-red-600 font-bold mb-1">Bernie Phillips</h3>
+                  <h3 className="text-red-600 font-bold mb-1">Rohan Phillips</h3>
                   <p className="text-red-600 mb-4">Director</p>
                   <p className="text-sm">
-                    B.A. Economics & Global Studies - University of Economics, USA
+                    B.Sc. Mechanical Engineering - Georgia Institute of Technology, USA.
                   </p>
                   <p className="text-sm">
-                    Diploma in Packaging - Indian Institute of Packaging, Mumbai.
+                    
                   </p>
                 </div>
               ))}
@@ -93,10 +89,9 @@ const AboutUsPage = () => {
           </div>
         </div>
 
-        {/* Sustainability Section */}
         <div className="mt-16">
           {/* Black navigation bar */}
-          <div className="bg-black py-2 flex justify-between px-32">
+          <div className="bg-black py-4 flex justify-between px-32">
             {Object.keys(sections).map((section) => (
               <button
                 key={section}
