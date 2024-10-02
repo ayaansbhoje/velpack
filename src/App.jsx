@@ -368,7 +368,7 @@ const SecurityFeaturesSection = () => (
           variants={fadeIn("up", 0.3)}
           initial="hidden"
           whileInView="show"
-          className="text-2xl font-bold whitespace-nowrap -ml-10 mr-6 flex-shrink-0">SECURITY FEATURES:</motion.h3>
+          className="text-2xl font-bold whitespace-nowrap  mr-6 flex-shrink-0">SECURITY FEATURES:</motion.h3>
 
         <p className="text-xl flex-grow">
           Micro Printing | Invisible Ink Printing | Hologram Foil | Coin-Reactive Ink | Tamper-Evident Cartons
