@@ -27,7 +27,7 @@ const AboutUsPage = () => {
       
         <div className="relative h-[300px] overflow-hidden">
           <img 
-            src="/api/placeholder/1200/500"
+            src="/assets/Aboutus.jpg"
             alt="Manufacturing equipment" 
             className="w-full h-full object-cover"
           />
