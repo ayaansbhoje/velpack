@@ -300,14 +300,14 @@ const TrustedBrandsSection = () => {
             <img src="/assets/Lupin.png" alt="Logo 2" className="h-14 mx-10" />
             <img src="/assets/Piramal.png" alt="Logo 3" className="h-14 mx-10" />
             <img src="/assets/Ipca.png" alt="Logo 4" className="h-14 mx-10" />
-            <img src="/assets/LG5Jge_2.png" alt="Logo 5" className="h-14 mx-10" />
+            <img src="/assets/Indoco.png" alt="Logo 5" className="h-14 mx-10" />
           </div>
           <div className="flex shrink-0">
             <img src="/assets/Marksans.png" alt="Logo 1" className="h-14 mx-10" />
             <img src="/assets/Lupin.png" alt="Logo 2" className="h-14 mx-10" />
             <img src="/assets/Piramal.png" alt="Logo 3" className="h-14 mx-10" />
             <img src="/assets/Ipca.png" alt="Logo 4" className="h-14 mx-10" />
-            <img src="/assets/LG5Jge_2.png" alt="Logo 5" className="h-14 mx-10" />
+            <img src="/assets/Indoco.png" alt="Logo 5" className="h-14 mx-10" />
           </div>
         </div>
       </div>
@@ -379,7 +379,7 @@ const SecurityFeaturesSection = () => (
 );
 
 const ReviewCard = ({ review, isCenter }) => (
-  <div className={`bg-red-500 rounded-lg p-6 text-white ${isCenter ? 'bg-red-800 shadow-lg transform scale-105 z-10' : 'z-0'} w-96 h-64 flex flex-col justify-between`}>
+  <div className={`bg-red-500 rounded-lg p-6 text-white ${isCenter ? 'bg-red-800 shadow-lg transform scale-105 z-10' : 'z-0'} w-96 h-74 flex flex-col justify-between`}>
     <div>
       <h3 className="text-xl font-bold mb-2 text-center">{review.name}</h3>
       <p className="text-sm mb-2 text-center">{review.company}</p>
