@@ -7,23 +7,23 @@ const AboutUsPage = () => {
   // Content for sustainability sections
   const sections = {
     sustainability: {
-      image: "/assets/sustainability.jpg",
+      image: "/assets/sustain.JPG",
       text: "At Velpack, we prioritize environmental protection and employee safety, adhering to rigorous standards and conducting regular audits.",
       heading: "Sustainability"
     },
     environment: {
-      image: "/assets/environment.jpg",
-      text: "Our commitment to environmental protection drives us to implement eco-friendly practices throughout our manufacturing process.",
+      image: "/assets/environment.JPG",
+      text: "We implement preventive actions and regular monitoring to avoid environmental damage, including ambient air quality checks, stack gas monitoring, ambient noise level monitoring, and STP water checks.",
       heading: "Environment Protection"
     },
     safety: {
-      image: "/assets/safety.jpg",
-      text: "Employee health and safety is paramount, with comprehensive protocols and continuous training programs in place.",
+      image: "/assets/safety.JPG",
+      text: "Our comprehensive measures ensure the well-being of our employees, fostering a safe and healthy work environment.",
       heading: "Employee Health and Safety"
     },
     audits: {
-      image: "/assets/audits.jpg",
-      text: "Regular audits ensure we maintain the highest standards in all aspects of our operations.",
+      image: "/assets/audits.JPG",
+      text: "Velpack is independently audited under SMETA criteria by SEDEX and by the Pharmaceutical Supply Chain Initiative (PSCI) for better social, environmental, and economic outcomes.",
       heading: "Regular Audits"
     }
   };
