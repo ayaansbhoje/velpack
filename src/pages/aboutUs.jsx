@@ -96,7 +96,7 @@ const AboutUsPage = () => {
         {/* Sustainability Section */}
         <div className="mt-16">
           {/* Black navigation bar */}
-          <div className="bg-black p-4 flex justify-start gap-8 px-8">
+          <div className="bg-black py-2 flex justify-between px-32">
             {Object.keys(sections).map((section) => (
               <button
                 key={section}
@@ -111,7 +111,7 @@ const AboutUsPage = () => {
           </div>
           
           {/* Image and text box container */}
-          <div className="relative w-full aspect-[16/9]">
+          <div className="relative w-full h-[400px]">
             <img 
               src={sections[activeSection].image}
               alt={sections[activeSection].heading}
