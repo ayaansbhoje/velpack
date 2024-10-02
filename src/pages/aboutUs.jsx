@@ -25,7 +25,7 @@ const AboutUsPage = () => {
 
       <div className="relative">
       
-        <div className="relative h-[500px] overflow-hidden">
+        <div className="relative h-[300px] overflow-hidden">
           <img 
             src="/api/placeholder/1200/500"
             alt="Manufacturing equipment" 
@@ -35,7 +35,7 @@ const AboutUsPage = () => {
          
           <div className="absolute top-0 right-0 w-1/3 h-full bg-red-700" />
 
-         <div className="absolute bottom-10 right-20 w-1/4 bg-stone-300 p-8 rounded-lg shadow-lg">
+         <div className="absolute bottom-10 right-30 w-1/4 bg-stone-300 p-8 shadow-lg">
             <p className="text-gray-800">
               Founded in 1956, Velpack has grown from a small family business into a global supplier of premium paper-based packaging. Our state-of-the-art facility in Navi Mumbai spans 42,000 sq. ft., enabling us to produce millions of cartons and inserts daily.
             </p>
