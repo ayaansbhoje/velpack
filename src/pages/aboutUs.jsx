@@ -104,7 +104,7 @@ const AboutUsPage = () => {
             ))}
           </div>
           
-          <div className="relative w-full h-[300px]">
+          <div className="relative w-full h-[600px]">
             <img 
               src={sections[activeSection].image}
               alt={sections[activeSection].heading}
