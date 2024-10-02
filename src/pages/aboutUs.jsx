@@ -42,7 +42,7 @@ const AboutUsPage = () => {
         </div>
         
         {/* Team section */}
-        <div className="bg-red-700 py-16 mt-16">
+        <div className="bg-red-700 py-16 mt-12">
           <div className="container mx-auto px-4">
             <h2 className="text-white text-4xl font-bold text-center mb-4">OUR TEAM</h2>
             <p className="text-white text-center mb-12">
