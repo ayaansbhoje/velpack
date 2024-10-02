@@ -28,6 +28,7 @@ const AboutUsPage = () => {
   return (
     <>
       <div className="bg-white min-h-screen">
+        {/* First section */}
         <div className="text-center py-8">
           <h1 className="text-4xl font-bold mb-2">
             VELPACK'S JOURNEY:
@@ -37,7 +38,6 @@ const AboutUsPage = () => {
           </h2>
         </div>
         
-        {/* First section with image and red box */}
         <div className="relative w-full aspect-[16/9] max-h-[600px]">
           <div className="absolute inset-0">
             <div className="relative w-full h-full">
@@ -56,7 +56,9 @@ const AboutUsPage = () => {
           </div>
         </div>
 
-        {/* Team section */}
+     
+        <div className="h-24"></div>
+
         <div className="bg-red-700 py-16 text-white">
           <h2 className="text-3xl font-bold text-center mb-4">OUR TEAM</h2>
           <p className="text-center mb-12">
@@ -84,13 +86,13 @@ const AboutUsPage = () => {
           </p>
         </div>
 
-        {/* Spacer */}
+        
         <div className="h-16"></div>
 
-        {/* New interactive section */}
+       
         <div className="relative">
-          {/* Red header box with buttons */}
-          <div className="bg-red-700 w-full py-4">
+          
+          <div className="bg-black w-full py-4">
             <div className="container mx-auto flex justify-between items-center px-4">
               <button 
                 className={`px-4 py-2 ${activeButton === 'sustainability' ? 'text-red-500 bg-white' : 'text-white'}`}
@@ -119,7 +121,6 @@ const AboutUsPage = () => {
             </div>
           </div>
           
-          {/* Interactive image and text box section */}
           <div className="relative w-full aspect-[16/9] max-h-[500px]">
             <img 
               src={contentData[activeButton].image}
@@ -127,9 +128,8 @@ const AboutUsPage = () => {
               className="w-full h-full object-cover"
             />
             
-            {/* Info box */}
-            <div className="absolute bottom-8 right-8 w-1/3 bg-white p-6 shadow-lg">
-              <p className="text-gray-800">
+            <div className="absolute bottom-8 right-8 w-1/3 bg-red-700 p-6 shadow-lg">
+              <p className="text-white">
                 {contentData[activeButton].text}
               </p>
             </div>
