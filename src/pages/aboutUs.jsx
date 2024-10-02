@@ -33,7 +33,7 @@ const AboutUsPage = () => {
           />
           
          
-          <div className="absolute top-0 right-0 w-1/3 h-full bg-red-700" />
+          <div className="absolute top-0 right-0 w-1/4 h-full bg-red-700" />
            
             <div className="absolute top-1/2 right-1/3 transform -translate-y-1/2 translate-x-1/2 w-1/4 bg-stone-300 p-8 rounded-lg shadow-lg z-10">
               <p className="text-gray-800">
