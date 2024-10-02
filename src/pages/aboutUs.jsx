@@ -90,7 +90,7 @@ const AboutUsPage = () => {
         <div className="h-16"></div>
 
        
-        <div className="relative">
+         <div className="relative">
         <div className="bg-black w-full py-6">
           <div className="container mx-auto flex justify-center items-center px-4 space-x-12">
             <button 
@@ -152,5 +152,6 @@ const AboutUsPage = () => {
       </div>
     </>
   );
-      
+};
+
 export default AboutUsPage;
