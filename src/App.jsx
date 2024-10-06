@@ -5,7 +5,7 @@ import { fadeIn } from './variant';
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import AboutUsPage from './pages/aboutUs';
 import Home from './pages/home';
-import technology from './pages/technology'
+import TechnologyPage from './pages/technology'
 
 // const Navbar = () => (
 // );
@@ -429,7 +429,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
         </Routes>
         <Routes>
-          <Route path="/technology" element={<technology />} />
+          <Route path="/technology" element={<TechnologyPage />} />
         </Routes>
       </div>
     </BrowserRouter>
