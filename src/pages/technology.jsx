@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/navbar'
 import Footer from '../components/footer';
 
-const TechnologyPage = () => {
+const Technologypage = () => {
   const technologies = [
     {
       title: "Quality Department Equipments",
@@ -67,7 +67,6 @@ const TechnologyPage = () => {
     <>
       <Navbar />
       
-      {/* Hero Section */}
       <div className="relative h-[400px]">
         <img 
           src="/assets/tech-hero.jpg"
@@ -79,7 +78,6 @@ const TechnologyPage = () => {
         </div>
       </div>
 
-      {/* Technologies Section */}
       <div className="bg-red-700 py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-white text-4xl font-bold text-center mb-4">
@@ -120,4 +118,4 @@ const TechnologyPage = () => {
   );
 };
 
-export default TechnologyPage;
+export default Technologypage;
