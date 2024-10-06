@@ -427,6 +427,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
+        <Routes>
+          <Route path="/technology" element={<technologypage />} />
+        </Routes>
       </div>
     </BrowserRouter>
   )
