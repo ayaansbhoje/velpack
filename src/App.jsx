@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import { fadeIn } from './variant';
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import AboutUsPage from './pages/aboutUs';
-import Home from './pages/home'
+import Home from './pages/home';
+import technologypage from './pages/technology';
 
 // const Navbar = () => (
 // );
