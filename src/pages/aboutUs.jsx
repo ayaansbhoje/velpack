@@ -77,7 +77,7 @@ const AboutUsPage = () => {
                 alt="Manufacturing equipment" 
                 className="absolute w-full h-full object-cover"
               />
-              <div className="absolute top-0 right-0 w-1/5 h-full bg-red-700" />
+              <div className="absolute top-0 right-0 w-1/5 h-full bg-[#b7162a]" />
               <div className="absolute bottom-8 right-1/4 transform translate-x-1/2 w-1/4 bg-stone-300 p-8 shadow-lg z-10">
                 <p className="text-gray-800 text-center">
                   Founded in 1956, Velpack has grown from a small family business into a global supplier of premium paper-based packaging. Our state-of-the-art facility in Navi Mumbai spans 42,000 sq. ft., enabling us to produce millions of cartons and inserts daily.
@@ -87,7 +87,7 @@ const AboutUsPage = () => {
           </div>
         </div>
         
-        <div className="bg-red-700 py-16 mt-16">
+        <div className="bg-[#b7162a] py-16 mt-16">
           <div className="container mx-auto px-4">
             <h2 className="text-white text-4xl font-bold text-center mb-4">OUR TEAM</h2>
             <p className="text-white text-center mb-12">
@@ -98,8 +98,8 @@ const AboutUsPage = () => {
               {teamMembers.map((member, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg text-center">
                   <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
-                  <h3 className="text-red-600 font-bold mb-1">{member.name}</h3>
-                  <p className="text-red-600 mb-4">{member.role}</p>
+                  <h3 className="text-[#e81d2d] font-bold mb-1">{member.name}</h3>
+                  <p className="text-[#e81d2d] mb-4">{member.role}</p>
                   {Array.isArray(member.education) ? (
                     member.education.map((edu, i) => (
                       <p key={i} className="text-sm mb-2">{edu}</p>
@@ -139,7 +139,7 @@ const AboutUsPage = () => {
               className="w-full h-full object-cover"
             />
             
-            <div className="absolute bottom-8 right-8 w-1/3 bg-red-600 p-6 text-center text-white">
+            <div className="absolute bottom-8 right-8 w-1/3 bg-[#e81d2d] p-6 text-center text-white">
               <p>
                 {sections[activeSection].text}
               </p>

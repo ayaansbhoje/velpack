@@ -82,7 +82,7 @@ const Technologypage = () => {
       </div>
 
       {/* Technologies Section */}
-      <div className="bg-red-700 pt-16 pb-16">
+      <div className="bg-[#b7162a] pt-16 pb-16">
         <div className="container mx-auto px-4">
           {/* Moved text up and reduced bottom margin */}
           <h2 className="text-white text-4xl font-bold text-center mb-2">
@@ -103,7 +103,7 @@ const Technologypage = () => {
                   />
                 </div>
                 <div className="w-2/3 p-6">
-                  <h3 className="text-red-600 text-2xl font-bold mb-4">{tech.title}</h3>
+                  <h3 className="text-[#e81d2d] text-2xl font-bold mb-4">{tech.title}</h3>
                   <div className="space-y-2">
                     {tech.items.map((item, i) => (
                       <p key={i} className="text-gray-700">

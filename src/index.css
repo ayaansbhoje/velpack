@@ -15,3 +15,13 @@
   .animate-scroll:hover {
     animation-play-state: paused;
   }
+
+@font-face {
+  font-family: "hbold";
+  src: url("../public/fonts/HelveticaNeueBold.otf");
+}
+
+@font-face {
+  font-family: "hmed";
+  src: url("../public/fonts/HelveticaNeueMedium.otf");
+} 
