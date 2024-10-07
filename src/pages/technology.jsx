@@ -82,10 +82,10 @@ const Technologypage = () => {
       {/* Technologies Section */}
       <div className="bg-red-800 pt-32 pb-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-white text-4xl font-bold text-center mb-4">
+          <h2 className="text-white text-4xl font-bold text-center mb-6">
             STATE OF THE ART MACHINERY
           </h2>
-          <p className="text-white text-center mb-12">
+          <p className="text-white text-center mb-8">
             With state-of-the-art machinery and advanced manufacturing processes, Velpack delivers precision and quality in every product.
           </p>
 
@@ -100,10 +100,10 @@ const Technologypage = () => {
                   />
                 </div>
                 <div className="w-2/3 p-6">
-                  <h3 className="text-red-600 text-2xl font-bold mb-4">{tech.title}</h3>
+                  <h3 className="text-white text-2xl font-bold mb-4">{tech.title}</h3>
                   <div className="space-y-2">
                     {tech.items.map((item, i) => (
-                      <p key={i} className="text-gray-700">
+                      <p key={i} className="text-white">
                         {item}
                       </p>
                     ))}
