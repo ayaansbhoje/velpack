@@ -67,18 +67,20 @@ const Technologypage = () => {
     <>
       <Navbar />
       
-      <div className="relative h-[400px]">
+      {/* Hero Section - Now full screen with text lower */}
+      <div className="relative h-screen">
         <img 
           src="/assets/tech-hero.jpg"
           alt="Technology at Velpack" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end justify-center pb-24">
           <h1 className="text-white text-5xl font-bold">OUR TECHNOLOGIES</h1>
         </div>
       </div>
 
-      <div className="bg-red-700 py-16">
+      {/* Technologies Section - Now with more top padding for gap */}
+      <div className="bg-red-700 pt-32 pb-16">
         <div className="container mx-auto px-4">
           <h2 className="text-white text-4xl font-bold text-center mb-4">
             STATE OF THE ART MACHINERY
@@ -99,13 +101,13 @@ const Technologypage = () => {
                 </div>
                 <div className="w-2/3 p-6">
                   <h3 className="text-red-600 text-2xl font-bold mb-4">{tech.title}</h3>
-                  <ul className="grid grid-cols-2 gap-2">
+                  <div className="space-y-2">
                     {tech.items.map((item, i) => (
-                      <li key={i} className="text-gray-700">
+                      <p key={i} className="text-gray-700">
                         {i + 1}. {item}
-                      </li>
+                      </p>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               </div>
             ))}
@@ -118,4 +120,4 @@ const Technologypage = () => {
   );
 };
 
-export default Technologypage;
+export default TechnologyPage;
