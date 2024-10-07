@@ -75,7 +75,7 @@ const Technologypage = () => {
           alt="Technology at Velpack" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end justify-center pb-24">
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end justify-center pb-20">
           <h1 className="text-white text-5xl font-bold">OUR TECHNOLOGIES</h1>
         </div>
       </div>
