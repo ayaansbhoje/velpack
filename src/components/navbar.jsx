@@ -22,7 +22,9 @@ const Navbar = () => {
                 <a href="#certifications" className="text-sm text-black hover:text-[#e81d2d]">Certifications</a>
                 <Link to="/technology" className="text-sm text-black hover:text-[#e81d2d]">Technology</Link>
                 {/*  <a href="#technology" className="text-sm text-black hover:text-[#e81d2d]">Technology</a> */}
-                <a href="#contact" className="text-sm text-black hover:text-[#e81d2d]">Contact Us</a>
+                <Link to="/contactus" className="text-sm text-black hover:text-[#e81d2d]">Contact Us </Link>
+                {/* <a href="#contact" className="text-sm text-black hover:text-[#e81d2d]">Contact Us</a> */}
+                
                 <button className="text-[#e81d2d]">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
