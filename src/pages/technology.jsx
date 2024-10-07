@@ -81,7 +81,7 @@ const Technologypage = () => {
       </div>
 
       {/* Added white space gap */}
-      <div className="h-24"></div>
+      <div className="h-18"></div>
 
       {/* Technologies Section */}
       <div className="bg-red-700 py-16">
