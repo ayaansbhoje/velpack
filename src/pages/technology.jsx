@@ -67,7 +67,7 @@ const Technologypage = () => {
     <>
       <Navbar />
       
-      {/* Hero Section - Now full screen with text lower */}
+      {/* Hero Section */}
       <div className="relative h-screen">
         <img 
           src="/assets/tech-hero.jpg"
@@ -79,7 +79,7 @@ const Technologypage = () => {
         </div>
       </div>
 
-      {/* Technologies Section - Now with more top padding for gap */}
+      {/* Technologies Section */}
       <div className="bg-red-700 pt-32 pb-16">
         <div className="container mx-auto px-4">
           <h2 className="text-white text-4xl font-bold text-center mb-4">
@@ -104,7 +104,7 @@ const Technologypage = () => {
                   <div className="space-y-2">
                     {tech.items.map((item, i) => (
                       <p key={i} className="text-gray-700">
-                        {i + 1}. {item}
+                        {item}
                       </p>
                     ))}
                   </div>
