@@ -80,7 +80,7 @@ const Technologypage = () => {
       </div>
 
       {/* Technologies Section */}
-      <div className="bg-red-700 pt-32 pb-16">
+      <div className="bg-red-800 pt-32 pb-16">
         <div className="container mx-auto px-4">
           <h2 className="text-white text-4xl font-bold text-center mb-4">
             STATE OF THE ART MACHINERY
@@ -91,7 +91,7 @@ const Technologypage = () => {
 
           <div className="space-y-12">
             {technologies.map((tech, index) => (
-              <div key={index} className="flex bg-white rounded-lg overflow-hidden">
+              <div key={index} className="flex bg-red-700 rounded-lg overflow-hidden">
                 <div className="w-1/3">
                   <img 
                     src={tech.image}
