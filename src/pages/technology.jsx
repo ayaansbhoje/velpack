@@ -5,7 +5,6 @@ import Navbar from '../components/navbar'
 import Footer from '../components/footer';
 
 
-
 const Technologypage = () => {
   const technologies = [
     {
@@ -66,7 +65,7 @@ const Technologypage = () => {
   ];
 
   return (
-    <>
+    <div className="bg-white">
       <Navbar />
       
       {/* Hero Section */}
@@ -76,15 +75,17 @@ const Technologypage = () => {
           alt="Technology at Velpack" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end justify-center pb-24">
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end justify-center pb-20">
           <h1 className="text-white text-5xl font-bold">OUR TECHNOLOGIES</h1>
         </div>
       </div>
 
+      {/* Added white space gap */}
+      <div className="h-18"></div>
+
       {/* Technologies Section */}
       <div className="bg-[#b7162a] pt-16 pb-16">
         <div className="container mx-auto px-4">
-          {/* Moved text up and reduced bottom margin */}
           <h2 className="text-white text-4xl font-bold text-center mb-2">
             STATE OF THE ART MACHINERY
           </h2>
@@ -92,9 +93,9 @@ const Technologypage = () => {
             With state-of-the-art machinery and advanced manufacturing processes, Velpack delivers precision and quality in every product.
           </p>
 
-          <div className="space-y-8"> {/* Reduced space between boxes */}
+          <div className="space-y-8">
             {technologies.map((tech, index) => (
-              <div key={index} className="flex bg-white rounded-lg overflow-hidden shadow-lg"> {/* Added shadow for depth */}
+              <div key={index} className="flex bg-white rounded-lg overflow-hidden shadow-lg">
                 <div className="w-1/3">
                   <img 
                     src={tech.image}
@@ -119,8 +120,9 @@ const Technologypage = () => {
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 };
 
 export default Technologypage;
+
