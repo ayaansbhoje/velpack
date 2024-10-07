@@ -5,7 +5,7 @@ import Navbar from '../components/navbar'
 import Footer from '../components/footer';
 
 
-const ContactPage = () => {
+const ContactusPage = () => {
   return (
     <div className="bg-white">
       <Navbar />
@@ -105,4 +105,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default ContactusPage;
