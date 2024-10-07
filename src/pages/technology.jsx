@@ -95,7 +95,7 @@ const Technologypage = () => {
 
           <div className="space-y-8">
             {technologies.map((tech, index) => (
-              <div key={index} className="flex bg-white rounded-lg overflow-hidden shadow-lg">
+              <div key={index} className="flex bg-[#e81d2d] rounded-lg overflow-hidden shadow-lg">
                 <div className="w-1/3">
                   <img 
                     src={tech.image}
@@ -104,10 +104,10 @@ const Technologypage = () => {
                   />
                 </div>
                 <div className="w-2/3 p-6">
-                  <h3 className="text-[#e81d2d] text-2xl font-bold mb-4">{tech.title}</h3>
+                  <h3 className="text-white text-2xl font-bold mb-4">{tech.title}</h3>
                   <div className="space-y-2">
                     {tech.items.map((item, i) => (
-                      <p key={i} className="text-gray-700">
+                      <p key={i} className="text-white">
                         {item}
                       </p>
                     ))}
