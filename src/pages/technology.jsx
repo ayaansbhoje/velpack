@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/navbar'
 import Footer from '../components/footer';
 
+
+
 const Technologypage = () => {
   const technologies = [
     {
@@ -80,18 +82,19 @@ const Technologypage = () => {
       </div>
 
       {/* Technologies Section */}
-      <div className="bg-red-800 pt-32 pb-16">
+      <div className="bg-red-700 pt-16 pb-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-white text-4xl font-bold text-center mb-6">
+          {/* Moved text up and reduced bottom margin */}
+          <h2 className="text-white text-4xl font-bold text-center mb-2">
             STATE OF THE ART MACHINERY
           </h2>
-          <p className="text-white text-center mb-8">
+          <p className="text-white text-center mb-16">
             With state-of-the-art machinery and advanced manufacturing processes, Velpack delivers precision and quality in every product.
           </p>
 
-          <div className="space-y-12">
+          <div className="space-y-8"> {/* Reduced space between boxes */}
             {technologies.map((tech, index) => (
-              <div key={index} className="flex bg-red-700 rounded-lg overflow-hidden">
+              <div key={index} className="flex bg-white rounded-lg overflow-hidden shadow-lg"> {/* Added shadow for depth */}
                 <div className="w-1/3">
                   <img 
                     src={tech.image}
@@ -100,10 +103,10 @@ const Technologypage = () => {
                   />
                 </div>
                 <div className="w-2/3 p-6">
-                  <h3 className="text-white text-2xl font-bold mb-4">{tech.title}</h3>
+                  <h3 className="text-red-600 text-2xl font-bold mb-4">{tech.title}</h3>
                   <div className="space-y-2">
                     {tech.items.map((item, i) => (
-                      <p key={i} className="text-white">
+                      <p key={i} className="text-gray-700">
                         {item}
                       </p>
                     ))}
