@@ -4,6 +4,10 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/navbar'
 import Footer from '../components/footer';
 
+import React from 'react';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
+
 const Technologypage = () => {
   const technologies = [
     {
