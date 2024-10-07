@@ -20,7 +20,8 @@ const Navbar = () => {
 
                 <a href="#services" className="text-sm text-black hover:text-red-600">Our Services</a>
                 <a href="#certifications" className="text-sm text-black hover:text-red-600">Certifications</a>
-                <a href="#technology" className="text-sm text-black hover:text-red-600">Technology</a>
+                <Link to="/technology" className="text-sm text-black hover:text-red-600">Technology</Link>
+                {/*  <a href="#technology" className="text-sm text-black hover:text-red-600">Technology</a> */}
                 <a href="#contact" className="text-sm text-black hover:text-red-600">Contact Us</a>
                 <button className="text-red-600">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
