@@ -73,7 +73,7 @@ const AboutUs = () => (
         variants={fadeIn("up", 0.3)}
         initial="hidden"
         whileInView="show"
-        className="mt-8 color-[#8B0000] text-white overflow-hidden relative">
+        className="mt-8 bg-[#b7162a] text-white overflow-hidden relative">
         <div className="container mx-auto flex">
             <div className="w-1/2 p-14 flex flex-col justify-center">
                 <h2 className="text-4xl font-bold -ml-10 mb-6">WHO ARE WE?</h2>
