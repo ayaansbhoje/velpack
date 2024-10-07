@@ -5,6 +5,7 @@ import Navbar from '../components/navbar'
 import Footer from '../components/footer';
 
 
+
 const ContactusPage = () => {
   return (
     <div className="bg-white">
@@ -12,56 +13,58 @@ const ContactusPage = () => {
       
       {/* Contact Form Section */}
       <div className="bg-red-700 text-white py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-bold mb-8">We Would Love to Hear from You.</h1>
-          
-          <form className="max-w-2xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <label htmlFor="name" className="block mb-2">Your name</label>
+        <div className="container mx-auto px-4 flex justify-center">
+          <div className="w-full max-w-2xl">
+            <h1 className="text-3xl font-bold mb-8 ">We Would Love to Hear from You.</h1>
+            
+            <form>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label htmlFor="name" className="block mb-2">Your name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="w-full p-2 rounded bg-transparent border border-white placeholder-white text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="mobile" className="block mb-2">Mobile no.</label>
+                  <input
+                    type="tel"
+                    id="mobile"
+                    className="w-full p-2 rounded bg-transparent border border-white placeholder-white text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white"
+                  />
+                </div>
+              </div>
+              
+              <div className="mb-6">
+                <label htmlFor="email" className="block mb-2">Email address</label>
                 <input
-                  type="text"
-                  id="name"
-                  className="w-full p-2 rounded text-gray-800"
+                  type="email"
+                  id="email"
+                  className="w-full p-2 rounded bg-transparent border border-white placeholder-white text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white"
                 />
               </div>
-              <div>
-                <label htmlFor="mobile" className="block mb-2">Mobile no.</label>
-                <input
-                  type="tel"
-                  id="mobile"
-                  className="w-full p-2 rounded text-gray-800"
-                />
+              
+              <div className="mb-6">
+                <label htmlFor="query" className="block mb-2">Your query</label>
+                <textarea
+                  id="query"
+                  rows={6}
+                  className="w-full p-2 rounded bg-transparent border border-white placeholder-white text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white"
+                ></textarea>
               </div>
-            </div>
-            
-            <div className="mb-6">
-              <label htmlFor="email" className="block mb-2">Email address</label>
-              <input
-                type="email"
-                id="email"
-                className="w-full p-2 rounded text-gray-800"
-              />
-            </div>
-            
-            <div className="mb-6">
-              <label htmlFor="query" className="block mb-2">Your query</label>
-              <textarea
-                id="query"
-                rows={6}
-                className="w-full p-2 rounded text-gray-800"
-              ></textarea>
-            </div>
-            
-            <div className="text-right">
-              <button
-                type="submit"
-                className="bg-white text-red-700 px-8 py-2 rounded hover:bg-gray-100 transition-colors"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
+              
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="border border-white text-white px-8 py-2 rounded hover:bg-white hover:text-red-700 transition-colors"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
       
