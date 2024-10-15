@@ -3,12 +3,15 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/navbar'
 import Footer from '../components/footer';
+
+
+
 const ServicesPage = () => {
   return (
     <div className="bg-white">
       <Navbar />
 
-      {/* Hero Section /}
+      {/* Hero Section */}
       <div className="relative h-screen">
         <img 
           src="/assets/services-hero.jpg"
@@ -19,13 +22,13 @@ const ServicesPage = () => {
           <h1 className="text-white text-5xl font-bold">OUR SERVICES</h1>
         </div>
       </div>
-      {/ Reduced white space gap /}
+      {/* Reduced white space gap */}
       <div className="h-8"></div>
       {/ Services Section /}
       <div className="bg-[#b7162a] py-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            {/ Left side: Text and CTA */}
+            {/* Left side: Text and CTA */}
             <div className="w-full md:w-1/2 text-white pr-0 md:pr-8 mb-8 md:mb-0">
               <h2 className="text-3xl font-bold mb-4">Paper-Packing Done Differently</h2>
               <p className="mb-6">
