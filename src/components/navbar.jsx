@@ -18,7 +18,9 @@ const Navbar = () => {
                 {/* <a href="/aboutus.jsx" className="text-sm text-black hover:text-[#e81d2d]">About Us</a> */}
                 <Link to="/aboutUs" className="text-sm text-black hover:text-[#e81d2d]">About Us</Link>
 
-                <a href="#services" className="text-sm text-black hover:text-[#e81d2d]">Our Services</a>
+                {/*   <a href="#services" className="text-sm text-black hover:text-[#e81d2d]">Our Services</a>*/}
+                 <Link to="/ourservices" className="text-sm text-black hover:text-[#e81d2d]">About Us</Link>
+                
                 <a href="#certifications" className="text-sm text-black hover:text-[#e81d2d]">Certifications</a>
                 <Link to="/technology" className="text-sm text-black hover:text-[#e81d2d]">Technology</Link>
                 {/*  <a href="#technology" className="text-sm text-black hover:text-[#e81d2d]">Technology</a> */}
