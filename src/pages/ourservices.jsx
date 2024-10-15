@@ -4,13 +4,11 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/navbar'
 import Footer from '../components/footer';
 
-
-
 const ServicesPage = () => {
   return (
     <div className="bg-white">
       <Navbar />
-
+      
       {/* Hero Section */}
       <div className="relative h-screen">
         <img 
@@ -22,10 +20,12 @@ const ServicesPage = () => {
           <h1 className="text-white text-5xl font-bold">OUR SERVICES</h1>
         </div>
       </div>
+
       {/* Reduced white space gap */}
       <div className="h-8"></div>
-      {/ Services Section /}
-      <div className="bg-[#b7162a] py-16">
+
+      {/* Services Section */}
+      <div className="bg-red-700 py-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             {/* Left side: Text and CTA */}
@@ -37,11 +37,11 @@ const ServicesPage = () => {
                 suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor 
                 in hendrerit in vulputate velit esse molestie consequat.
               </p>
-              <button className="bg-transparent border-2 border-white text-white py-2 px-6  rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300 self-start">
+              <button className="bg-white text-red-700 px-6 py-2 rounded hover:bg-gray-100 transition-colors">
                 Contact Us
               </button>
             </div>
-
+            
             {/* Right side: Image (with reduced width) */}
             <div className="w-full md:w-5/12">
               <img 
@@ -53,8 +53,10 @@ const ServicesPage = () => {
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );
 };
-export default ServicesPage; 
+
+export default ServicesPage;
