@@ -38,7 +38,7 @@ const ServicesPage = () => {
                 suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor 
                 in hendrerit in vulputate velit esse molestie consequat.
               </p>
-              <button className="bg-transparent border-2 border-white text-white py-2 px-6 -ml-10 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300 self-start">
+              <button className="bg-transparent border-2 border-white text-white py-2 px-6 -ml-14 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300 self-start">
                 Contact Us
               </button>
             </div>
