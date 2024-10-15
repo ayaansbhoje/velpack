@@ -25,7 +25,7 @@ const ServicesPage = () => {
       <div className="h-8"></div>
 
       {/* Services Section */}
-      <div className="bg-red-[#b7162a] py-16">
+      <div className="bg-[#b7162a] py-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             {/* Left side: Text and CTA */}
