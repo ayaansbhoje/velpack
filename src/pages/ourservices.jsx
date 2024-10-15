@@ -37,7 +37,7 @@ const ServicesPage = () => {
                 suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor 
                 in hendrerit in vulputate velit esse molestie consequat.
               </p>
-              <button className="bg-transparent border-2 border-white text-white py-2 px-6  rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300 self-start">
+              <button className="bg-transparent border-2 border-white text-white py-2 px-6 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300 self-start">
                 Contact Us
               </button>
             </div>
@@ -54,7 +54,8 @@ const ServicesPage = () => {
         </div>
       </div>
 
-       <div className="py-16 bg-white">
+      {/* Industry Expertise Section */}
+      <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-[#b7162a] mb-12">
             OUR EXPERTISE AND ASSISTANCE IN MAJOR INDUSTRIES
@@ -64,7 +65,11 @@ const ServicesPage = () => {
             {/* Pharmaceutical Packaging Box */}
             <div className="w-full md:w-5/12 bg-white border-2 border-[#b7162a] rounded-lg p-8 shadow-lg">
               <div className="flex justify-center mb-4">
-                <Pill size={48} className="text-[#b7162a]" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#b7162a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M10.5 7.5v9"/>
+                  <path d="M6 12h12"/>
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                </svg>
               </div>
               <h3 className="text-xl font-bold text-[#b7162a] text-center mb-4">
                 Pharmaceutical Packaging
@@ -79,7 +84,11 @@ const ServicesPage = () => {
             {/* FMCG Packaging Box */}
             <div className="w-full md:w-5/12 bg-white border-2 border-[#b7162a] rounded-lg p-8 shadow-lg">
               <div className="flex justify-center mb-4">
-                <Package size={48} className="text-[#b7162a]" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#b7162a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/>
+                  <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"/>
+                  <path d="M12 3v6"/>
+                </svg>
               </div>
               <h3 className="text-xl font-bold text-[#b7162a] text-center mb-4">
                 FMCG Packaging
@@ -93,7 +102,6 @@ const ServicesPage = () => {
           </div>
         </div>
       </div>
-
 
       <Footer />
     </div>
