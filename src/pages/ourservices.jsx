@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Navbar from '../components/navbar'
+import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
 
