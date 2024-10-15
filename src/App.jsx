@@ -6,7 +6,8 @@ import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import AboutUsPage from './pages/aboutUs';
 import Home from './pages/home';
 import Technologypage from './pages/technology';
-import ContactusPage from './pages/contactus'
+import ContactusPage from './pages/contactus';
+import ServicesPage from './pages/ourservices'
 
 // const Navbar = () => (
 // );
@@ -434,6 +435,9 @@ const App = () => {
         </Routes>
         <Routes>
           <Route path="/contactus" element={<ContactusPage />} />
+        </Routes>
+        <Routes>
+          <Route path="/ourservices" element={<ServicesPage />} />
         </Routes>
       </div>
     </BrowserRouter>
