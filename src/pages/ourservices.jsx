@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/navbar'
 import Footer from '../components/footer';
+import { Pill, Package } from 'lucide-react';
 
 const ServicesPage = () => {
   return (
@@ -37,7 +38,7 @@ const ServicesPage = () => {
                 suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor 
                 in hendrerit in vulputate velit esse molestie consequat.
               </p>
-              <button className="bg-transparent border-2 border-white text-white py-2 px-6  rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300 self-start">
+              <button className="bg-transparent border-2 border-white text-white py-2 px-6 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300 self-start">
                 Contact Us
               </button>
             </div>
@@ -49,6 +50,47 @@ const ServicesPage = () => {
                 alt="Paper Packing Samples" 
                 className="w-full rounded-lg shadow-lg"
               />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Industry Expertise Section */}
+      <div className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-[#b7162a] mb-12">
+            OUR EXPERTISE AND ASSISTANCE IN MAJOR INDUSTRIES
+          </h2>
+          
+          <div className="flex flex-col md:flex-row justify-center gap-8">
+            {/* Pharmaceutical Packaging Box */}
+            <div className="w-full md:w-5/12 bg-white border-2 border-[#b7162a] rounded-lg p-8 shadow-lg">
+              <div className="flex justify-center mb-4">
+                <Pill size={48} className="text-[#b7162a]" />
+              </div>
+              <h3 className="text-xl font-bold text-[#b7162a] text-center mb-4">
+                Pharmaceutical Packaging
+              </h3>
+              <p className="text-gray-700 text-center">
+                Lorem ipsum dolor sit amet, diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
+                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper 
+                suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+
+            {/* FMCG Packaging Box */}
+            <div className="w-full md:w-5/12 bg-white border-2 border-[#b7162a] rounded-lg p-8 shadow-lg">
+              <div className="flex justify-center mb-4">
+                <Package size={48} className="text-[#b7162a]" />
+              </div>
+              <h3 className="text-xl font-bold text-[#b7162a] text-center mb-4">
+                FMCG Packaging
+              </h3>
+              <p className="text-gray-700 text-center">
+                Lorem ipsum dolor sit amet, diam nonummy nibh euismod tincidunt ut laoreet dolore magna 
+                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper 
+                suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+              </p>
             </div>
           </div>
         </div>
