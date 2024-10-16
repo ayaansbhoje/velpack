@@ -4,6 +4,8 @@ import { fadeIn } from '../variant';
 
 import Navbar  from '../components/navbar'
 import Footer from '../components/footer';
+import Footprint from '../components/Footprint';
+
 
 const Home = () => {
 const HeroSection = () => {
@@ -256,14 +258,7 @@ const CapabilitiesSection = () => (
                 </div>
             </motion.div>
 
-            <motion.h2
-                variants={fadeIn("up", 0.3)}
-                initial="hidden"
-                whileInView="show"
-                className="text-4xl font-bold text-center mb-4">OUR FOOTPRINT</motion.h2>
-            <div className="relative">
-                <img src="/assets/world_map.png" alt="World Map" className="w-full" />
-            </div>
+            <Footprint />
         </motion.div>
     </motion.section>
 );
