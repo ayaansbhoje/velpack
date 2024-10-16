@@ -21,7 +21,6 @@ const Footprint = () => {
     { top: "70%", left: "52%" },
   ];
 
-  // Intersection Observer to trigger the animation when the section is in view
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -30,7 +29,7 @@ const Footprint = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 } // 20% of the section needs to be in view
+      { threshold: 0.2 } 
     );
 
     if (sectionRef.current) {
@@ -44,7 +43,6 @@ const Footprint = () => {
     };
   }, []);
 
-  // Trigger the ticks animation sequentially when the section is visible
   useEffect(() => {
     if (isVisible) {
       tickPositions.forEach((_, index) => {
