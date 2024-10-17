@@ -170,6 +170,9 @@ const CapabilitiesSection = () => (
                 initial="hidden"
                 whileInView="show"
                 className="text-4xl font-bold text-center mb-4">OUR CAPABILITIES</motion.h2>
+            
+            <div className="w-16 h-2 bg-[#e81d2d] mx-auto mb-12"></div>
+
             <motion.p
                 variants={fadeIn("up", 0.3)}
                 initial="hidden"
@@ -251,6 +254,9 @@ const CapabilitiesSection = () => (
                     initial="hidden"
                     whileInView="show"
                     className="text-2xl font-bold text-center mb-4 text-[#e81d2d]">WE ARE CERTIFIED BY</motion.h3>
+                
+                 <div className="w-16 h-2 bg-[#e81d2d] mx-auto mb-12"></div>
+
                 <div className="flex justify-around items-center">
                     <img src="/assets/iso.jpg" alt="ISO" className="h-14" />
                     <img src="/assets/ps_image.png" alt="PS" className="h-14" />
@@ -304,7 +310,7 @@ const FeaturesSection = () => (
                 initial="hidden"
                 whileInView="show"
                 className="text-4xl font-bold text-center mb-2 text-[#e81d2d]">OUR FEATURES</motion.h2>
-            <div className="w-20 h-1 bg-[#e81d2d] mx-auto mb-12"></div>
+            <div className="w-16 h-2 bg-[#e81d2d] mx-auto mb-12"></div>
 
             <motion.div
                 variants={fadeIn("up", 0.3)}
