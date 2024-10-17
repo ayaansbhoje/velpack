@@ -257,6 +257,7 @@ const CapabilitiesSection = () => (
                     <img src="/assets/brc.png" alt="BRC" className="h-12" />
                     <img src="/assets/sedex.png" alt="Sedex" className="h-12" />
                     <img src="/assets/psci.jpeg" alt="PSCI" className="h-12" />
+                    <img src="/assets/gmi.png" alt="gmi" className="h-12" />
                 </div>
             </motion.div>
 

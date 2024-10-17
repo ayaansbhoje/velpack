@@ -421,6 +421,7 @@ import ServicesPage from './pages/ourservices'
 // );
 
 const App = () => {
+  // console.log("Hello");
   return (
     <BrowserRouter>
       <div className="min-h-screen flex flex-col">
