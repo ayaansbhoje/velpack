@@ -252,12 +252,12 @@ const CapabilitiesSection = () => (
                     whileInView="show"
                     className="text-2xl font-bold text-center mb-4 text-[#e81d2d]">WE ARE CERTIFIED BY</motion.h3>
                 <div className="flex justify-around items-center">
-                    <img src="/assets/iso.jpg" alt="ISO" className="h-12" />
-                    <img src="/assets/ps_image.png" alt="PS" className="h-12" />
-                    <img src="/assets/brc.png" alt="BRC" className="h-12" />
-                    <img src="/assets/sedex.png" alt="Sedex" className="h-12" />
-                    <img src="/assets/psci.jpeg" alt="PSCI" className="h-12" />
-                    <img src="/assets/gmi.png" alt="gmi" className="h-12" />
+                    <img src="/assets/iso.jpg" alt="ISO" className="h-14" />
+                    <img src="/assets/ps_image.png" alt="PS" className="h-14" />
+                    <img src="/assets/brc.png" alt="BRC" className="h-14" />
+                    <img src="/assets/sedex.png" alt="Sedex" className="h-14" />
+                    <img src="/assets/psci.jpeg" alt="PSCI" className="h-14" />
+                    <img src="/assets/gmi.png" alt="gmi" className="h-14" />
                 </div>
             </motion.div>
 
