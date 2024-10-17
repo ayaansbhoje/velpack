@@ -15,6 +15,8 @@ const HeroSection = () => {
         "/assets/2B_01718.JPG"
     ];
 
+    // console.log("Hello");   
+
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     useEffect(() => {
