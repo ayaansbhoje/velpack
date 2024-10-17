@@ -99,58 +99,58 @@ const AboutUs = () => (
 );
 
 const ServicesSection = () => (
-    <section className="bg-white py-16">
-        <div className="container mx-auto">
-            <motion.h2
-                variants={fadeIn("up", 0.3)}
-                initial="hidden"
-                whileInView="show"
-                className="text-3xl font-bold text-center text-[#b7162a] mb-10 ">
-                We offer specialized paper-based packaging solutions for various
-                industries,<br />
-                ensuring each product meets stringent quality standards.
-            </motion.h2>
-            <div className="flex space-x-8">
-                <motion.div
-                    variants={fadeIn("left", 0.3)}
+        <section className="bg-white py-16">
+            <div className="container mx-auto">
+                <motion.h2
+                    variants={fadeIn("up", 0.3)}
                     initial="hidden"
                     whileInView="show"
-                    className="w-1/2 relative h-96">
-                    <img
-                        src="/assets/pharmaceutical.png"
-                        alt="Pharmaceutical Packaging"
-                        className="w-full h-64 object-cover"
-                    />
+                    className="text-3xl font-bold text-center text-[#b7162a] mb-10 ">
+                    We offer specialized paper-based packaging solutions for various
+                    industries,<br />
+                    ensuring each product meets stringent quality standards.
+                </motion.h2>
+                <div className="flex justify-center space-x-8">
                     <motion.div
-                        variants={fadeIn("up", 0.3)}
+                        variants={fadeIn("left", 0.3)}
                         initial="hidden"
                         whileInView="show"
-                        className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-                        <p className="text-xl font-semibold text-center">Pharmaceutical Packaging</p>
+                        className="w-1/3 relative">
+                        <img
+                            src="/assets/pharmaceutical.png"
+                            alt="Pharmaceutical Packaging"
+                            className="w-full h-64 object-cover"
+                        />
+                        <motion.div
+                            variants={fadeIn("up", 0.3)}
+                            initial="hidden"
+                            whileInView="show"
+                            className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                            <p className="text-xl font-semibold text-center">Pharmaceutical Packaging</p>
+                        </motion.div>
                     </motion.div>
-                </motion.div>
-                <motion.div
-                    variants={fadeIn("right", 0.3)}
-                    initial="hidden"
-                    whileInView="show"
-                    className="w-1/2 relative">
-                    <img
-                        src="/assets/P2-1.webp"
-                        alt="FMCG Packaging"
-                        className="w-full h-64 object-cover"
-                    />
                     <motion.div
-                        variants={fadeIn("up", 0.3)}
+                        variants={fadeIn("right", 0.3)}
                         initial="hidden"
                         whileInView="show"
-                        className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-                        <p className="text-xl font-semibold text-center">FMCG Packaging</p>
+                        className="w-1/3 relative">
+                        <img
+                            src="/assets/P2-1.webp"
+                            alt="FMCG Packaging"
+                            className="w-full h-64 object-cover"
+                        />
+                        <motion.div
+                            variants={fadeIn("up", 0.3)}
+                            initial="hidden"
+                            whileInView="show"
+                            className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                            <p className="text-xl font-semibold text-center">FMCG Packaging</p>
+                        </motion.div>
                     </motion.div>
-                </motion.div>
+                </div>
             </div>
-        </div>
-    </section>
-);
+        </section>
+    );
 
 const CapabilitiesSection = () => (
     <motion.section
