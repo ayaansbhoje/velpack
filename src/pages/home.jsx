@@ -102,6 +102,7 @@ const Home = () => {
         </motion.section>
     );
 
+
     const ServicesSection = () => (
         <section className="bg-white py-16">
             <div className="container mx-auto">
