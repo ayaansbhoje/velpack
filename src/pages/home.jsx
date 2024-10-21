@@ -103,7 +103,7 @@ const Home = () => {
     );
 
 
-    const ServicesSection = () => (
+   const ServicesSection = () => (
         <section className="bg-white py-16">
             <div className="container mx-auto">
                 <motion.h2
@@ -115,12 +115,12 @@ const Home = () => {
                     industries,<br />
                     ensuring each product meets stringent quality standards.
                 </motion.h2>
-                <div className="flex space-x-8">
+                <div className="flex justify-center space-x-8">
                     <motion.div
                         variants={fadeIn("left", 0.3)}
                         initial="hidden"
                         whileInView="show"
-                        className="w-1/2 relative h-96">
+                        className="w-1/3 relative">
                         <img
                             src="/assets/pharmaceutical.png"
                             alt="Pharmaceutical Packaging"
@@ -138,7 +138,7 @@ const Home = () => {
                         variants={fadeIn("right", 0.3)}
                         initial="hidden"
                         whileInView="show"
-                        className="w-1/2 relative">
+                        className="w-1/3 relative">
                         <img
                             src="/assets/P2-1.webp"
                             alt="FMCG Packaging"
@@ -157,6 +157,7 @@ const Home = () => {
         </section>
     );
 
+    
     const CapabilitiesSection = () => (
         <motion.section
             variants={fadeIn("up", 0.3)}
