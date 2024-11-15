@@ -3,25 +3,25 @@
 @tailwind utilities;
 
 @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  
-  .animate-scroll {
-    animation: scroll 20s linear infinite;
-    width: 200%; /* Make the scrolling content twice the width of the viewport */
-  }
-  
-  .animate-scroll:hover {
-    animation-play-state: paused;
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+  width: 200%; /* Make the scrolling content twice the width of the viewport */
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
 
 @font-face {
   font-family: "hbold";
-  src: url("../public/fonts/HelveticaNeueBold.otf");
+  src: url("/fonts/HelveticaNeueBold.otf") format("opentype");
 }
 
 @font-face {
   font-family: "hmed";
-  src: url("../public/fonts/HelveticaNeueMedium.otf");
-} 
+  src: url("/fonts/HelveticaNeueMedium.otf") format("opentype");
+}

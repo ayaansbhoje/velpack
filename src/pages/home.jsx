@@ -45,14 +45,14 @@ const Home = () => {
                         variants={fadeIn("left", 1.2)}
                         initial="hidden"
                         whileInView={"show"}
-                        className="text-4xl font-bold mb-8 text-white text-center tracking-wider">
+                        className="text-4xl mb-8 text-white text-center tracking-wider font-hmed">
                         PAPER-BASED PACKAGING SOLUTIONS SINCE 1956
                     </motion.h1>
                     <motion.button
                         variants={fadeIn("up", 0.3)}
                         initial="hidden"
                         whileInView="show"
-                        className="px-6 py-2 border-2 border-[#e81d2d] text-white bg-white-600 rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300">
+                        className="px-6 py-2 border-2 border-[#e81d2d] text-white bg-white-600 rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold">
                         GET IN TOUCH
                     </motion.button>
                 </div>
@@ -86,13 +86,13 @@ const Home = () => {
 
 
                 <div className="w-1/2 p-12 flex flex-col justify-center z-10">
-                    <h2 className="text-4xl font-bold mb-6">WHO ARE WE?</h2>
-                    <p className="mb-8 text-lg">
+                    <h2 className="text-4xl mb-6 font-hbold">WHO ARE WE?</h2>
+                    <p className="mb-8 text-lg font-hmed">
                         Velpack has been a pioneer in the paper-based packaging
                         industry since 1956. We specialize in providing high-quality folded
                         cartons for the pharmaceutical, FMCG and industrial sectors.
                     </p>
-                    <button className="bg-transparent border-2 border-white text-white py-2 px-6 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300 self-start">
+                    <button className=" font-hbold bg-transparent border-2 border-white text-white py-2 px-6 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300 self-start">
                         KNOW MORE
                     </button>
                 </div>
@@ -110,7 +110,7 @@ const Home = () => {
                     variants={fadeIn("up", 0.3)}
                     initial="hidden"
                     whileInView="show"
-                    className="text-3xl font-bold text-center text-[#b7162a] mb-10 ">
+                    className="text-3xl font-hbold text-center text-[#b7162a] mb-10 ">
                     We offer specialized paper-based packaging solutions for various
                     industries,<br />
                     ensuring each product meets stringent quality standards.
