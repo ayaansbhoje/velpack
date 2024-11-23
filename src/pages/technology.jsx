@@ -1,65 +1,68 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Navbar from '../components/navbar'
+import Navbar from '../components/navbar';
 import Footer from '../components/footer';
-
 
 const Technologypage = () => {
   const technologies = [
-    {
-      title: "Quality Department Equipments",
-      image: "/assets/quality-equipment.jpg",
-      items: [
-        "Bursting Strength Tester",
-        "Digital GSM Testing Machine",
-        "L&W Tensile Tester",
-        "Digital Thickness Gauge",
-        "Roll Resistance Tester",
-        "pH Meter Digital",
-        "RH and Cup Viscometer",
-        "Bar Code Reader",
-        "TechCheck with Graphics Scanner"
-      ]
-    },
-    {
-      title: "Cutting-Edge Machinery for Cartons",
-      image: "/assets/carton-machinery.jpg",
-      items: [
-        "Polar Guillotine - 115",
-        "Heidelberg XL 75 - 5 Color + Coater",
-        "Komori GL640 - 6 Color + Coater",
-        "Autoprint DION 450",
-        "DGM Foil UV",
-        "Techno Pasta Laminators",
-        "Heidelberg Full Automatic Die Cutting",
-        "Bobst Die Cutting - 76E",
-        "Bobst Novacut 2.0 - 106",
-        "Automat Die Cutting",
-        "Steuer Folder Die Cutting",
-        "Suba Stripping and Blanking"
-      ]
-    },
     {
       title: "Prepress Technology",
       image: "/assets/prepress-tech.jpg",
       items: [
         "ESKO Packaging Prepress Software",
         "FFEI CTP",
-        "Opus & screen CTP Processor",
-        "AGS Sample Maker",
-        "Color Management & Quality Inspection"
+        "Glunz & Jensen CTP Processor",
+        "AOKE Sample Maker",
+        "Tec 4 Check Media Check Print Inspection"
       ]
     },
     {
-      title: "Precision Machinery For Inserts",
+      title: "Cutting-Edge Machinery for Cartons",
+      image: "/assets/carton-machinery.jpg",
+      items: [
+        "Polar Guillotine – 115",
+        "Heidelberg XL 75 – 6 Colour + Coater",
+        "Komori GL 640 – 6 Color + Coater",
+        "Heidelberg UV Varnishing",
+        "UCS Spot UV",
+        "Heidelberg Foil Stamping (2 nos.)",
+        "Bobst Die Cutting – 76E",
+        "Bobst Novacut 2.0 – 106",
+        "Bobst Novacut 3.0 – 106",
+        "Gargi Platen Die Cutting",
+        "Suba Stripping and Blanking",
+        "Checkmate 50 – Carton Inspection System",
+        "Checkmate 25 – Carton Inspection System"
+      ]
+    },
+    {
+      title: "Precision Machinery for Inserts",
       image: "/assets/precision-machinery.jpg",
       items: [
-        "Heidelberg SM52 4 Color",
-        "Rotatek RK250",
-        "Autoprint DION 450",
-        "Welbound 6 Clamp",
-        "Welbound Perfect Binding"
+        "Polar Guillotine – 115",
+        "Polar Guillotine – 76",
+        "Komori 2 Colour Perfector – 28",
+        "Komori 2 Colour Perfector – 40",
+        "Pratham Insert Folder (2 nos.)",
+        "GUK Insert Folder",
+        "Bobst Expertfold Folder Gluer with Accubraille and Baumer hhs Quality Assurance System (2 nos.)",
+        "Bobst Ambition Folder Gluer with Lock Bottom pasting and Baumer hhs Quality Assurance System"
+      ]
+    },
+    {
+      title: "Quality Department Equipment",
+      image: "/assets/quality-equipment.jpg",
+      items: [
+        "Bursting Strength Tester",
+        "Digital GSM Testing Machine",
+        "Electronic Weighing Scale",
+        "Digital Thickness Gauge",
+        "Rub Resistance Tester",
+        "BYK Gloss Meter",
+        "B4 Ford Cup Viscometer",
+        "Bar Code Reader",
+        "Tech4Check with Graphtech Scanner"
       ]
     }
   ];
@@ -125,4 +128,3 @@ const Technologypage = () => {
 };
 
 export default Technologypage;
-

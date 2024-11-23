@@ -86,7 +86,9 @@ const Home = () => {
 
 
                 <div className="w-1/2 p-12 flex flex-col justify-center z-10">
-                    <h2 className="text-4xl mb-6 font-hbold">WHO ARE WE?</h2>
+                    <h2 className="text-4xl mb-2 font-hbold">WHO ARE WE?</h2>
+                    <div className="w-16 h-1 bg-white mb-6 ml-2 "></div>
+
                     <p className="mb-8 text-lg font-hmed">
                         Velpack has been a pioneer in the paper-based packaging
                         industry since 1956. We specialize in providing high-quality folded
@@ -173,7 +175,12 @@ const Home = () => {
                     variants={fadeIn("up", 0.3)}
                     initial="hidden"
                     whileInView="show"
-                    className="text-4xl font-bold text-center mb-4">OUR CAPABILITIES</motion.h2>
+                    className="text-4xl font-bold text-center">
+                    OUR CAPABILITIES
+                    <div className="w-16 h-1 bg-white mb-6 mx-auto mt-3"></div>
+
+                    </motion.h2>
+
                 <motion.p
                     variants={fadeIn("up", 0.3)}
                     initial="hidden"
@@ -255,7 +262,7 @@ const Home = () => {
                         initial="hidden"
                         whileInView="show"
                         className="text-2xl font-bold text-center mb-4 text-[#e81d2d]">WE ARE CERTIFIED BY</motion.h3>
-                    <div className="flex justify-around items-center">
+                    <div className="flex justify-around items-center pb-4">
                         <img src="/assets/iso.jpg" alt="ISO" className="h-14" />
                         <img src="/assets/ps_image.png" alt="PS" className="h-14" />
                         <img src="/assets/brc.png" alt="BRC" className="h-14" />
@@ -343,16 +350,16 @@ const Home = () => {
             initial="hidden"
             whileInView="show"
             className="bg-black text-white py-6">
-            <div className="container mx-auto px-4">
-                <div className="flex items-center">
+            <div className="container">
+                <div className="flex justify-center">
                     <motion.h3
-                        variants={fadeIn("up", 0.3)}
+                        variants={fadeIn( 0.3)}
                         initial="hidden"
                         whileInView="show"
-                        className="text-2xl font-bold whitespace-nowrap  mr-6 flex-shrink-0">SECURITY FEATURES:</motion.h3>
+                        className="text-2xl text-center font-bold whitespace-nowrap  px-2 ">SECURITY FEATURES:</motion.h3>
 
-                    <p className="text-xl flex-grow">
-                        Micro Printing | Invisible Ink Printing | Hologram Foil | Coin-Reactive Ink | Tamper-Evident Cartons
+                    <p className="text-xl ">
+                         Micro Printing | Invisible Ink Printing | Hologram Foil | Coin-Reactive Ink | Tamper-Evident Cartons
                     </p>
                 </div>
             </div>
@@ -390,10 +397,12 @@ const Home = () => {
         return (
             <section className="bg-white py-16">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-4xl font-bold text-center mb-12 text-[#e81d2d]">WHAT OUR CLIENTS SAY</h2>
+                    <h2 className="text-4xl font-bold text-center mb-3 text-[#e81d2d]">WHAT OUR CLIENTS SAY</h2>
+                    <div className="w-16 h-1 bg-[#e81d2d] mb-12 mx-auto "></div>
+
                     <div className="relative">
                         <div className="flex justify-center items-center">
-                            <button onClick={prevReview} className="absolute left-0 z-20 text-4xl text-[#e81d2d]">&lt;</button>
+                            <button onClick={prevReview} className="absolute left-0 z-20 text-4xl text-[#000000]">&lt;</button>
                             <div className="flex justify-center items-center space-x-4 relative">
                                 <div className="w-96 absolute -left-80 transform scale-90">
                                     <ReviewCard review={reviews[(currentIndex - 1 + reviews.length) % reviews.length]} isCenter={false} />
@@ -405,7 +414,7 @@ const Home = () => {
                                     <ReviewCard review={reviews[(currentIndex + 1) % reviews.length]} isCenter={false} />
                                 </div>
                             </div>
-                            <button onClick={nextReview} className="absolute right-0 z-20 text-4xl text-[#e81d2d]">&gt;</button>
+                            <button onClick={nextReview} className="absolute right-0 z-20 text-4xl text-[#000000]">&gt;</button>
                         </div>
                     </div>
                 </div>

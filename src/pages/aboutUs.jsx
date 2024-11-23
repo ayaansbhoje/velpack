@@ -90,6 +90,8 @@ const AboutUsPage = () => {
         <div className="bg-[#b7162a] py-16 mt-16">
           <div className="container mx-auto px-4">
             <h2 className="text-white text-4xl font-bold text-center mb-4">OUR TEAM</h2>
+            <div className="w-16 h-1 bg-white mb-6 mx-auto mt-2"></div>
+
             <p className="text-white text-center mb-12">
               Combining seasoned expertise with dynamic innovation, our leadership team drives Velpack's success.
             </p>
@@ -97,7 +99,7 @@ const AboutUsPage = () => {
             <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto">
               {teamMembers.map((member, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg text-center">
-                  <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
+                  {/* <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div> */}
                   <h3 className="text-[#e81d2d] font-bold mb-1">{member.name}</h3>
                   <p className="text-[#e81d2d] mb-4">{member.role}</p>
                   {Array.isArray(member.education) ? (
