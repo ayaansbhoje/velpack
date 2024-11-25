@@ -74,7 +74,7 @@ const Technologypage = () => {
       {/* Hero Section */}
       <div className="relative h-screen">
         <img 
-          src="/assets/tech-hero.jpg"
+          src="/assets/OT_Banner.jpg"
           alt="Technology at Velpack" 
           className="w-full h-full object-cover"
         />
