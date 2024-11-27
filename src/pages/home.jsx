@@ -69,13 +69,7 @@ const Home = () => {
         );
     };
 
-    return (
-        <div>
-            <HeroSection />
-            {/* Other components can be added here */}
-        </div>
-    );
-};
+ 
 const AboutUs = () => (
         <motion.section
             variants={fadeIn("up", 0.3)}
