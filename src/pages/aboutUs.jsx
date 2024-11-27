@@ -12,7 +12,7 @@ const AboutUsPage = () => {
       heading: "Sustainability"
     },
     environment: {
-      image: "/assets/Environment_Protection.jpg",
+      image: "/assets/Enviroment_Protection.jpg",
       text: "We implement preventive actions and regular monitoring to avoid environmental damage, including ambient air quality checks, stack gas monitoring, ambient noise level monitoring, and STP water checks.",
       heading: "Environment Protection"
     },
