@@ -72,31 +72,31 @@ const Home = () => {
 
 const AboutUs = () => (
     <motion.section
-            variants={fadeIn("up", 0.3)}
-            initial="hidden"
-            whileInView="show"
-            className="my-20 bg-[#b7162a] text-white  ">
-            <div className="w-full mx-auto flex relative">
-            <div className="absolute right-[4rem] top-[-3rem] w-[45vw] h-[400px] bg-gray-300 flex items-center justify-center shadow-lg">
-                <p className="text-gray-600 text-2xl font-bold">VELPACK VIDEO</p>
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView="show"
+        className="mt-8 bg-[#b7162a] text-white overflow-hidden relative">
+        <div className="container mx-auto flex">
+            <div className="w-1/2 p-14 flex flex-col justify-center">
+                <h2 className="text-4xl font-bold -ml-10 mb-6">WHO ARE WE?</h2>
+                <p className="mb-8 -ml-10 text-lg">
+                    Velpack has been a pioneer in the paper-based packaging
+                    industry since 1956. We specialize in providing high-quality folded
+                    cartons for the pharmaceutical, FMCG and industrial sectors.
+                </p>
+                <button className="bg-transparent border-2 border-white text-white py-2 px-6 -ml-10 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300 self-start">
+                    KNOW MORE
+                </button>
             </div>
-                <div className="w-1/2 p-12 flex flex-col justify-center z-10">
-                    <h2 className="text-4xl mb-2 font-hbold">WHO ARE WE?</h2>
-                    <div className="w-16 h-1 bg-white mb-6 ml-2 "></div>
-                    <p className="mb-8 text-lg font-hmed">
-                        Velpack has been a pioneer in the paper-based packaging
-                        industry since 1956. We specialize in providing high-quality folded
-                        cartons for the pharmaceutical, FMCG and industrial sectors.
-                    </p>
-                    <button className=" font-hbold bg-transparent border-2 border-white text-white py-2 px-6 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300 self-start">
-                        KNOW MORE
-                    </button>
-                </div>
-                {/ Right Side - Video Section */}
-            </div>
-        </motion.section>
-    );
 
+            <div className="w-1/2 relative">
+                <div className="absolute top-0 left-0 bg-gray-300 w-[calc(100%+3rem)] h-[110%] flex items-center justify-center">
+                    <p className="text-gray-600 text-2xl font-bold">VELPACK VIDEO</p>
+                </div>
+            </div>
+        </div>
+    </motion.section>
+);
 
    const ServicesSection = () => (
         <section className="bg-white py-16">
