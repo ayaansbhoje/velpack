@@ -69,7 +69,7 @@ const AboutUsPage = () => {
           </h2>
         </div>
 
-        <div className="relative w-full aspect-[16/9] max-h-[600px]">
+        <div className="relative w-full aspect-video max-h-[600px]">
           <div className="absolute inset-0">
             <div className="relative w-full h-full">
               <img 
@@ -138,7 +138,7 @@ const AboutUsPage = () => {
             <img 
               src={sections[activeSection].image}
               alt={sections[activeSection].heading}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
             
             <div className="absolute bottom-8 right-8 w-1/3 bg-[#e81d2d] p-6 text-center text-white">
