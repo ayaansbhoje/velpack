@@ -12,19 +12,18 @@ const Home = () => {
         const images = [
             "/assets/HP_Banner_1.jpg",
             "/assets/HP_Banner_2.jpg",
-            "/assets/HP_Banner_3.jpg"
+            "/assets/HP_Banner_3.jpg",
+            "/assets/HP_Banner_4.jpg" // Added fourth image
         ];
-
         const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
+        
         useEffect(() => {
             const timer = setInterval(() => {
                 setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
             }, 3000);
-
             return () => clearInterval(timer);
         }, []);
-
+        
         return (
             <motion.div
                 variants={fadeIn("up", 0.3)}
@@ -69,6 +68,14 @@ const Home = () => {
             </motion.div>
         );
     };
+
+    return (
+        <div>
+            <HeroSection />
+            {/* Other components can be added here */}
+        </div>
+    );
+};
 const AboutUs = () => (
         <motion.section
             variants={fadeIn("up", 0.3)}
