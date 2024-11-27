@@ -12,13 +12,18 @@ const Footprint = () => {
   const sectionRef = useRef(null);
 
   const tickPositions = [
-    { top: "32%", left: "24%" },
-    { top: "30%", left: "65%" },
-    { top: "50%", left: "50%" },
-    { top: "71%", left: "75%" },
-    { top: "65%", left: "35%" },
-    { top: "43%", left: "63%" },
-    { top: "70%", left: "52%" },
+    { top: "32%", left: "24%", size: "3rem" },
+    { top: "30%", left: "65%", size: "2.5rem" },
+    { top: "50%", left: "50%", size: "3rem" },
+    { top: "71%", left: "75%", size: "2.5rem" },
+    { top: "65%", left: "35%", size: "3rem" },
+    { top: "43%", left: "63%", size: "2.5rem" },
+    { top: "70%", left: "52%", size: "2.5rem" },
+    { top: "48%", left: "20%", size: "2.5rem" },
+    { top: "58%", left: "68%", size: "3rem" },
+    { top: "38%", left: "40%", size: "2.5rem" },
+    { top: "72%", left: "42%", size: "3rem" },
+    { top: "55%", left: "30%", size: "2.5rem" },
   ];
 
   useEffect(() => {
@@ -29,13 +34,11 @@ const Footprint = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 } 
+      { threshold: 0.2 }
     );
-
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
@@ -48,7 +51,7 @@ const Footprint = () => {
       tickPositions.forEach((_, index) => {
         setTimeout(() => {
           setVisibleTicks((prev) => [...prev, index]);
-        }, index * 1000);
+        }, index * 800);
       });
     }
   }, [isVisible]);
@@ -66,12 +69,9 @@ const Footprint = () => {
       >
         OUR FOOTPRINT
         <div className="w-16 h-1 bg-white mb-6 mx-auto mt-3"></div>
-
       </motion.h2>
-
       <div className="relative">
         <img src="/assets/map_full[1].png" alt="World Map" className="w-[80%] mx-auto" />
-
         {visibleTicks.map((index) => (
           <motion.div
             key={index}
@@ -83,9 +83,10 @@ const Footprint = () => {
             style={{
               top: tickPositions[index].top,
               left: tickPositions[index].left,
+              fontSize: tickPositions[index].size,
             }}
           >
-            <span role="img" aria-label="tick" className="text-red-500 text-4xl">
+            <span role="img" aria-label="tick" className="text-red-500">
               <img src="/assets/tick.png" alt="tick" />
             </span>
           </motion.div>
