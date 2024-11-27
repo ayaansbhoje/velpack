@@ -12,18 +12,18 @@ const Footprint = () => {
   const sectionRef = useRef(null);
 
   const tickPositions = [
-    { top: "32%", left: "24%", size: "3rem" },
-    { top: "30%", left: "65%", size: "2.5rem" },
-    { top: "50%", left: "50%", size: "3rem" },
-    { top: "71%", left: "75%", size: "2.5rem" },
-    { top: "65%", left: "35%", size: "3rem" },
-    { top: "43%", left: "63%", size: "2.5rem" },
-    { top: "70%", left: "52%", size: "2.5rem" },
-    { top: "48%", left: "20%", size: "2.5rem" },
-    { top: "58%", left: "68%", size: "3rem" },
-    { top: "38%", left: "40%", size: "2.5rem" },
-    { top: "72%", left: "42%", size: "3rem" },
-    { top: "55%", left: "30%", size: "2.5rem" },
+    { top: "35%", left: "24%", size: "2.5rem" },
+    { top: "33%", left: "64%", size: "2rem" },
+    { top: "52%", left: "50%", size: "2.5rem" },
+    { top: "70%", left: "74%", size: "2rem" },
+    { top: "64%", left: "36%", size: "2.5rem" },
+    { top: "46%", left: "62%", size: "2rem" },
+    { top: "69%", left: "53%", size: "2rem" },
+    { top: "50%", left: "21%", size: "2rem" },
+    { top: "59%", left: "67%", size: "2.5rem" },
+    { top: "41%", left: "41%", size: "2rem" },
+    { top: "70%", left: "43%", size: "2.5rem" },
+    { top: "57%", left: "32%", size: "2rem" },
   ];
 
   useEffect(() => {
@@ -71,7 +71,7 @@ const Footprint = () => {
         <div className="w-16 h-1 bg-white mb-6 mx-auto mt-3"></div>
       </motion.h2>
       <div className="relative">
-        <img src="/assets/map_full[1].png" alt="World Map" className="w-[80%] mx-auto" />
+        <img src="/assets/map_full[1].png" alt="World Map" className="w-full" />
         {visibleTicks.map((index) => (
           <motion.div
             key={index}
