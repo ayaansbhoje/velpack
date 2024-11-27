@@ -125,7 +125,7 @@ const ServicesSection = () => (
                             initial="hidden"
                             whileInView="show"
                             className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-                            <p className="text-xl font-semibold text-center">Pharmaceutical Packaging</p>
+                            {/*  <p className="text-xl font-semibold text-center">Pharmaceutical Packaging</p> */}
                         </motion.div>
                     </motion.div>
                     <motion.div
@@ -143,7 +143,7 @@ const ServicesSection = () => (
                             initial="hidden"
                             whileInView="show"
                             className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-                            <p className="text-xl font-semibold text-center">FMCG Packaging</p>
+                           {/*  <p className="text-xl font-semibold text-center">FMCG Packaging</p> */}
                         </motion.div>
                     </motion.div>
                 </div>
