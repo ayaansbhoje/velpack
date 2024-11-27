@@ -70,39 +70,43 @@ const Home = () => {
         );
     };
 
-    const AboutUs = () => (
-        <motion.section
-            variants={fadeIn("up", 0.3)}
-            initial="hidden"
-            whileInView="show"
-            className="my-20 bg-[#b7162a] text-white  ">
-
-
-            <div className="w-full mx-auto flex relative">
-                {/* Left Side - WHO ARE WE */}
-            <div className="absolute right-[4rem] top-[-3rem] w-[45vw] h-[400px] bg-gray-300 flex items-center justify-center shadow-lg">
-                <p className="text-gray-600 text-2xl font-bold">VELPACK VIDEO</p>
+const AboutUs = () => (
+    <motion.section
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView="show"
+        className="my-20 bg-[#b7162a] text-white"
+    >
+        <div className="w-full mx-auto flex relative">
+            <div className="w-1/2 p-12 flex flex-col justify-center z-10">
+                <h2 className="text-4xl mb-2 font-hbold">WHO ARE WE?</h2>
+                <div className="w-16 h-1 bg-white mb-6 ml-2"></div>
+                <p className="mb-8 text-lg font-hmed">
+                    Velpack has been a pioneer in the paper-based packaging
+                    industry since 1956. We specialize in providing high-quality folded
+                    cartons for the pharmaceutical, FMCG and industrial sectors.
+                </p>
+                <button className="font-hbold bg-transparent border-2 border-white text-white py-2 px-6 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300 self-start">
+                    KNOW MORE
+                </button>
             </div>
-
-
-                <div className="w-1/2 p-12 flex flex-col justify-center z-10">
-                    <h2 className="text-4xl mb-2 font-hbold">WHO ARE WE?</h2>
-                    <div className="w-16 h-1 bg-white mb-6 ml-2 "></div>
-
-                    <p className="mb-8 text-lg font-hmed">
-                        Velpack has been a pioneer in the paper-based packaging
-                        industry since 1956. We specialize in providing high-quality folded
-                        cartons for the pharmaceutical, FMCG and industrial sectors.
-                    </p>
-                    <button className=" font-hbold bg-transparent border-2 border-white text-white py-2 px-6 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300 self-start">
-                        KNOW MORE
-                    </button>
-                </div>
-
-                {/* Right Side - Video Section */}
+            
+            {/* Video Section */}
+            <div className="w-1/2 p-12">
+               <video 
+                    className="w-full h-[400px] object-cover shadow-lg"
+                    src="/path/to/your/video.mp4" 
+                    controls 
+                    autoPlay 
+                    muted 
+                    loop
+                >
+                    Your browser does not support the video tag.
+                </video>
             </div>
-        </motion.section>
-    );
+        </div>
+    </motion.section>
+);
 
 
    const ServicesSection = () => (
