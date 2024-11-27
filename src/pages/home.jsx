@@ -13,7 +13,7 @@ const Home = () => {
             "/assets/HP_Banner_1.jpg",
             "/assets/HP_Banner_2.jpg",
             "/assets/HP_Banner_3.jpg",
-            "/assets/HP_Banner_4.jpg" // Added fourth image
+            "/assets/HP_Banner_4.jpg" 
         ];
         const [currentImageIndex, setCurrentImageIndex] = useState(0);
         
