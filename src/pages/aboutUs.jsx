@@ -7,22 +7,22 @@ import Footer from '../components/footer';
 const AboutUsPage = () => {
   const sections = {
     sustainability: {
-      image: "/assets/sustain.JPG",
+      image: "/assets/Sustainability.jpg",
       text: "At Velpack, we prioritize environmental protection and employee safety, adhering to rigorous standards and conducting regular audits.",
       heading: "Sustainability"
     },
     environment: {
-      image: "/assets/environment.JPG",
+      image: "/assets/Environment_Protection.jpg",
       text: "We implement preventive actions and regular monitoring to avoid environmental damage, including ambient air quality checks, stack gas monitoring, ambient noise level monitoring, and STP water checks.",
       heading: "Environment Protection"
     },
     safety: {
-      image: "/assets/safety.JPG",
+      image: "/assets/Employee_Health.jpg",
       text: "Our comprehensive measures ensure the well-being of our employees, fostering a safe and healthy work environment.",
       heading: "Employee Health and Safety"
     },
     audits: {
-      image: "/assets/audits.JPG",
+      image: "/assets/Regular_Audits.JPG",
       text: "Velpack is independently audited under SMETA criteria by SEDEX and by the Pharmaceutical Supply Chain Initiative (PSCI) for better social, environmental, and economic outcomes.",
       heading: "Regular Audits"
     }
@@ -61,10 +61,10 @@ const AboutUsPage = () => {
       <Navbar />
       <div className="bg-white min-h-screen">
         <div className="text-center py-8">
-          <h1 className="text-4xl font-bold mb-2">
+          <h1 className="text-4xl font-hbold mb-2">
             VELPACKS JOURNEY:
           </h1>
-          <h2 className="text-3xl font-bold text-red-500">
+          <h2 className="text-3xl font-hmed text-red-500">
             Wrapping Responsibly since 1956
           </h2>
         </div>
@@ -73,7 +73,7 @@ const AboutUsPage = () => {
           <div className="absolute inset-0">
             <div className="relative w-full h-full">
               <img 
-                src="/assets/Aboutus.JPG"
+                src="/assets/AU_Banner.jpg"
                 alt="Manufacturing equipment" 
                 className="absolute w-full h-full object-cover"
               />
@@ -89,7 +89,7 @@ const AboutUsPage = () => {
         
         <div className="bg-[#b7162a] py-16 mt-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-white text-4xl font-bold text-center mb-4">OUR TEAM</h2>
+            <h2 className="text-white text-4xl font-hbold text-center mb-4">OUR TEAM</h2>
             <div className="w-16 h-1 bg-white mb-6 mx-auto mt-2"></div>
 
             <p className="text-white text-center mb-12">
