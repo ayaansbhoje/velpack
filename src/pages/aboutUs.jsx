@@ -48,7 +48,7 @@ const AboutUsPage = () => {
       name: "Lyssa Phillips",
       role: "Director",
       education: [
-        "B.A. Economics & Global Studies - University of California, USA;",
+        "B.A. Economics & Global Studies - U.C.L.A, USA;",
         "Diploma in Packaging - Indian Institute of Packaging, Mumbai."
       ]
     }
