@@ -1,31 +1,22 @@
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
-
 const tickVariants = {
   hidden: { opacity: 0, scale: 0.5 },
   visible: { opacity: 1, scale: 1 },
 };
-
 const Footprint = () => {
   const [visibleTicks, setVisibleTicks] = useState([]);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
-
   const tickPositions = [
-    { top: "35%", left: "24%", size: "2.5rem" },
-    { top: "33%", left: "64%", size: "2rem" },
-    { top: "52%", left: "50%", size: "2.5rem" },
-    { top: "70%", left: "74%", size: "2rem" },
-    { top: "64%", left: "36%", size: "2.5rem" },
-    { top: "46%", left: "62%", size: "2rem" },
-    { top: "69%", left: "53%", size: "2rem" },
-    { top: "50%", left: "21%", size: "2rem" },
-    { top: "59%", left: "67%", size: "2.5rem" },
-    { top: "41%", left: "41%", size: "2rem" },
-    { top: "70%", left: "43%", size: "2.5rem" },
-    { top: "57%", left: "32%", size: "2rem" },
+    { top: "32%", left: "24%" },
+    { top: "30%", left: "65%" },
+    { top: "50%", left: "50%" },
+    { top: "71%", left: "75%" },
+    { top: "65%", left: "35%" },
+    { top: "43%", left: "63%" },
+    { top: "70%", left: "52%" },
   ];
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -34,7 +25,7 @@ const Footprint = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 } 
     );
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
@@ -45,17 +36,15 @@ const Footprint = () => {
       }
     };
   }, []);
-
   useEffect(() => {
     if (isVisible) {
       tickPositions.forEach((_, index) => {
         setTimeout(() => {
           setVisibleTicks((prev) => [...prev, index]);
-        }, index * 800);
+        }, index * 1000);
       });
     }
   }, [isVisible]);
-
   return (
     <div ref={sectionRef} className="relative my-10">
       <motion.h2
@@ -71,7 +60,7 @@ const Footprint = () => {
         <div className="w-16 h-1 bg-white mb-6 mx-auto mt-3"></div>
       </motion.h2>
       <div className="relative">
-        <img src="/assets/map_full[1].png" alt="World Map" className="w-full" />
+        <img src="/assets/map_full[1].png" alt="World Map" className="w-[80%] mx-auto" />
         {visibleTicks.map((index) => (
           <motion.div
             key={index}
@@ -83,10 +72,9 @@ const Footprint = () => {
             style={{
               top: tickPositions[index].top,
               left: tickPositions[index].left,
-              fontSize: tickPositions[index].size,
             }}
           >
-            <span role="img" aria-label="tick" className="text-red-500">
+            <span role="img" aria-label="tick" className="text-red-500 text-4xl">
               <img src="/assets/tick.png" alt="tick" />
             </span>
           </motion.div>
@@ -95,5 +83,3 @@ const Footprint = () => {
     </div>
   );
 };
-
-export default Footprint;
