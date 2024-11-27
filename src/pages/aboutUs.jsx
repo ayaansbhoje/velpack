@@ -138,7 +138,7 @@ const AboutUsPage = () => {
             <img 
               src={sections[activeSection].image}
               alt={sections[activeSection].heading}
-              className="w-full h-full object-contain"
+              className="absolute w-full h-full object-cover"
             />
             
             <div className="absolute bottom-8 right-8 w-1/3 bg-[#e81d2d] p-6 text-center text-white">
