@@ -10,9 +10,9 @@ import Footprint from '../components/Footprint';
 const Home = () => {
     const HeroSection = () => {
         const images = [
-            "/assets/2B_01679.JPG",
-            "/assets/_DSC0076 (1).JPG",
-            "/assets/2B_01718.JPG"
+            "/assets/HP_Banner_1.jpg",
+            "/assets/HP_Banner_2.jpg",
+            "/assets/HP_Banner_3.jpg"
         ];
 
         const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -142,7 +142,7 @@ const Home = () => {
                         whileInView="show"
                         className="w-1/3 relative">
                         <img
-                            src="/assets/P2-1.webp"
+                            src="/assets/P2-1.web"
                             alt="FMCG Packaging"
                             className="w-full h-64 object-cover"
                         />
