@@ -124,7 +124,7 @@ const Home = () => {
                         whileInView="show"
                         className="w-1/3 relative">
                         <img
-                            src="/assets/pharmaceutical.png"
+                            src="/assets/Pharmaceutical.jpg"
                             alt="Pharmaceutical Packaging"
                             className="w-full h-64 object-cover"
                         />
@@ -142,7 +142,7 @@ const Home = () => {
                         whileInView="show"
                         className="w-1/3 relative">
                         <img
-                            src="/assets/P2-1.web"
+                            src="/assets/FMCG.jpg"
                             alt="FMCG Packaging"
                             className="w-full h-64 object-cover"
                         />
