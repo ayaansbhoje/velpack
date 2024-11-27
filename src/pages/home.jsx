@@ -323,14 +323,11 @@ const Home = () => {
                     whileInView="show"
                     className="grid grid-cols-4 gap-8">
                     {[
-                        { name: "EMBOSSING", image: "/assets/embossing_image.jpg" },
-                        { name: "MICRO EMBOSSING", image: "/assets/micro_embossing_image.jpg" },
-                        { name: "GRAINING", image: "/assets/graining_image.jpg" },
-                        { name: "ACCUBRAILLE", image: "/assets/accubraille_image.jpg" },
-                        { name: "SPOT GLOSS", image: "/assets/spot_gloss_image.jpg" },
-                        { name: "FOIL STAMPING", image: "/assets/foil_stamping_image.jpg" },
-                        { name: "TEXTURE UV", image: "/assets/texture_uv_image.jpg" },
-                        { name: "TEXTURE UV", image: "/assets/texture_uv_image2.jpg" },
+                        { name: "EMBOSSING", image: "/assets/Embossing.jpg" },
+                        { name: "ACCUBRAILLE", image: "/assets/Accubraille.jpg" },
+                        { name: "SPOT GLOSS", image: "/assets/Spot_Gloss.jpg" },
+                        { name: "FOIL STAMPING", image: "/assets/Foil_Stamping.jpg" },
+                        { name: "TEXTURE UV", image: "/assets/Textured_UV.jpg" },
                     ].map((feature, index) => (
                         <div key={index} className="flex flex-col items-center">
                             <div className="w-full aspect-square bg-gray-200 mb-4 rounded-lg overflow-hidden">
