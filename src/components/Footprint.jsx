@@ -70,7 +70,7 @@ const Footprint = () => {
       </motion.h2>
 
       <div className="relative">
-        <img src="/assets/world_map.png" alt="World Map" className="w-[80%] mx-auto" />
+        <img src="/assets/map_full[1].png" alt="World Map" className="w-[80%] mx-auto" />
 
         {visibleTicks.map((index) => (
           <motion.div
