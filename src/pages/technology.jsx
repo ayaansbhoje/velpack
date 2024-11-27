@@ -8,7 +8,7 @@ const Technologypage = () => {
   const technologies = [
     {
       title: "Prepress Technology",
-      image: "/assets/prepress-tech.jpg",
+      image: "/assets/Prepress.jpg",
       items: [
         "ESKO Packaging Prepress Software",
         "FFEI CTP",
@@ -19,7 +19,7 @@ const Technologypage = () => {
     },
     {
       title: "Cutting-Edge Machinery for Cartons",
-      image: "/assets/carton-machinery.jpg",
+      image: "/assets/Cutting_Edge_Cartons.jpg",
       items: [
         "Polar Guillotine – 115",
         "Heidelberg XL 75 – 6 Colour + Coater",
@@ -38,7 +38,7 @@ const Technologypage = () => {
     },
     {
       title: "Precision Machinery for Inserts",
-      image: "/assets/precision-machinery.jpg",
+      image: "/assets/precision_inserts.jpg",
       items: [
         "Polar Guillotine – 115",
         "Polar Guillotine – 76",
@@ -52,7 +52,7 @@ const Technologypage = () => {
     },
     {
       title: "Quality Department Equipment",
-      image: "/assets/quality-equipment.jpg",
+      image: "/assets/qualityDepartment.jpg",
       items: [
         "Bursting Strength Tester",
         "Digital GSM Testing Machine",
@@ -74,7 +74,7 @@ const Technologypage = () => {
       {/* Hero Section */}
       <div className="relative h-screen">
         <img 
-          src="/assets/services-hero.jpg"
+          src="/assets/OT_Banner.jpg"
           alt="Our Services at Velpack" 
           className="w-full h-full object-cover"
         />
