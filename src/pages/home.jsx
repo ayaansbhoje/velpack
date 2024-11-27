@@ -120,13 +120,13 @@ const ServicesSection = () => (
                             alt="Pharmaceutical Packaging"
                             className="w-full h-64 object-cover"
                         />
-                        <motion.div
+                        {/* <motion.div
                             variants={fadeIn("up", 0.3)}
                             initial="hidden"
                             whileInView="show"
                             className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-                            {/*  <p className="text-xl font-semibold text-center">Pharmaceutical Packaging</p> */}
-                        </motion.div>
+                              <p className="text-xl font-semibold text-center">Pharmaceutical Packaging</p> 
+                        </motion.div> */}
                     </motion.div>
                     <motion.div
                         variants={fadeIn("right", 0.3)}
@@ -138,13 +138,13 @@ const ServicesSection = () => (
                             alt="FMCG Packaging"
                             className="w-full h-64 object-cover"
                         />
-                        <motion.div
+                      {/*   <motion.div
                             variants={fadeIn("up", 0.3)}
                             initial="hidden"
                             whileInView="show"
                             className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-                           {/*  <p className="text-xl font-semibold text-center">FMCG Packaging</p> */}
-                        </motion.div>
+                           {/*  <p className="text-xl font-semibold text-center">FMCG Packaging</p> 
+                        </motion.div> */}
                     </motion.div>
                 </div>
             </div>
