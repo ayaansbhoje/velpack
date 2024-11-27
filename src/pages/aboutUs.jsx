@@ -22,7 +22,7 @@ const AboutUsPage = () => {
       heading: "Employee Health and Safety"
     },
     audits: {
-      image: "/assets/Regular_Audits.JPG",
+      image: "/assets/Regular_Audits.jpg",
       text: "Velpack is independently audited under SMETA criteria by SEDEX and by the Pharmaceutical Supply Chain Initiative (PSCI) for better social, environmental, and economic outcomes.",
       heading: "Regular Audits"
     }
