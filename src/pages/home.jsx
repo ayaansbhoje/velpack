@@ -70,7 +70,8 @@ const Home = () => {
         );
     };
 
-<motion.section
+const AboutUs = () => (
+    <motion.section
             variants={fadeIn("up", 0.3)}
             initial="hidden"
             whileInView="show"
