@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 const tickVariants = {
@@ -83,3 +84,4 @@ const Footprint = () => {
     </div>
   );
 };
+export default Footprint;
