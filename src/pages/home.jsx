@@ -93,7 +93,7 @@ const AboutUs = () => (
                         KNOW MORE
                     </button>
                 </div>
-                {/ Right Side - Video Section */}
+                {/* Right Side - Video Section */}
             </div>
         </motion.section>
     );
