@@ -38,7 +38,7 @@ const Technologypage = () => {
     },
     {
       title: "Precision Machinery for Inserts",
-      image: "/assets/precision_inserts.jpg",
+      image: "/assets/Precision_inserts.jpg",
       items: [
         "Polar Guillotine – 115",
         "Polar Guillotine – 76",
@@ -52,7 +52,7 @@ const Technologypage = () => {
     },
     {
       title: "Quality Department Equipment",
-      image: "/assets/qualityDepartment.jpg",
+      image: "/assets/Quality_Department.jpg",
       items: [
         "Bursting Strength Tester",
         "Digital GSM Testing Machine",
