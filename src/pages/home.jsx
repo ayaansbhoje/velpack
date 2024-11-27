@@ -104,7 +104,7 @@ const ServicesSection = () => (
                     variants={fadeIn("up", 0.3)}
                     initial="hidden"
                     whileInView="show"
-                    className="text-3xl font-bold text-center text-[#b7162a] mb-10 ">
+                    className="text-3xl font-hbold text-center text-[#b7162a] mb-10 ">
                     We offer specialized paper-based packaging solutions for various
                     industries,<br />
                     ensuring each product meets stringent quality standards.
@@ -166,7 +166,7 @@ const ServicesSection = () => (
                     variants={fadeIn("up", 0.3)}
                     initial="hidden"
                     whileInView="show"
-                    className="text-4xl font-bold text-center">
+                    className="text-4xl font-hbold text-center">
                     OUR CAPABILITIES
                     <div className="w-16 h-1 bg-white mb-6 mx-auto mt-3"></div>
 
@@ -189,7 +189,7 @@ const ServicesSection = () => (
                             variants={fadeIn("up", 0.5)}
                             initial="hidden"
                             whileInView="show"
-                            className="text-xl font-bold mb-1">Our facility spans</motion.h3>
+                            className="text-xl font-hmed mb-1">Our facility spans</motion.h3>
                         <motion.p
                             variants={fadeIn("up", 0.5)}
                             initial="hidden"
@@ -210,7 +210,7 @@ const ServicesSection = () => (
                             variants={fadeIn("up", 0.5)}
                             initial="hidden"
                             whileInView="show"
-                            className="text-xl font-bold mb-1">We produce</motion.h3>
+                            className="text-xl font-hmed mb-1">We produce</motion.h3>
                         <motion.p
                             variants={fadeIn("up", 0.5)}
                             initial="hidden"
@@ -230,7 +230,7 @@ const ServicesSection = () => (
                             variants={fadeIn("up", 0.5)}
                             initial="hidden"
                             whileInView="show"
-                            className="text-xl font-bold mb-1">We print</motion.h3>
+                            className="text-xl font-hmed mb-1">We print</motion.h3>
                         <motion.p
                             variants={fadeIn("up", 0.5)}
                             initial="hidden"
@@ -252,7 +252,7 @@ const ServicesSection = () => (
                         variants={fadeIn("up", 0.7)}
                         initial="hidden"
                         whileInView="show"
-                        className="text-2xl font-bold text-center mb-4 text-[#e81d2d]">WE ARE CERTIFIED BY</motion.h3>
+                        className="text-2xl font-hbold text-center mb-4 text-[#e81d2d]">WE ARE CERTIFIED BY</motion.h3>
                     <div className="flex justify-around items-center pb-4">
                         <img src="/assets/ISO_9001.png" alt="ISO" className="h-14" />
                         <img src="/assets/PS_9000.png" alt="PS" className="h-14" />
@@ -271,7 +271,7 @@ const ServicesSection = () => (
     const TrustedBrandsSection = () => {
         return (
             <section className="bg-[#e81d2d] py-10 overflow-hidden">
-                <h2 className="text-4xl font-bold text-center mb-8 text-white">TRUSTED BY LEADING BRANDS</h2>
+                <h2 className="text-4xl font-hbold text-center mb-8 text-white">TRUSTED BY LEADING BRANDS</h2>
                 <div className="relative">
                     <div className="flex animate-scroll bg-white py-6 h-xl">
                         <div className="flex shrink-0">
@@ -305,7 +305,7 @@ const ServicesSection = () => (
                     variants={fadeIn("up", 0.3)}
                     initial="hidden"
                     whileInView="show"
-                    className="text-4xl font-bold text-center mb-2 text-[#e81d2d]">OUR FEATURES</motion.h2>
+                    className="text-4xl font-hbold text-center mb-2 text-[#e81d2d]">OUR FEATURES</motion.h2>
                 <div className="w-20 h-1 bg-[#e81d2d] mx-auto mb-12"></div>
 
                 <motion.div
@@ -344,7 +344,7 @@ const ServicesSection = () => (
                         variants={fadeIn( 0.3)}
                         initial="hidden"
                         whileInView="show"
-                        className="text-2xl text-center font-bold whitespace-nowrap  px-2 ">SECURITY FEATURES:</motion.h3>
+                        className="text-2xl text-center font-hbold whitespace-nowrap  px-2 ">SECURITY FEATURES:</motion.h3>
 
                     <p className="text-xl ">
                          Micro Printing | Invisible Ink Printing | Hologram Foil | Coin-Reactive Ink | Tamper-Evident Cartons
