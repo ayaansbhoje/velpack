@@ -62,7 +62,7 @@ const CertificationPage = () => {
                         }`}
                     >
                         {/* Image Section */}
-                        <div className="w-1/3 p-4">
+                        <div className="w-1/4 p-4">
                             <img 
                                 src={cert.image} 
                                 alt={cert.title} 
@@ -71,7 +71,7 @@ const CertificationPage = () => {
                         </div>
                         
                         {/* Text Section */}
-                        <div className="w-2/3 p-8">
+                        <div className="w-3/4 p-8">
                             <h2 className="text-3xl font-bold mb-6 text-[#e81d2d]">
                                 {cert.title}
                             </h2>
