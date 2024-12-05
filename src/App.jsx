@@ -7,7 +7,8 @@ import AboutUsPage from './pages/aboutUs';
 import Home from './pages/home';
 import Technologypage from './pages/technology';
 import ContactusPage from './pages/contactus';
-import ServicesPage from './pages/ourservices'
+import ServicesPage from './pages/ourservices';
+import CertificationPage from './pages/certification'
 
 // const Navbar = () => (
 // );
@@ -439,6 +440,9 @@ const App = () => {
         </Routes>
         <Routes>
           <Route path="/ourservices" element={<ServicesPage />} />
+        </Routes>
+        <Routes>
+          <Route path="/certification" element={<CertificationPage />} />
         </Routes>
       </div>
     </BrowserRouter>
