@@ -21,7 +21,9 @@ const Navbar = () => {
                 {/*   <a href="#services" className="text-sm text-black hover:text-[#e81d2d]">Our Services</a>*/}
                  <Link to="/ourservices" className="text-sm text-black hover:text-[#e81d2d]">Our Services</Link>
                 
-                <a href="#certifications" className="text-sm text-black hover:text-[#e81d2d]">Certifications</a>
+                {/*<a href="#certifications" className="text-sm text-black hover:text-[#e81d2d]">Certifications</a> */}
+                <Link to="/Certification" className="text-sm text-black hover:text-[#e81d2d]">Certifications</Link>
+                
                 <Link to="/technology" className="text-sm text-black hover:text-[#e81d2d]">Technology</Link>
                 {/*  <a href="#technology" className="text-sm text-black hover:text-[#e81d2d]">Technology</a> */}
                 <Link to="/contactus" className="text-sm text-black hover:text-[#e81d2d]">Contact Us </Link>
