@@ -62,7 +62,7 @@ const AboutUsPage = () => {
       <div className="bg-white min-h-screen">
         {/* Banner Section with Improved Layout */}
         <div className="relative w-full flex">
-          <div className="w-2/3 h-[600px] overflow-hidden">
+          <div className="w-1/3 h-[600px] overflow-hidden">
             <img
               src="/assets/AU_Banner.jpg"
               alt="Manufacturing equipment"
@@ -77,14 +77,15 @@ const AboutUsPage = () => {
               enabling us to produce millions of cartons and inserts daily.
             </p>
           </div>
+          <div className="w-1/3 bg-[#e81d2d] p-8 flex items-center justify-center text-white text-center">
+            <p>VELPACKS JOURNEY:</p>
+            <h2 className="text-3xl font-hmed mt-2">Wrapping Responsibly since 1956</h2>
+          </div>
         </div>
 
         {/* Rest of the existing content remains the same */}
         <div className="text-center py-8">
-          <h1 className="text-4xl font-hbold mb-2">VELPACKS JOURNEY:</h1>
-          <h2 className="text-3xl font-hmed text-red-500">
-            Wrapping Responsibly since 1956
-          </h2>
+          {/* Rest of the content */}
         </div>
 
         {/* Team and other sections remain unchanged */}
@@ -111,15 +112,19 @@ const AboutUsPage = () => {
           </div>
 
           <div className="relative w-full flex">
-            <div className="w-2/3 h-[600px] overflow-hidden">
+            <div className="w-1/3 h-[600px] overflow-hidden">
               <img
                 src={sections[activeSection].image}
                 alt={sections[activeSection].heading}
                 className="w-full h-full object-cover object-center"
               />
             </div>
-            <div className="w-1/3 bg-[#e81d2d] p-8 flex items-center justify-center text-white text-center">
+            <div className="w-1/3 bg-stone-300 p-8 flex items-center justify-center">
               <p>{sections[activeSection].text}</p>
+            </div>
+            <div className="w-1/3 bg-[#e81d2d] p-8 flex items-center justify-center text-white text-center">
+              <p>VELPACK'S JOURNEY:</p>
+              <h2 className="text-3xl font-hmed mt-2">Wrapping Responsibly since 1956</h2>
             </div>
           </div>
         </div>
