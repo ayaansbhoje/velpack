@@ -5,8 +5,6 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
 const CertificationPage = () => {
-
-
     const certifications = [
         {
             image: "/assets/iso-9001-logo.svg",
@@ -41,45 +39,49 @@ const CertificationPage = () => {
     ];
 
     return (
-        <div className="container mx-auto px-4 py-12">
-            <motion.h1 
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="text-4xl font-bold text-center mb-12 text-[#e81d2d]"
-            >
-                Our Certifications
-            </motion.h1>
-            
-            {certifications.map((cert, index) => (
-                <motion.div 
-                    key={cert.title}
-                    initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className={`flex items-center mb-12 border-2 border-[#e81d2d] rounded-lg overflow-hidden bg-white bg-opacity-10 ${
-                        index % 2 === 1 ? 'flex-row-reverse' : ''
-                    }`}
+        <>
+            <Navbar />
+            <div className="container mx-auto px-4 py-12">
+                <motion.h1 
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-4xl font-bold text-center mb-12 text-[#e81d2d]"
                 >
-                    {/* Image Section */}
-                    <div className="w-1/2 p-4">
-                        <img 
-                            src={cert.image} 
-                            alt={cert.title} 
-                            className="w-full h-auto object-cover rounded-lg shadow-lg"
-                        />
-                    </div>
-                    
-                    {/* Text Section */}
-                    <div className="w-1/2 p-8">
-                        <h2 className="text-3xl font-bold mb-6 text-[#e81d2d]">
-                            {cert.title}
-                        </h2>
-                        <p className="text-gray-700">{cert.description}</p>
-                    </div>
-                </motion.div>
-            ))}
-        </div>
+                    Our Certifications
+                </motion.h1>
+                
+                {certifications.map((cert, index) => (
+                    <motion.div 
+                        key={cert.title}
+                        initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className={`flex items-center mb-12 border-2 border-[#e81d2d] rounded-lg overflow-hidden bg-white bg-opacity-10 ${
+                            index % 2 === 1 ? 'flex-row-reverse' : ''
+                        }`}
+                    >
+                        {/* Image Section */}
+                        <div className="w-1/2 p-4">
+                            <img 
+                                src={cert.image} 
+                                alt={cert.title} 
+                                className="w-full h-auto object-cover rounded-lg shadow-lg"
+                            />
+                        </div>
+                        
+                        {/* Text Section */}
+                        <div className="w-1/2 p-8">
+                            <h2 className="text-3xl font-bold mb-6 text-[#e81d2d]">
+                                {cert.title}
+                            </h2>
+                            <p className="text-gray-700">{cert.description}</p>
+                        </div>
+                    </motion.div>
+                ))}
+            </div>
+            <Footer />
+        </>
     );
 };
 
