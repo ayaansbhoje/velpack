@@ -62,14 +62,14 @@ const AboutUsPage = () => {
       <div className="bg-white min-h-screen">
         {/* Banner Section with Improved Layout */}
         <div className="relative w-full flex">
-          <div className="w-3/5 h-[600px] overflow-hidden">
+          <div className="w-2/3 h-[600px] overflow-hidden">
             <img
               src="/assets/AU_Banner.jpg"
               alt="Manufacturing equipment"
               className="w-full h-full object-cover object-center"
             />
           </div>
-          <div className="w-2/5 bg-stone-300 p-8 flex items-center justify-center">
+          <div className="w-1/3 bg-stone-300 p-8 flex items-center justify-center">
             <p className="text-gray-800 text-center">
               Founded in 1956, Velpack has grown from a small family business
               into a global supplier of premium paper-based packaging. Our
@@ -111,14 +111,14 @@ const AboutUsPage = () => {
           </div>
 
           <div className="relative w-full flex">
-            <div className="w-3/5 h-[600px] overflow-hidden">
+            <div className="w-2/3 h-[600px] overflow-hidden">
               <img
                 src={sections[activeSection].image}
                 alt={sections[activeSection].heading}
                 className="w-full h-full object-cover object-center"
               />
             </div>
-            <div className="w-2/5 bg-[#e81d2d] p-8 flex items-center justify-center text-white text-center">
+            <div className="w-1/3 bg-[#e81d2d] p-8 flex items-center justify-center text-white text-center">
               <p>{sections[activeSection].text}</p>
             </div>
           </div>
