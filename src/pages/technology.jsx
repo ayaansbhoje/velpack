@@ -71,17 +71,29 @@ const Technologypage = () => {
     <div className="bg-white">
       <Navbar />
       
-      {/* Hero Section */}
-      <div className="relative h-screen">
+      {/* Hero Section with Animation */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="relative h-screen"
+      >
         <img 
           src="/assets/OT_Banner.jpg"
           alt="Our Services at Velpack" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-white text-5xl font-bold">OUR TECHNOLOGY</h1>
+          <motion.h1 
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-white text-5xl font-bold"
+          >
+            OUR TECHNOLOGY
+          </motion.h1>
         </div>
-      </div>
+      </motion.div>
 
       {/* Added white space gap */}
       <div className="h-18"></div>
@@ -89,18 +101,37 @@ const Technologypage = () => {
       {/* Technologies Section */}
       <div className="bg-[#b7162a] pt-16 pb-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-white text-4xl font-bold text-center mb-2">
+          <motion.h2 
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-white text-4xl font-bold text-center mb-2"
+          >
             STATE OF THE ART MACHINERY
-          </h2>
-          <p className="text-white text-center mb-16">
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="text-white text-center mb-16"
+          >
             With state-of-the-art machinery and advanced manufacturing processes, Velpack delivers precision and quality in every product.
-          </p>
+          </motion.p>
 
           <div className="space-y-8">
             {technologies.map((tech, index) => (
-              <div key={index} className="flex bg-[#e81d2d] rounded-lg overflow-hidden shadow-lg">
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="flex bg-[#e81d2d] rounded-lg overflow-hidden shadow-lg"
+              >
                 <div className="w-1/3">
-                  <img 
+                  <motion.img 
+                    initial={{ scale: 0.9 }}
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
                     src={tech.image}
                     alt={tech.title}
                     className="w-full h-full object-cover"
@@ -110,13 +141,19 @@ const Technologypage = () => {
                   <h3 className="text-white text-2xl font-bold mb-4">{tech.title}</h3>
                   <div className="space-y-2">
                     {tech.items.map((item, i) => (
-                      <p key={i} className="text-white">
+                      <motion.p 
+                        key={i} 
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.3, delay: i * 0.1 }}
+                        className="text-white"
+                      >
                         {item}
-                      </p>
+                      </motion.p>
                     ))}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
