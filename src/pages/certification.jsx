@@ -7,32 +7,32 @@ import Footer from '../components/footer';
 const CertificationPage = () => {
     const certifications = [
         {
-            image: "/assets/iso-9001-logo.svg",
+            image: "/assets/ISO_9001.png",
             title: "ISO 9001: 2015",
             description: "Widely accepted standard for quality management systems."
         },
         {
-            image: "/assets/ps-9000-logo.svg",
+            image: "/assets/PS_9000.png",
             title: "PS 9000: 2016",
             description: "GMP framework for best practices in pharmaceutical packaging."
         },
         {
-            image: "/assets/brc-global-standard-logo.svg",
+            image: "/assets/BRC_Global_Standard.png",
             title: "BRC GLOBAL STANDARD",
             description: "Recognized framework for managing product quality and operational criteria."
         },
         {
-            image: "/assets/sedex-logo.svg",
+            image: "/assets/sedex.png",
             title: "SEDEX",
             description: "Ethical and responsible business practices certification."
         },
         {
-            image: "/assets/psci-logo.svg",
+            image: "/assets/PSCI.png",
             title: "PSCI",
             description: "A coalition of healthcare companies committed to excellence in safety, environmental, and social outcomes."
         },
         {
-            image: "/assets/gmi-logo.svg",
+            image: "/assets/GMI.png",
             title: "GMI",
             description: "A certification that holds packaging suppliers accountable to established brand owner standards."
         }
