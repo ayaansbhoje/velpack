@@ -67,7 +67,6 @@ const AboutUsPage = () => {
             alt="Manufacturing equipment"
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute top-0 right-0 w-1/5 h-full bg-[#b7162a]" />
           <div className="absolute bottom-8 right-1/4 transform translate-x-1/2 w-1/4 bg-stone-300 p-8 shadow-lg z-10">
             <p className="text-gray-800 text-center">
               Founded in 1956, Velpack has grown from a small family business
