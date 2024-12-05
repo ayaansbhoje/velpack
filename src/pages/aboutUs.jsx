@@ -69,13 +69,14 @@ const AboutUsPage = () => {
           </h2>
         </div>
 
-        <div className="relative w-full aspect-video max-h-[600px]">
+        {/* Banner Section with Improved Image Handling */}
+        <div className="relative w-full aspect-video max-h-[600px] overflow-hidden">
           <div className="absolute inset-0">
             <div className="relative w-full h-full">
               <img 
                 src="/assets/AU_Banner.jpg"
                 alt="Manufacturing equipment" 
-                className="absolute w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
               />
               <div className="absolute top-0 right-0 w-1/5 h-full bg-[#b7162a]" />
               <div className="absolute bottom-8 right-1/4 transform translate-x-1/2 w-1/4 bg-stone-300 p-8 shadow-lg z-10">
@@ -87,6 +88,7 @@ const AboutUsPage = () => {
           </div>
         </div>
         
+        {/* Team Section Remains the Same */}
         <div className="bg-[#b7162a] py-16 mt-16">
           <div className="container mx-auto px-4">
             <h2 className="text-white text-4xl font-hbold text-center mb-4">OUR TEAM</h2>
@@ -99,7 +101,6 @@ const AboutUsPage = () => {
             <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto">
               {teamMembers.map((member, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg text-center">
-                  {/* <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div> */}
                   <h3 className="text-[#e81d2d] font-bold mb-1">{member.name}</h3>
                   <p className="text-[#e81d2d] mb-4">{member.role}</p>
                   {Array.isArray(member.education) ? (
@@ -119,6 +120,7 @@ const AboutUsPage = () => {
           </div>
         </div>
 
+        {/* Sections with Improved Image Handling */}
         <div className="mt-16">
           <div className="bg-black py-4 flex justify-between px-32">
             {Object.keys(sections).map((section) => (
@@ -134,11 +136,11 @@ const AboutUsPage = () => {
             ))}
           </div>
           
-          <div className="relative w-full h-[600px]">
+          <div className="relative w-full h-[600px] overflow-hidden">
             <img 
               src={sections[activeSection].image}
               alt={sections[activeSection].heading}
-              className="absolute w-full h-full object-cover"
+              className="absolute w-full h-full object-cover object-center"
             />
             
             <div className="absolute bottom-8 right-8 w-1/3 bg-[#e81d2d] p-6 text-center text-white">
