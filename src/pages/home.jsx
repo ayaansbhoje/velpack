@@ -525,3 +525,4 @@ return (
     <Footer />
   </>
 );
+export default Home  
