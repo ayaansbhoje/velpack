@@ -26,47 +26,47 @@ const Home = () => {
         
         return (
             <motion.div
-                variants={fadeIn("up", 0.3)}
-                initial="hidden"
-                whileInView="show"
-                className="relative h-[calc(100vh-5rem)]">
-                {images.map((img, index) => (
-                    <img
-                        key={img}
-                        src={img}
-                        alt={`Team in packaging facility ${index + 1}`}
-                        className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                            }`}
-                    />
+              variants={fadeIn("up", 0.3)}
+              initial="hidden"
+              whileInView="show"
+              className="relative h-[calc(100vh-5rem)]">
+              {images.map((img, index) => (
+                <img
+                  key={img}
+                  src={img}
+                  alt={`Team in packaging facility ${index + 1}`}
+                  className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
+                />
+              ))}
+              <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end items-center pb-24">
+                <motion.h1
+                  variants={fadeIn("left", 1.2)}
+                  initial="hidden"
+                  whileInView={"show"}
+                  className="text-4xl mb-8 text-white text-center tracking-[0.14em] font-hmed leading-[38px] -webkit-font-smoothing: antialiased font-kerning-normal">
+                  PAPER-BASED PACKAGING SOLUTIONS SINCE 1956
+                </motion.h1>
+                <motion.button
+                  variants={fadeIn("up", 0.3)}
+                  initial="hidden"
+                  whileInView="show"
+                  className="px-6 py-2 border-2 border-[#e81d2d] text-white bg-white-600 rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold leading-[38px] -webkit-font-smoothing: antialiased font-kerning-normal">
+                  GET IN TOUCH
+                </motion.button>
+              </div>
+              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                {images.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`w-3 h-3 rounded-full ${index === currentImageIndex ? 'bg-white' : 'bg-gray-400'
+                      }`}
+                  ></button>
                 ))}
-                <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end items-center pb-24">
-                    <motion.h1
-                        variants={fadeIn("left", 1.2)}
-                        initial="hidden"
-                        whileInView={"show"}
-                        className="text-4xl mb-8 text-white text-center tracking-wider font-hmed">
-                        PAPER-BASED PACKAGING SOLUTIONS SINCE 1956
-                    </motion.h1>
-                    <motion.button
-                        variants={fadeIn("up", 0.3)}
-                        initial="hidden"
-                        whileInView="show"
-                        className="px-6 py-2 border-2 border-[#e81d2d] text-white bg-white-600 rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold">
-                        GET IN TOUCH
-                    </motion.button>
-                </div>
-                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                    {images.map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => setCurrentImageIndex(index)}
-                            className={`w-3 h-3 rounded-full ${index === currentImageIndex ? 'bg-white' : 'bg-gray-400'
-                                }`}
-                        ></button>
-                    ))}
-                </div>
+              </div>
             </motion.div>
-        );
+          );          
     };
 
  
