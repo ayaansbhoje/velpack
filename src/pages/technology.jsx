@@ -124,14 +124,14 @@ const Technologypage = () => {
                 transition={{ duration: 0.6 }}
                 className="flex flex-col sm:flex-row bg-[#e81d2d] rounded-lg overflow-hidden shadow-lg"
               >
-                <div className="w-full sm:w-1/3 flex items-center justify-center p-4">
+                <div className="w-full sm:w-1/3 flex items-center justify-center">
                   <motion.img 
                     initial={{ scale: 0.9 }}
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
                     src={tech.image}
                     alt={tech.title}
-                    className="max-w-full max-h-64 object-contain"
+                    className="w-full h-64 sm:h-full object-cover"
                   />
                 </div>
                 <div className="w-full sm:w-2/3 p-4 sm:p-6">
