@@ -76,7 +76,7 @@ const Technologypage = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="relative h-screen"
+        className="relative h-[50vh] sm:h-screen"
       >
         <img 
           src="/assets/OT_Banner.jpg"
@@ -88,15 +88,12 @@ const Technologypage = () => {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-white text-5xl font-bold"
+            className="text-white text-3xl sm:text-5xl font-bold text-center px-4"
           >
             OUR TECHNOLOGY
           </motion.h1>
         </div>
       </motion.div>
-
-      {/* Added white space gap */}
-      <div className="h-18"></div>
 
       {/* Technologies Section */}
       <div className="bg-[#b7162a] pt-16 pb-16">
@@ -105,7 +102,7 @@ const Technologypage = () => {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-white text-4xl font-bold text-center mb-2"
+            className="text-white text-3xl sm:text-4xl font-bold text-center mb-2"
           >
             STATE OF THE ART MACHINERY
           </motion.h2>
@@ -113,7 +110,7 @@ const Technologypage = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-white text-center mb-16"
+            className="text-white text-center mb-16 text-sm sm:text-base"
           >
             With state-of-the-art machinery and advanced manufacturing processes, Velpack delivers precision and quality in every product.
           </motion.p>
@@ -125,20 +122,20 @@ const Technologypage = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="flex bg-[#e81d2d] rounded-lg overflow-hidden shadow-lg"
+                className="flex flex-col sm:flex-row bg-[#e81d2d] rounded-lg overflow-hidden shadow-lg"
               >
-                <div className="w-1/3">
+                <div className="w-full sm:w-1/3">
                   <motion.img 
                     initial={{ scale: 0.9 }}
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
                     src={tech.image}
                     alt={tech.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-48 sm:h-full object-cover"
                   />
                 </div>
-                <div className="w-2/3 p-6">
-                  <h3 className="text-white text-2xl font-bold mb-4">{tech.title}</h3>
+                <div className="w-full sm:w-2/3 p-4 sm:p-6">
+                  <h3 className="text-white text-xl sm:text-2xl font-bold mb-4">{tech.title}</h3>
                   <div className="space-y-2">
                     {tech.items.map((item, i) => (
                       <motion.p 
@@ -146,7 +143,7 @@ const Technologypage = () => {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.3, delay: i * 0.1 }}
-                        className="text-white"
+                        className="text-white text-sm sm:text-base"
                       >
                         {item}
                       </motion.p>
