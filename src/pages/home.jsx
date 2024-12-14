@@ -34,8 +34,7 @@ const Home = () => {
                   key={img}
                   src={img}
                   alt={`Team in packaging facility ${index + 1}`}
-                  className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                    }`}
+                  className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`}
                 />
               ))}
               <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end items-center pb-12 md:pb-24">
@@ -43,14 +42,14 @@ const Home = () => {
                   variants={fadeIn("left", 1.2)}
                   initial="hidden"
                   whileInView={"show"}
-                  className="text-2xl md:text-4xl mb-4 md:mb-4 text-white text-center tracking-wider md:tracking-[0.14em] font-hmed leading-tight md:leading-[38px]">
+                  className="text-2xl md:text-4xl mb-4 text-white text-center tracking-wider md:tracking-[0.14em] font-hmed leading-tight md:leading-[38px] px-4">
                   PAPER-BASED PACKAGING SOLUTIONS SINCE 1956
                 </motion.h1>
                 <motion.button
                   variants={fadeIn("up", 0.3)}
                   initial="hidden"
                   whileInView="show"
-                  className="px-4 py-2 md:px-6 md:py-2 md:mb-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold">
+                  className="px-4 py-2 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold">
                   GET IN TOUCH
                 </motion.button>
               </div>
@@ -59,13 +58,12 @@ const Home = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentImageIndex(index)}
-                    className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${index === currentImageIndex ? 'bg-white' : 'bg-gray-400'
-                      }`}
+                    className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${index === currentImageIndex ? 'bg-white' : 'bg-gray-400'}`}
                   ></button>
                 ))}
               </div>
             </motion.div>
-          );          
+        );          
     };
 
     const AboutUs = () => (
@@ -74,22 +72,22 @@ const Home = () => {
             initial="hidden"
             whileInView="show"
             className="my-10 md:my-20 bg-[#b7162a] text-white">
-            <div className="w-full mx-auto flex flex-col md:flex-row relative">
-                {/* Video Placeholder */}
-                <div className="md:absolute md:right-[4rem] md:top-[-3rem] md:w-[45vw] md:h-[400px] bg-gray-300 flex items-center justify-center shadow-lg mb-6 md:mb-0">
-                    <p className="text-gray-600 text-xl md:text-2xl font-bold">VELPACK VIDEO</p>
-                </div>
-                <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center z-10">
-                    <h2 className="text-3xl md:text-4xl mb-2 font-hbold">WHO ARE WE?</h2>
-                    <div className="w-16 h-1 bg-white mb-4 md:mb-6 ml-2"></div>
-                    <p className="mb-6 md:mb-8 text-base md:text-lg font-hmed">
+            <div className="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center">
+                <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4">
+                    <h2 className="text-3xl md:text-4xl font-hbold">WHO ARE WE?</h2>
+                    <div className="w-16 h-1 bg-white"></div>
+                    <p className="text-base md:text-lg font-hmed">
                         Velpack has been a pioneer in the paper-based packaging
                         industry since 1956. We specialize in providing high-quality folded
                         cartons for the pharmaceutical, FMCG and industrial sectors.
                     </p>
-                    <button className="font-hbold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300 self-start">
+                    <button className="font-hbold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300">
                         KNOW MORE
                     </button>
+                </div>
+                
+                <div className="w-full md:w-1/2 mb-6 md:mb-0 md:ml-8 h-64 md:h-[400px] bg-gray-300 flex items-center justify-center shadow-lg">
+                    <p className="text-gray-600 text-xl md:text-2xl font-bold">VELPACK VIDEO</p>
                 </div>
             </div>
         </motion.section>
@@ -159,71 +157,37 @@ const Home = () => {
                     variants={fadeIn("up", 0.3)}
                     initial="hidden"
                     whileInView="show" 
-                    className="text-base md:text-xl text-center mb-6 md:mb-8">
+                    className="text-base md:text-xl text-center mb-6 md:mb-8 px-4">
                     With state-of-the-art machinery and advanced manufacturing processes, Velpack delivers precision and quality in every product.
                 </motion.p>
 
-                <div className="flex flex-col md:flex-row justify-between mb-4 space-y-4 md:space-y-0">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                     <motion.div
                         variants={fadeIn("left", 0.3)}
                         initial="hidden"
                         whileInView="show"
-                        className="w-full md:w-1/3 bg-[#e81d2d] p-4 rounded-lg md:mx-1 text-center">
-                        <motion.h3
-                            variants={fadeIn("up", 0.5)}
-                            initial="hidden"
-                            whileInView="show"
-                            className="text-lg md:text-xl font-hmed mb-1">Our facility spans</motion.h3>
-                        <motion.p
-                            variants={fadeIn("up", 0.5)}
-                            initial="hidden"
-                            whileInView="show"
-                            className="text-2xl md:text-4xl font-bold mb-1">42,000 sq. ft.</motion.p>
-                        <motion.p
-                            variants={fadeIn("up", 0.5)}
-                            initial="hidden"
-                            whileInView="show"
-                        >in Navi Mumbai, India</motion.p>
+                        className="bg-[#e81d2d] p-4 rounded-lg text-center">
+                        <h3 className="text-lg md:text-xl font-hmed mb-1">Our facility spans</h3>
+                        <p className="text-2xl md:text-4xl font-bold mb-1">42,000 sq. ft.</p>
+                        <p>in Navi Mumbai, India</p>
                     </motion.div>
                     <motion.div
                         variants={fadeIn("up", 0.3)}
                         initial="hidden"
                         whileInView="show"
-                        className="w-full md:w-1/3 bg-[#e81d2d] p-4 rounded-lg md:mx-1 text-center">
-                        <motion.h3
-                            variants={fadeIn("up", 0.5)}
-                            initial="hidden"
-                            whileInView="show"
-                            className="text-lg md:text-xl font-hmed mb-1">We produce</motion.h3>
-                        <motion.p
-                            variants={fadeIn("up", 0.5)}
-                            initial="hidden"
-                            whileInView="show"
-                            className="text-2xl md:text-4xl font-bold mb-1">3 million</motion.p>
-                        <motion.p
-                            variants={fadeIn("up", 0.5)}
-                            initial="hidden"
-                            whileInView="show">cartons per day</motion.p>
+                        className="bg-[#e81d2d] p-4 rounded-lg text-center">
+                        <h3 className="text-lg md:text-xl font-hmed mb-1">We produce</h3>
+                        <p className="text-2xl md:text-4xl font-bold mb-1">3 million</p>
+                        <p>cartons per day</p>
                     </motion.div>
                     <motion.div
                         variants={fadeIn("right", 0.3)}
                         initial="hidden"
                         whileInView="show"
-                        className="w-full md:w-1/3 bg-[#e81d2d] p-4 rounded-lg md:mx-1 text-center">
-                        <motion.h3
-                            variants={fadeIn("up", 0.5)}
-                            initial="hidden"
-                            whileInView="show"
-                            className="text-lg md:text-xl font-hmed mb-1">We print</motion.h3>
-                        <motion.p
-                            variants={fadeIn("up", 0.5)}
-                            initial="hidden"
-                            whileInView="show"
-                            className="text-2xl md:text-4xl font-bold mb-1">1 million</motion.p>
-                        <motion.p
-                            variants={fadeIn("up", 0.5)}
-                            initial="hidden"
-                            whileInView="show">inserts per day</motion.p>
+                        className="bg-[#e81d2d] p-4 rounded-lg text-center">
+                        <h3 className="text-lg md:text-xl font-hmed mb-1">We print</h3>
+                        <p className="text-2xl md:text-4xl font-bold mb-1">1 million</p>
+                        <p>inserts per day</p>
                     </motion.div>
                 </div>
 
@@ -236,8 +200,10 @@ const Home = () => {
                         variants={fadeIn("up", 0.7)}
                         initial="hidden"
                         whileInView="show"
-                        className="text-xl md:text-2xl font-hbold text-center mb-4 text-[#e81d2d]">WE ARE CERTIFIED BY</motion.h3>
-                    <div className="flex flex-wrap justify-around items-center pb-4 space-x-2 md:space-x-0">
+                        className="text-xl md:text-2xl font-hbold text-center mb-4 text-[#e81d2d]">
+                        WE ARE CERTIFIED BY
+                    </motion.h3>
+                    <div className="flex flex-wrap justify-around items-center space-x-2 md:space-x-4 pb-4">
                         <img src="/assets/ISO_9001.png" alt="ISO" className="h-8 md:h-14 mb-2 md:mb-0" />
                         <img src="/assets/PS_9000.png" alt="PS" className="h-8 md:h-14 mb-2 md:mb-0" />
                         <img src="/assets/BRC_Global_Standard.png" alt="BRC" className="h-8 md:h-14 mb-2 md:mb-0" />
@@ -255,7 +221,9 @@ const Home = () => {
     const TrustedBrandsSection = () => {
         return (
             <section className="bg-[#e81d2d] py-6 md:py-10 overflow-hidden">
-                <h2 className="text-3xl md:text-4xl font-hbold text-center mb-4 md:mb-8 text-white">TRUSTED BY LEADING BRANDS</h2>
+                <h2 className="text-3xl md:text-4xl font-hbold text-center mb-4 md:mb-8 text-white">
+                    TRUSTED BY LEADING BRANDS
+                </h2>
                 <div className="relative">
                     <div className="flex animate-scroll bg-white py-4 md:py-6 h-xl">
                         <div className="flex shrink-0">
