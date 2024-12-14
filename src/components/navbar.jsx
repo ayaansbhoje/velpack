@@ -1,45 +1,129 @@
-import React from 'react'
-import { useState, useEffect } from 'react';
-// import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-// import { fadeIn } from './variant';
-
-
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
-        <nav className="w-full bg-white py-4 px-8 flex justify-between items-center">
-            <div className="flex items-center">
-                <Link to="/" >
-                <img src="/assets/Velpack_logo_fullcolor_rgb.png" alt="Velpack Logo" className="h-8" />
-                </Link>
-            </div>
-            <div className="flex items-center space-x-6">
-                {/* <a href="/aboutus.jsx" className="text-sm text-black hover:text-[#e81d2d]">About Us</a> */}
-                <Link to="/aboutUs" className="text-sm text-black hover:text-[#e81d2d]">About Us</Link>
+        <nav className="relative w-full bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex items-center justify-between h-16">
+                    {/* Logo */}
+                    <div className="flex items-center">
+                        <Link to="/">
+                            <img 
+                                src="/assets/Velpack_logo_fullcolor_rgb.png" 
+                                alt="Velpack Logo" 
+                                className="h-8 w-auto" 
+                            />
+                        </Link>
+                    </div>
 
-                {/*   <a href="#services" className="text-sm text-black hover:text-[#e81d2d]">Our Services</a>*/}
-                 <Link to="/ourservices" className="text-sm text-black hover:text-[#e81d2d]">Our Services</Link>
-                
-                {/*<a href="#certifications" className="text-sm text-black hover:text-[#e81d2d]">Certifications</a> */}
-                <Link to="/certification" className="text-sm text-black hover:text-[#e81d2d]">Certifications</Link>
-                
-                <Link to="/technology" className="text-sm text-black hover:text-[#e81d2d]">Technology</Link>
-                {/*  <a href="#technology" className="text-sm text-black hover:text-[#e81d2d]">Technology</a> */}
-                <Link to="/contactus" className="text-sm text-black hover:text-[#e81d2d]">Contact Us </Link>
-                {/* <a href="#contact" className="text-sm text-black hover:text-[#e81d2d]">Contact Us</a> */}
-                
-                <button className="text-[#e81d2d]">
-                    {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                    </svg> */}
-                </button>
+                    {/* Desktop Navigation */}
+                    <div className="hidden md:flex space-x-4">
+                        <Link to="/aboutUs" className="text-sm text-black hover:text-[#e81d2d]">About Us</Link>
+                        <Link to="/ourservices" className="text-sm text-black hover:text-[#e81d2d]">Our Services</Link>
+                        <Link to="/certification" className="text-sm text-black hover:text-[#e81d2d]">Certifications</Link>
+                        <Link to="/technology" className="text-sm text-black hover:text-[#e81d2d]">Technology</Link>
+                        <Link to="/contactus" className="text-sm text-black hover:text-[#e81d2d]">Contact Us</Link>
+                    </div>
+
+                    {/* Mobile Menu Button */}
+                    <div className="md:hidden flex items-center">
+                        <button 
+                            onClick={toggleMenu} 
+                            type="button" 
+                            className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-[#e81d2d] focus:outline-none"
+                            aria-controls="mobile-menu"
+                            aria-expanded={isMenuOpen}
+                        >
+                            <span className="sr-only">Open main menu</span>
+                            {!isMenuOpen ? (
+                                <svg 
+                                    className="block h-6 w-6" 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    fill="none" 
+                                    viewBox="0 0 24 24" 
+                                    stroke="currentColor" 
+                                    aria-hidden="true"
+                                >
+                                    <path 
+                                        strokeLinecap="round" 
+                                        strokeLinejoin="round" 
+                                        strokeWidth={2} 
+                                        d="M4 6h16M4 12h16M4 18h16" 
+                                    />
+                                </svg>
+                            ) : (
+                                <svg 
+                                    className="block h-6 w-6" 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    fill="none" 
+                                    viewBox="0 0 24 24" 
+                                    stroke="currentColor" 
+                                    aria-hidden="true"
+                                >
+                                    <path 
+                                        strokeLinecap="round" 
+                                        strokeLinejoin="round" 
+                                        strokeWidth={2} 
+                                        d="M6 18L18 6M6 6l12 12" 
+                                    />
+                                </svg>
+                            )}
+                        </button>
+                    </div>
+                </div>
             </div>
+
+            {/* Mobile Menu */}
+            {isMenuOpen && (
+                <div className="md:hidden" id="mobile-menu">
+                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        <Link 
+                            to="/aboutUs" 
+                            className="text-black hover:bg-gray-100 hover:text-[#e81d2d] block px-3 py-2 rounded-md text-base font-medium"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            About Us
+                        </Link>
+                        <Link 
+                            to="/ourservices" 
+                            className="text-black hover:bg-gray-100 hover:text-[#e81d2d] block px-3 py-2 rounded-md text-base font-medium"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Our Services
+                        </Link>
+                        <Link 
+                            to="/certification" 
+                            className="text-black hover:bg-gray-100 hover:text-[#e81d2d] block px-3 py-2 rounded-md text-base font-medium"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Certifications
+                        </Link>
+                        <Link 
+                            to="/technology" 
+                            className="text-black hover:bg-gray-100 hover:text-[#e81d2d] block px-3 py-2 rounded-md text-base font-medium"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Technology
+                        </Link>
+                        <Link 
+                            to="/contactus" 
+                            className="text-black hover:bg-gray-100 hover:text-[#e81d2d] block px-3 py-2 rounded-md text-base font-medium"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Contact Us
+                        </Link>
+                    </div>
+                </div>
+            )}
         </nav>
-
     )
 }
 
-export default Navbar
-
-
+export default Navbar;
