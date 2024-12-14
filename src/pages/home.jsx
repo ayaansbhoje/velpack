@@ -43,7 +43,7 @@ const Home = () => {
                   variants={fadeIn("left", 1.2)}
                   initial="hidden"
                   whileInView={"show"}
-                  className="text-2xl md:text-4xl mb-4 md:mb-8 text-white text-center tracking-wider md:tracking-[0.14em] font-hmed leading-tight md:leading-[38px]">
+                  className="text-2xl md:text-4xl mb-4 md:mb-6 text-white text-center tracking-wider md:tracking-[0.14em] font-hmed leading-tight md:leading-[38px]">
                   PAPER-BASED PACKAGING SOLUTIONS SINCE 1956
                 </motion.h1>
                 <motion.button
