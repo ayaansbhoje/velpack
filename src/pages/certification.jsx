@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
+
 const CertificationPage = () => {
   const certifications = [
     {
@@ -37,7 +38,6 @@ const CertificationPage = () => {
       description: "A certification that holds packaging suppliers accountable to established brand owner standards."
     }
   ];
-
   return (
     <>
       <Navbar />
@@ -46,12 +46,11 @@ const CertificationPage = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold text-center mb-8 text-[#e81d2d]"
+          className="text-2xl md:text-3xl font-bold text-center mb-8 text-[#e81d2d]"
         >
           Our Certifications
         </motion.h1>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {certifications.map((cert, index) => (
             <motion.div
               key={cert.title}
@@ -60,18 +59,18 @@ const CertificationPage = () => {
               transition={{ duration: 0.5 }}
               className="bg-white bg-opacity-10 border-2 border-[#e81d2d] rounded-lg overflow-hidden"
             >
-              <div className="w-full h-40 overflow-hidden">
+              <div className="w-full h-32 sm:h-40 flex items-center justify-center p-2 sm:p-4 overflow-hidden">
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className="w-full h-full object-contain"
+                  className="max-w-full max-h-full object-contain"
                 />
               </div>
-              <div className="p-4">
-                <h2 className="text-xl font-bold mb-2 text-[#e81d2d]">
+              <div className="p-3 sm:p-4">
+                <h2 className="text-lg sm:text-xl font-bold mb-2 text-[#e81d2d]">
                   {cert.title}
                 </h2>
-                <p className="text-gray-700">{cert.description}</p>
+                <p className="text-sm sm:text-base text-gray-700">{cert.description}</p>
               </div>
             </motion.div>
           ))}
@@ -81,5 +80,4 @@ const CertificationPage = () => {
     </>
   );
 };
-
 export default CertificationPage;
