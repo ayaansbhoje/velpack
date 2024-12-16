@@ -1,14 +1,16 @@
-
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
+
 const tickVariants = {
   hidden: { opacity: 0, scale: 0.5 },
   visible: { opacity: 1, scale: 1 },
 };
+
 const Footprint = () => {
   const [visibleTicks, setVisibleTicks] = useState([]);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+
   const tickPositions = [
     { top: "32%", left: "24%" },
     { top: "30%", left: "65%" },
@@ -18,6 +20,7 @@ const Footprint = () => {
     { top: "43%", left: "63%" },
     { top: "70%", left: "52%" },
   ];
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -26,7 +29,7 @@ const Footprint = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 } 
+      { threshold: 0.2 }
     );
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
@@ -37,6 +40,7 @@ const Footprint = () => {
       }
     };
   }, []);
+
   useEffect(() => {
     if (isVisible) {
       tickPositions.forEach((_, index) => {
@@ -46,6 +50,7 @@ const Footprint = () => {
       });
     }
   }, [isVisible]);
+
   return (
     <div ref={sectionRef} className="relative my-10">
       <motion.h2
@@ -75,8 +80,12 @@ const Footprint = () => {
               left: tickPositions[index].left,
             }}
           >
-            <span role="img" aria-label="tick" className="text-red-500 text-4xl">
-              <img src="/assets/tick.png" alt="tick" />
+            <span role="img" aria-label="tick">
+              <img
+                src="/assets/tick.png"
+                alt="tick"
+                className="w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8"
+              />
             </span>
           </motion.div>
         ))}
@@ -84,4 +93,5 @@ const Footprint = () => {
     </div>
   );
 };
+
 export default Footprint;

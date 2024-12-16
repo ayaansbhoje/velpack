@@ -7,91 +7,95 @@ import Footer from '../components/footer';
 import Footprint from '../components/Footprint';
 
 const Home = () => {
-    const HeroSection = () => {
-        const images = [
-            "/assets/HP_Banner_1.jpg",
-            "/assets/HP_Banner_2.jpg",
-            "/assets/HP_Banner_3.jpg",
-            "/assets/HP_Banner_4.jpg" 
-        ];
-        const [currentImageIndex, setCurrentImageIndex] = useState(0);
-        
-        useEffect(() => {
-            const timer = setInterval(() => {
-                setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-            }, 3000);
-            return () => clearInterval(timer);
-        }, []);
-        
-        return (
-            <motion.div
+const HeroSection = () => {
+    const images = [
+        "/assets/HP_Banner_1.jpg",
+        "/assets/HP_Banner_2.jpg",
+        "/assets/HP_Banner_3.jpg",
+        "/assets/HP_Banner_4.jpg"
+    ];
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 3000);
+        return () => clearInterval(timer);
+    }, []);
+    
+    return (
+        <motion.div
+          variants={fadeIn("up", 0.3)}
+          initial="hidden"
+          whileInView="show"
+          className="relative h-[60vh] md:h-screen">
+          {images.map((img, index) => (
+            <img
+              key={img}
+              src={img}
+              alt={`Team in packaging facility ${index + 1}`}
+              className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`}
+            />
+          ))}
+          <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end items-center pb-12 md:pb-24">
+            <motion.h1
+              variants={fadeIn("left", 1.2)}
+              initial="hidden"
+              whileInView="show"
+              className="text-2xl md:text-4xl mb-4 text-white text-center tracking-wider md:tracking-[0.14em] font-hmed leading-tight md:leading-[38px] px-4">
+              PAPER-BASED PACKAGING SOLUTIONS SINCE 1956
+            </motion.h1>
+            <motion.button
               variants={fadeIn("up", 0.3)}
               initial="hidden"
               whileInView="show"
-              className="relative h-screen md:h-[calc(100vh-5rem)]">
-              {images.map((img, index) => (
-                <img
-                  key={img}
-                  src={img}
-                  alt={`Team in packaging facility ${index + 1}`}
-                  className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`}
-                />
-              ))}
-              <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end items-center pb-12 md:pb-24">
-                <motion.h1
-                  variants={fadeIn("left", 1.2)}
-                  initial="hidden"
-                  whileInView={"show"}
-                  className="text-2xl md:text-4xl mb-4 text-white text-center tracking-wider md:tracking-[0.14em] font-hmed leading-tight md:leading-[38px] px-4">
-                  PAPER-BASED PACKAGING SOLUTIONS SINCE 1956
-                </motion.h1>
-                <motion.button
-                  variants={fadeIn("up", 0.3)}
-                  initial="hidden"
-                  whileInView="show"
-                  className="px-4 py-2 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold">
-                  GET IN TOUCH
-                </motion.button>
-              </div>
-              <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                {images.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImageIndex(index)}
-                    className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${index === currentImageIndex ? 'bg-white' : 'bg-gray-400'}`}
-                  ></button>
-                ))}
-              </div>
-            </motion.div>
-        );          
-    };
+              className="px-4 py-2 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold">
+              GET IN TOUCH
+            </motion.button>
+          </div>
+          <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${index === currentImageIndex ? 'bg-white' : 'bg-gray-400'}`}
+              ></button>
+            ))}
+          </div>
+        </motion.div>
+    );          
+};
 
-    const AboutUs = () => (
-        <motion.section
-            variants={fadeIn("up", 0.3)}
-            initial="hidden"
-            whileInView="show"
-            className="my-10 md:my-20 bg-[#b7162a] text-white">
-            <div className="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center">
-                <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4">
-                    <h2 className="text-3xl md:text-4xl font-hbold">WHO ARE WE?</h2>
-                    <div className="w-16 h-1 bg-white"></div>
-                    <p className="text-base md:text-lg font-hmed">
-                        Velpack has been a pioneer in the paper-based packaging
-                        industry since 1956. We specialize in providing high-quality folded
-                        cartons for the pharmaceutical, FMCG and industrial sectors.
-                    </p>
-                    <button className="font-hbold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300">
-                        KNOW MORE
-                    </button>
-                </div>
-                
-                <div className="w-full md:w-1/2 mb-6 md:mb-0 md:ml-8 h-64 md:h-[400px] bg-gray-300 flex items-center justify-center shadow-lg">
-                    <p className="text-gray-600 text-xl md:text-2xl font-bold">VELPACK VIDEO</p>
-                </div>
+
+const AboutUs = () => (
+    <motion.section
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView="show"
+        className="my-10 md:my-20 bg-[#b7162a] text-white"
+    >
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            {/* Text Section */}
+            <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4">
+                <h2 className="text-3xl md:text-4xl font-hbold">WHO ARE WE?</h2>
+                <div className="w-16 h-1 bg-white"></div>
+                <p className="text-base md:text-lg font-hmed">
+                    Velpack has been a pioneer in the paper-based packaging
+                    industry since 1956. We specialize in providing high-quality folded
+                    cartons for the pharmaceutical, FMCG and industrial sectors.
+                </p>
+                <button className="font-hbold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300">
+                    KNOW MORE
+                </button>
             </div>
-        </motion.section>
-    );
+
+            {/* Video Section */}
+            <div className="w-full md:w-1/2 mb-6 md:mb-0 md:ml-8 h-64 md:h-[400px] bg-gray-300 flex items-center justify-center shadow-lg">
+                <p className="text-gray-600 text-xl md:text-2xl font-bold">VELPACK VIDEO</p>
+            </div>
+        </div>
+    </motion.section>
+);
 
     const ServicesSection = () => (
         <section className="bg-white py-10 md:py-16">
@@ -360,13 +364,13 @@ const FeaturesSection = () => (
                                 &lt;
                             </button>
                             <div className="flex justify-center items-center space-x-2 md:space-x-4 relative">
-                                <div className="w-72 md:w-96 absolute -left-72 md:-left-80 transform scale-90">
-                                    <ReviewCard review={reviews[(currentIndex - 1 + reviews.length) % reviews.length]} isCenter={false} />
+                                <div className="w-72 md:w-96 absolute -left-72 md:-left-80 transform scale-90 ">
+                                    <ReviewCard review={reviews[(currentIndex - 1 + reviews.length) % reviews.length]} isCenter={false}  />
                                 </div>
-                                <div className="w-72 md:w-96 z-10">
+                                <div className="w-72 md:w-96 z-10 sm:">
                                     <ReviewCard review={reviews[currentIndex]} isCenter={true} />
                                 </div>
-                                <div className="w-72 md:w-96 absolute -right-72 md:-right-80 transform scale-90">
+                                <div className="w-72 md:w-96 absolute -right-72 md:-right-80 transform scale-90  ">
                                     <ReviewCard review={reviews[(currentIndex + 1) % reviews.length]} isCenter={false} />
                                 </div>
                             </div>

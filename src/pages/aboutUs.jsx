@@ -75,7 +75,7 @@ const AboutUsPage = () => {
               <img 
                 src="/assets/AU_Banner.jpg"
                 alt="Manufacturing equipment" 
-                className="absolute w-full h-full object-cover"
+                className="absolute w-full h-full  "
               />
               <div className="absolute top-0 right-0 w-1/5 h-full bg-[#b7162a]" />
               <div className="absolute bottom-8 right-1/4 transform translate-x-1/2 w-1/4 bg-stone-300 p-8 shadow-lg z-10">
