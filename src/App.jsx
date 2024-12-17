@@ -426,6 +426,9 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="min-h-screen flex flex-col">
+         <Routes>
+          <Route path="/Home" element={<home />} />
+        </Routes>
         <Routes>
           <Route path="/aboutUs" element={<AboutUsPage />} />
         </Routes>
