@@ -70,14 +70,14 @@ const AboutUsPage = () => {
           </h2>
         </div>
 
-        {/* Banner - Maintain Original Layout with Responsive Adjustments */}
+        {/* Banner - Exact Original Layout */}
         <div className="relative w-full aspect-video max-h-[600px]">
           <div className="absolute inset-0">
             <div className="relative w-full h-full">
               <img 
                 src="/assets/AU_Banner.jpg"
                 alt="Manufacturing equipment" 
-                className="absolute w-full h-full object-cover"
+                className="absolute w-full h-full"
               />
               <div className="absolute top-0 right-0 w-1/5 h-full bg-[#b7162a] hidden sm:block" />
               <div className="absolute bottom-4 sm:bottom-8 right-0 sm:right-1/4 transform sm:translate-x-1/2 w-full sm:w-1/4 bg-stone-300 p-4 sm:p-8 shadow-lg z-10">
