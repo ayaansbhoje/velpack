@@ -75,8 +75,8 @@ const AboutUs = () => (
         className="my-10 md:my-20 bg-[#b7162a] text-white"
     >
         <div className="w-full mx-auto flex flex-col md:flex-row relative">
-            {/* Header and Text */}
-            <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center z-10 order-2 md:order-1">
+            {/* Desktop Version */}
+            <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center z-10">
                 <h2 className="text-3xl md:text-4xl mb-2 font-hbold">WHO ARE WE?</h2>
                 <div className="w-16 h-1 bg-white mb-4 md:mb-6 ml-2"></div>
                 <p className="mb-6 md:mb-8 text-base md:text-lg font-hmed">
@@ -89,7 +89,7 @@ const AboutUs = () => (
                 </button>
             </div>
 
-            {/* Video Placeholder - Centered */}
+            {/* Mobile Version */}
             <div className="w-full md:w-1/2 md:absolute md:right-[4rem] md:top-[-3rem] md:h-[400px] bg-gray-300 flex items-center justify-center shadow-lg order-1 md:order-2">
                 <p className="text-gray-600 text-xl md:text-2xl font-bold">VELPACK VIDEO</p>
             </div>
