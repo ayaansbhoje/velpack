@@ -96,7 +96,6 @@ const AboutUs = () => (
         </div>
     </motion.section>
 );
-
     const ServicesSection = () => (
         <section className="bg-white py-10 md:py-16">
             <div className="container mx-auto px-4">
