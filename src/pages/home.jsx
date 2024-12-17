@@ -73,11 +73,8 @@ const AboutUs = () => (
         initial="hidden"
         whileInView="show"
         className="my-10 md:my-20 bg-[#b7162a] text-white">
-        <div className="w-full mx-auto flex flex-col md:flex-row relative">
-            {/* Video Placeholder */}
-            <div className="md:absolute md:right-[4rem] md:top-[-3rem] md:w-[45vw] md:h-[400px] bg-gray-300 flex items-center justify-center shadow-lg mb-6 md:mb-0">
-                <p className="text-gray-600 text-xl md:text-2xl font-bold">VELPACK VIDEO</p>
-            </div>
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            {/* Text Section */}
             <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center z-10">
                 <h2 className="text-3xl md:text-4xl mb-2 font-hbold">WHO ARE WE?</h2>
                 <div className="w-16 h-1 bg-white mb-4 md:mb-6 ml-2"></div>
@@ -89,6 +86,11 @@ const AboutUs = () => (
                 <button className="font-hbold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300 self-start">
                     KNOW MORE
                 </button>
+            </div>
+
+            {/* Video Placeholder */}
+            <div className="w-full md:w-1/2 mb-6 md:mb-0 md:ml-8 h-64 md:h-[400px] bg-gray-300 flex items-center justify-center shadow-lg">
+                <p className="text-gray-600 text-xl md:text-2xl font-bold">VELPACK VIDEO</p>
             </div>
         </div>
     </motion.section>
