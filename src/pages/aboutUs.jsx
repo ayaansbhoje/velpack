@@ -60,7 +60,7 @@ const AboutUsPage = () => {
     <>
       <Navbar />
       <div className="bg-white min-h-screen">
-        {/* Header - Original Desktop Size, Responsive Text */}
+        {/* Header */}
         <div className="text-center py-8">
           <h1 className="text-2xl sm:text-4xl font-hbold mb-2">
             VELPACKS JOURNEY:
@@ -70,40 +70,34 @@ const AboutUsPage = () => {
           </h2>
         </div>
 
-        {/* Banner Section */}
-        <div className="relative w-full aspect-video max-h-[600px]">
-          <div className="absolute inset-0">
-            <div className="relative w-full h-full">
-              <img 
-                src="/assets/AU_Banner.jpg"
-                alt="Manufacturing equipment" 
-                className="absolute w-full h-full object-cover"
-              />
-              <div className="absolute top-0 right-0 w-1/5 h-full bg-[#b7162a] hidden sm:block" />
+        {/* Banner Section - Fixed height and full image visibility */}
+        <div className="relative">
+          <div className="relative h-[300px] sm:h-[600px] w-full">
+            <img 
+              src="/assets/AU_Banner.jpg"
+              alt="Manufacturing equipment" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute top-0 right-0 w-1/5 h-full bg-[#b7162a] hidden sm:block" />
+            
+            {/* Grey box - Desktop position */}
+            <div className="hidden sm:block absolute bottom-8 right-1/4 transform translate-x-1/2 w-1/4 bg-stone-300 p-8 shadow-lg z-10">
+              <p className="text-gray-800 text-center text-base">
+                Founded in 1956, Velpack has grown from a small family business into a global supplier of premium paper-based packaging. Our state-of-the-art facility in Navi Mumbai spans 42,000 sq. ft., enabling us to produce millions of cartons and inserts daily.
+              </p>
             </div>
           </div>
           
-          {/* Info Box - Mobile Optimized */}
-          <div className={`
-            sm:absolute sm:bottom-8 sm:right-1/4 
-            relative bottom-0 right-0
-            transform sm:translate-x-1/2 
-            w-full sm:w-1/4 
-            bg-stone-300 p-4 sm:p-8 
-            shadow-lg z-10
-            ${window.innerWidth <= 640 ? '-mb-16' : ''}
-          `}>
-            <p className="text-gray-800 text-center text-xs sm:text-base">
+          {/* Grey box - Mobile position */}
+          <div className="sm:hidden w-full bg-stone-300 p-4 shadow-lg">
+            <p className="text-gray-800 text-center text-xs">
               Founded in 1956, Velpack has grown from a small family business into a global supplier of premium paper-based packaging. Our state-of-the-art facility in Navi Mumbai spans 42,000 sq. ft., enabling us to produce millions of cartons and inserts daily.
             </p>
           </div>
         </div>
         
-        {/* Team Section - Keeping Original Desktop Spacing */}
-        <div className={`
-          bg-[#b7162a] py-16 
-          ${window.innerWidth > 640 ? 'mt-16' : 'mt-0'}
-        `}>
+        {/* Team Section */}
+        <div className={`bg-[#b7162a] py-16 ${window.innerWidth > 640 ? 'mt-16' : ''}`}>
           <div className="container mx-auto px-4">
             <h2 className="text-white text-2xl sm:text-4xl font-hbold text-center mb-4">OUR TEAM</h2>
             <div className="w-16 h-1 bg-white mb-6 mx-auto mt-2"></div>
@@ -134,7 +128,7 @@ const AboutUsPage = () => {
           </div>
         </div>
 
-        {/* Sections Navigation - Original Layout */}
+        {/* Sections Navigation */}
         <div className="mt-16">
           <div className="bg-black py-4 flex flex-wrap justify-center px-4 sm:px-32">
             {Object.keys(sections).map((section) => (
@@ -150,7 +144,7 @@ const AboutUsPage = () => {
             ))}
           </div>
           
-          {/* Sections Display - Original Layout */}
+          {/* Sections Display */}
           <div className="relative w-full h-[300px] sm:h-[600px]">
             <img 
               src={sections[activeSection].image}
