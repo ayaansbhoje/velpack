@@ -30,26 +30,26 @@ const AboutUsPage = () => {
 
   const teamMembers = [
     {
-      name: "Bernie Phillips",
+      name: "Bennie Phillips",
       role: "Director",
-      education: "Printing Technology - J.J. School of Arts, Mumbai."
+      education: "Printing Technology,mJ.J. School of Arts, Mumbai"
     },
     {
       name: "Rohan Phillips",
       role: "Director",
-      education: "B.Sc. Mechanical Engineering - Georgia Institute of Technology, USA."
+      education: "B.Sc. Mechanical Engineering, Georgia Institute of Technology, USA"
     },
     {
       name: "Bobbie Phillips",
       role: "Managing Director",
-      education: "MBA - Finance - University of Scranton, USA."
+      education: "MBA, Finance, University of Scranton, USA"
     },
     {
       name: "Lyssa Phillips",
       role: "Director",
       education: [
-        "B.A. Economics & Global Studies - U.C.L.A, USA;",
-        "Diploma in Packaging - Indian Institute of Packaging, Mumbai."
+        "B.A. Economics & Global Studies - U.C.L.A, USA",
+        "Diploma in Packaging, Indian Institute of Packaging, Mumbai"
       ]
     }
   ];
