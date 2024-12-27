@@ -10,7 +10,7 @@ const Home = () => {
 const HeroSection = () => {
     const images = [
         "/assets/HP_Banner_1.jpg",
-        "/assets/banner_y.png",
+        "/assets/banner_z.jpg",
         "/assets/HP_Banner_3.jpg",
         "/assets/HP_Banner_4.jpg"
     ];
