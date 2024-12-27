@@ -162,20 +162,35 @@ const AboutUsPage = () => {
             ))}
           </div>
           
-          {/* Updated carousel section with reduced image height */}
-          <div className="relative w-full">
-            <div className="relative aspect-[21/9] sm:aspect-[21/9] w-full">
+          {/* Desktop layout for carousel */}
+          <div className="hidden sm:block relative w-full">
+            <div className="relative aspect-[21/9] w-full">
               <img 
                 src={sections[activeSection].image}
                 alt={sections[activeSection].heading}
                 className="w-full h-full object-cover"
               />
-              
-              <div className="absolute bottom-0 right-0 w-full sm:w-1/3 bg-[#e81d2d] p-4 sm:p-6">
-                <p className="text-white text-center text-sm sm:text-base">
+              <div className="absolute bottom-0 right-0 w-1/3 bg-[#e81d2d] p-6">
+                <p className="text-white text-center text-base">
                   {sections[activeSection].text}
                 </p>
               </div>
+            </div>
+          </div>
+
+          {/* Mobile layout for carousel */}
+          <div className="sm:hidden w-full">
+            <div className="w-full">
+              <img 
+                src={sections[activeSection].image}
+                alt={sections[activeSection].heading}
+                className="w-full aspect-[16/9] object-cover"
+              />
+            </div>
+            <div className="w-full bg-[#e81d2d] p-4">
+              <p className="text-white text-center text-sm">
+                {sections[activeSection].text}
+              </p>
             </div>
           </div>
         </div>
