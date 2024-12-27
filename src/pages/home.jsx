@@ -9,7 +9,7 @@ import Footprint from '../components/Footprint';
 const Home = () => {
 const HeroSection = () => {
     const images = [
-        "/assets/HP_Banner_1.jpg",
+        "/assets/HP_Banner_x.jpg",
         "/assets/banner_z.jpg",
         "/assets/HP_Banner_3.jpg",
         "/assets/HP_Banner_4.jpg"
