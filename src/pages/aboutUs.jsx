@@ -70,36 +70,42 @@ const AboutUsPage = () => {
           </h2>
         </div>
 
-        {/* Enhanced Banner/Hero Section */}
-        <div className="relative w-full">
-          {/* Aspect ratio container for the image */}
-          <div className="relative aspect-[16/7] w-full">
-            <img 
-              src="/assets/AU_Banner.jpg"
-              alt="Manufacturing equipment" 
-              className="w-full h-full object-cover object-center"
-            />
-            {/* Red accent bar - Adjusted for new aspect ratio */}
-            <div className="absolute top-0 right-0 w-1/5 h-full bg-[#b7162a] hidden sm:block opacity-90" />
-            
-            {/* Grey info box - Desktop */}
-            <div className="hidden sm:block absolute bottom-8 right-1/4 transform translate-x-1/2 w-1/4 bg-stone-300/95 p-8 shadow-lg z-10">
-              <p className="text-gray-800 text-center text-base">
-                Founded in 1956, Velpack has grown from a small family business into a global supplier of premium paper-based packaging. Our state-of-the-art facility in Navi Mumbai spans 42,000 sq. ft., enabling us to produce millions of cartons and inserts daily.
-              </p>
+        {/* Enhanced Banner/Hero Section with spacing */}
+        <div className="relative w-full mt-8">
+          <div className="flex">
+            {/* Image container - adjusted for full visibility */}
+            <div className="relative w-4/5">
+              <div className="aspect-[16/9]">
+                <img 
+                  src="/assets/AU_Banner.jpg"
+                  alt="Manufacturing equipment" 
+                  className="w-full h-full object-cover object-left"
+                />
+                {/* Grey info box - Desktop */}
+                <div className="hidden sm:block absolute bottom-8 right-8 w-1/3 bg-stone-300 p-6 shadow-lg">
+                  <p className="text-gray-800 text-center text-sm sm:text-base">
+                    Founded in 1956, Velpack has grown from a small family business into a global supplier of premium paper-based packaging. Our state-of-the-art facility in Navi Mumbai spans 42,000 sq. ft., enabling us to produce millions of cartons and inserts daily.
+                  </p>
+                </div>
+              </div>
             </div>
+            {/* Solid red box */}
+            <div className="w-1/5 bg-[#b7162a]" />
           </div>
           
           {/* Grey info box - Mobile */}
-          <div className="sm:hidden w-full bg-stone-300/95 p-4 shadow-lg">
+          <div className="sm:hidden w-full bg-stone-300 p-4 shadow-lg mt-4">
             <p className="text-gray-800 text-center text-sm">
               Founded in 1956, Velpack has grown from a small family business into a global supplier of premium paper-based packaging. Our state-of-the-art facility in Navi Mumbai spans 42,000 sq. ft., enabling us to produce millions of cartons and inserts daily.
             </p>
           </div>
         </div>
+
+        {/* Spacing between hero and team section */}
+        <div className="h-16"></div>
         
         {/* Team Section */}
-        <div className="bg-[#b7162a] py-16 mt-0">
+        <div className="bg-[#b7162a] py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-white text-2xl sm:text-4xl font-hbold text-center mb-4">OUR TEAM</h2>
             <div className="w-16 h-1 bg-white mb-6 mx-auto mt-2"></div>
