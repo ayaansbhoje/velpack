@@ -28,7 +28,7 @@ const Navbar = () => {
                         <Link to="/home" className="text-sm text-black hover:text-[#e81d2d]">Home</Link>
                         
                         <Link to="/aboutUs" className="text-sm text-black hover:text-[#e81d2d]">About Us</Link>
-                        <Link to="/ourservices" className="text-sm text-black hover:text-[#e81d2d]">Our Services</Link>
+                        {/*   <Link to="/ourservices" className="text-sm text-black hover:text-[#e81d2d]">Our Services</Link> */}
                         <Link to="/certification" className="text-sm text-black hover:text-[#e81d2d]">Certifications</Link>
                         <Link to="/technology" className="text-sm text-black hover:text-[#e81d2d]">Technology</Link>
                         <Link to="/contactus" className="text-sm text-black hover:text-[#e81d2d]">Contact Us</Link>
@@ -100,13 +100,13 @@ const Navbar = () => {
                         >
                             About Us
                         </Link>
-                        <Link 
+                        {/*   <Link 
                             to="/ourservices" 
                             className="text-black hover:bg-gray-100 hover:text-[#e81d2d] block px-3 py-2 rounded-md text-base font-medium"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Our Services
-                        </Link>
+                        </Link> */}
                         <Link 
                             to="/certification" 
                             className="text-black hover:bg-gray-100 hover:text-[#e81d2d] block px-3 py-2 rounded-md text-base font-medium"
