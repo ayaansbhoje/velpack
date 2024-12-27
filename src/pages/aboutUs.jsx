@@ -94,18 +94,18 @@ const AboutUsPage = () => {
           </div>
           
           {/* Grey info box - Mobile */}
-          <div className="sm:hidden w-full bg-stone-300 p-4 shadow-lg mt-4">
+          <div className="sm:hidden w-full bg-stone-300 p-4 shadow-lg">
             <p className="text-gray-800 text-center text-sm">
               Founded in 1956, Velpack has grown from a small family business into a global supplier of premium paper-based packaging. Our state-of-the-art facility in Navi Mumbai spans 42,000 sq. ft., enabling us to produce millions of cartons and inserts daily.
             </p>
           </div>
         </div>
 
-        {/* Spacing between hero and team section */}
-        <div className="h-16"></div>
+        {/* Spacing between hero and team section - Desktop only */}
+        <div className="hidden sm:block h-16"></div>
         
         {/* Team Section */}
-        <div className="bg-[#b7162a] py-16">
+        <div className="bg-[#b7162a] sm:py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-white text-2xl sm:text-4xl font-hbold text-center mb-4">OUR TEAM</h2>
             <div className="w-16 h-1 bg-white mb-6 mx-auto mt-2"></div>
@@ -136,7 +136,7 @@ const AboutUsPage = () => {
           </div>
         </div>
 
-        {/* Sections Navigation */}
+        {/* Rest of the sections remain unchanged */}
         <div className="mt-16">
           <div className="bg-black py-4 flex flex-wrap justify-center px-4 sm:px-32">
             {Object.keys(sections).map((section) => (
@@ -152,9 +152,7 @@ const AboutUsPage = () => {
             ))}
           </div>
           
-          {/* Updated Sections Display with better mobile responsiveness */}
           <div className="relative w-full">
-            {/* Image container with aspect ratio */}
             <div className="relative aspect-[16/9] w-full">
               <img 
                 src={sections[activeSection].image}
@@ -162,7 +160,6 @@ const AboutUsPage = () => {
                 className="w-full h-full object-cover"
               />
               
-              {/* Text overlay with improved mobile positioning */}
               <div className="absolute bottom-0 right-0 w-full sm:w-1/3 bg-[#e81d2d] p-4 sm:p-6">
                 <p className="text-white text-center text-sm sm:text-base">
                   {sections[activeSection].text}
