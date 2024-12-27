@@ -70,10 +70,10 @@ const AboutUsPage = () => {
           </h2>
         </div>
 
-        {/* Enhanced Banner/Hero Section with spacing */}
+        {/* Enhanced Banner/Hero Section */}
         <div className="relative w-full mt-8">
-          <div className="flex">
-            {/* Image container - adjusted for full visibility */}
+          {/* Desktop layout */}
+          <div className="hidden sm:flex">
             <div className="relative w-4/5">
               <div className="aspect-[16/9]">
                 <img 
@@ -81,27 +81,37 @@ const AboutUsPage = () => {
                   alt="Manufacturing equipment" 
                   className="w-full h-full object-cover object-left"
                 />
-                {/* Grey info box - Desktop */}
-                <div className="hidden sm:block absolute bottom-8 right-8 w-1/3 bg-stone-300 p-6 shadow-lg">
+                <div className="absolute bottom-8 right-8 w-1/3 bg-stone-300 p-6 shadow-lg">
                   <p className="text-gray-800 text-center text-sm sm:text-base">
                     Founded in 1956, Velpack has grown from a small family business into a global supplier of premium paper-based packaging. Our state-of-the-art facility in Navi Mumbai spans 42,000 sq. ft., enabling us to produce millions of cartons and inserts daily.
                   </p>
                 </div>
               </div>
             </div>
-            {/* Solid red box */}
             <div className="w-1/5 bg-[#b7162a]" />
           </div>
-          
-          {/* Grey info box - Mobile */}
-          <div className="sm:hidden w-full bg-stone-300 p-4 shadow-lg">
-            <p className="text-gray-800 text-center text-sm">
-              Founded in 1956, Velpack has grown from a small family business into a global supplier of premium paper-based packaging. Our state-of-the-art facility in Navi Mumbai spans 42,000 sq. ft., enabling us to produce millions of cartons and inserts daily.
-            </p>
+
+          {/* Mobile layout */}
+          <div className="sm:hidden flex flex-col">
+            <div className="w-full">
+              <div className="aspect-[16/9]">
+                <img 
+                  src="/assets/AU_Banner.jpg"
+                  alt="Manufacturing equipment" 
+                  className="w-full h-full object-cover object-left"
+                />
+              </div>
+            </div>
+            <div className="w-full h-16 bg-[#b7162a]" />
+            <div className="w-full bg-stone-300 p-4 shadow-lg">
+              <p className="text-gray-800 text-center text-sm">
+                Founded in 1956, Velpack has grown from a small family business into a global supplier of premium paper-based packaging. Our state-of-the-art facility in Navi Mumbai spans 42,000 sq. ft., enabling us to produce millions of cartons and inserts daily.
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Spacing between hero and team section - Desktop only */}
+        {/* Spacing for desktop only */}
         <div className="hidden sm:block h-16"></div>
         
         {/* Team Section */}
@@ -136,7 +146,7 @@ const AboutUsPage = () => {
           </div>
         </div>
 
-        {/* Rest of the sections remain unchanged */}
+        {/* Sections Navigation */}
         <div className="mt-16">
           <div className="bg-black py-4 flex flex-wrap justify-center px-4 sm:px-32">
             {Object.keys(sections).map((section) => (
@@ -152,8 +162,9 @@ const AboutUsPage = () => {
             ))}
           </div>
           
+          {/* Updated carousel section with reduced image height */}
           <div className="relative w-full">
-            <div className="relative aspect-[16/9] w-full">
+            <div className="relative aspect-[21/9] sm:aspect-[21/9] w-full">
               <img 
                 src={sections[activeSection].image}
                 alt={sections[activeSection].heading}
