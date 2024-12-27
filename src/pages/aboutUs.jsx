@@ -152,18 +152,22 @@ const AboutUsPage = () => {
             ))}
           </div>
           
-          {/* Sections Display */}
-          <div className="relative w-full h-[300px] sm:h-[600px]">
-            <img 
-              src={sections[activeSection].image}
-              alt={sections[activeSection].heading}
-              className="absolute w-full h-full object-cover"
-            />
-            
-            <div className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 w-full sm:w-1/3 bg-[#e81d2d] p-4 sm:p-6 text-center text-white">
-              <p className="text-xs sm:text-base">
-                {sections[activeSection].text}
-              </p>
+          {/* Updated Sections Display with better mobile responsiveness */}
+          <div className="relative w-full">
+            {/* Image container with aspect ratio */}
+            <div className="relative aspect-[16/9] w-full">
+              <img 
+                src={sections[activeSection].image}
+                alt={sections[activeSection].heading}
+                className="w-full h-full object-cover"
+              />
+              
+              {/* Text overlay with improved mobile positioning */}
+              <div className="absolute bottom-0 right-0 w-full sm:w-1/3 bg-[#e81d2d] p-4 sm:p-6">
+                <p className="text-white text-center text-sm sm:text-base">
+                  {sections[activeSection].text}
+                </p>
+              </div>
             </div>
           </div>
         </div>
