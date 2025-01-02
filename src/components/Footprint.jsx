@@ -66,29 +66,7 @@ const Footprint = () => {
         <div className="w-16 h-1 bg-white mb-6 mx-auto mt-3"></div>
       </motion.h2>
       <div className="relative">
-        <img src="/assets/map_full[1].png" alt="World Map" className="w-[80%] mx-auto" />
-        {visibleTicks.map((index) => (
-          <motion.div
-            key={index}
-            initial="hidden"
-            animate="visible"
-            variants={tickVariants}
-            transition={{ duration: 0.5 }}
-            className="absolute"
-            style={{
-              top: tickPositions[index].top,
-              left: tickPositions[index].left,
-            }}
-          >
-            <span role="img" aria-label="tick">
-              <img
-                src="/assets/tick.png"
-                alt="tick"
-                className="w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8"
-              />
-            </span>
-          </motion.div>
-        ))}
+        <img src="assets/maps_final.gif" alt="World Map" className="w-[80%] mx-auto" />
       </div>
     </div>
   );

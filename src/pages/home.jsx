@@ -72,9 +72,9 @@ const Home = () => {
             variants={fadeIn("up", 0.3)}
             initial="hidden"
             whileInView="show"
-            className="my-10 md:my-20 bg-[#b7162a] text-white"
+            className="my-10 md:my-20 bg-[#b7162a] p-6 text-white relative"
         >
-            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative">
                 {/* Text Section */}
                 <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4">
                     <h2 className="text-3xl md:text-4xl font-hbold">WHO ARE WE?</h2>
@@ -88,20 +88,22 @@ const Home = () => {
                         KNOW MORE
                     </button>
                 </div>
-
+    
                 {/* Video Section */}
-                <div className="w-full md:w-1/2 mb-6 md:mb-0 md:ml-8 h-64 md:h-[400px] bg-gray-300 flex items-center justify-center shadow-lg">
-                    {/* <p className="text-gray-600 text-xl md:text-2xl font-bold">VELPACK VIDEO</p> */}
-                    <video className="w-full h-full object-cover" controls>
-                        <source src="/assets/video.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-
+                <div className="w-full md:w-[60%] h-[300px] md:h-[500px] bg-white rounded-lg shadow-2xl flex items-center justify-center 
+                    relative md:absolute md:-bottom-30 md:-right-1/3 md:transform md:-translate-x-1/2 scale-75 mt-6 md:mt-0">
+                    <iframe
+                        className="w-full h-full object-cover rounded-lg"
+                        src="https://www.youtube.com/embed/bpR5jz4PTrA?autoplay=1"
+                        title="YouTube Video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
                 </div>
             </div>
         </motion.section>
     );
-
+        
     const ServicesSection = () => (
         <section className="bg-white py-10 md:py-16">
             <div className="container mx-auto px-4">
@@ -335,7 +337,7 @@ const Home = () => {
             <p className="text-xs md:text-sm text-center mb-4 md:mb-16">{review.content}</p>
         </div>
     );
-
+    
     const ReviewsSection = () => {
         const reviews = [
             { name: "Name 1", company: "Company 1", content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat." },
@@ -343,23 +345,23 @@ const Home = () => {
             { name: "Name 3", company: "Company 3", content: "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros." },
             { name: "Name 4", company: "Company 4", content: "Et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi." },
         ];
-
+    
         const [currentIndex, setCurrentIndex] = useState(1);
-
+    
         const nextReview = () => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
         };
-
+    
         const prevReview = () => {
             setCurrentIndex((prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length);
         };
-
+    
         return (
             <section className="bg-white py-10 md:py-16">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-2 text-[#e81d2d]">WHAT OUR CLIENTS SAY</h2>
                     <div className="w-16 h-1 bg-[#e81d2d] mb-8 md:mb-12 mx-auto"></div>
-
+    
                     <div className="relative">
                         <div className="flex justify-center items-center">
                             <button
@@ -369,13 +371,13 @@ const Home = () => {
                                 &lt;
                             </button>
                             <div className="flex justify-center items-center space-x-2 md:space-x-4 relative">
-                                <div className="w-72 md:w-96 absolute -left-72 md:-left-80 transform scale-90 ">
+                                <div className="w-72 md:w-96 absolute -left-72 md:-left-80 transform scale-90 md:scale-100">
                                     <ReviewCard review={reviews[(currentIndex - 1 + reviews.length) % reviews.length]} isCenter={false} />
                                 </div>
-                                <div className="w-72 md:w-96 z-10 sm:">
+                                <div className="w-72 md:w-96 z-10">
                                     <ReviewCard review={reviews[currentIndex]} isCenter={true} />
                                 </div>
-                                <div className="w-72 md:w-96 absolute -right-72 md:-right-80 transform scale-90  ">
+                                <div className="w-72 md:w-96 absolute -right-72 md:-right-80 transform scale-90 md:scale-100">
                                     <ReviewCard review={reviews[(currentIndex + 1) % reviews.length]} isCenter={false} />
                                 </div>
                             </div>
@@ -391,7 +393,8 @@ const Home = () => {
             </section>
         );
     };
-
+    
+    
     return (
         <>
             <Navbar />
