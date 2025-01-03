@@ -288,6 +288,9 @@ const Home = () => {
                         { name: "SPOT GLOSS", image: "/assets/Spot_Gloss.jpg" },
                         { name: "FOIL STAMPING", image: "/assets/Foil_Stamping.jpg" },
                         { name: "TEXTURE UV", image: "/assets/Textured_UV.jpg" },
+                        { name: "Graining", image: "/assets/Graining.jpg" },
+                        { name: "Micro Embossing", image: "/assets/Micro_Embossing.jpg" },
+                        
                     ].map((feature, index) => (
                         <div key={index} className="flex flex-col items-center">
                             <div className="w-full aspect-square bg-gray-200 mb-2 md:mb-4 rounded-lg overflow-hidden">
