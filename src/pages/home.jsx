@@ -238,7 +238,7 @@ const Home = () => {
                 <div className="relative">
                     <div className="flex animate-scroll bg-white py-4 md:py-6 h-xl">
                         <div className="flex shrink-0">
-                            {["Marksans", "Lupin", "Piramal", "Ipca", "Indoco"].map((logo) => (
+                            {["Pfizer_1", "abbott", "Marksans","MSD", "Ipca","Torent_Pharma", "usv", "Ajanta_Pharma", "encube", "Lupin", "FDC" , "Franco_1" ,"Piramal", "Encore_1"].map((logo) => (
                                 <img
                                     key={logo}
                                     src={`/assets/${logo}.png`}
@@ -248,7 +248,7 @@ const Home = () => {
                             ))}
                         </div>
                         <div className="flex shrink-0">
-                            {["Marksans", "Lupin", "Piramal", "Ipca", "Indoco"].map((logo) => (
+                            {["Pfizer_1", "abbott", "Marksans","MSD", "Ipca","Torent_Pharma", "usv", "Ajanta_Pharma", "encube", "Lupin", "FDC" , "Franco_1" ,"Piramal", "Encore_1"].map((logo) => (
                                 <img
                                     key={logo}
                                     src={`/assets/${logo}.png`}
