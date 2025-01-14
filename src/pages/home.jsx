@@ -263,6 +263,40 @@ const Home = () => {
         );
     };
 
+    const TrustedclientsSection = () => {
+        return (
+            <section className="bg-[#e81d2d] py-6 md:py-10 overflow-hidden">
+                <h2 className="text-3xl md:text-4xl font-hbold text-center mb-4 md:mb-8 text-white">
+                    CARRYING TRUST OF OUR LOVING CLIENTS  
+                </h2>
+                <div className="relative">
+                    <div className="flex animate-scroll bg-white py-4 md:py-6 h-xl">
+                        <div className="flex shrink-0">
+                            {["Marksans", "Lupin", "Piramal", "Ipca", "Indoco"].map((logo) => (
+                                <img
+                                    key={logo}
+                                    src={`/assets/${logo}.png`}
+                                    alt={`${logo} Logo`}
+                                    className="h-8 md:h-14 mx-4 md:mx-10"
+                                />
+                            ))}
+                        </div>
+                        <div className="flex shrink-0">
+                            {["Marksans", "Lupin", "Piramal", "Ipca", "Indoco"].map((logo) => (
+                                <img
+                                    key={logo}
+                                    src={`/assets/${logo}.png`}
+                                    alt={`${logo} Logo`}
+                                    className="h-8 md:h-14 mx-4 md:mx-10"
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        );
+    };
+
     const FeaturesSection = () => (
         <motion.section
             variants={fadeIn("up", 0.3)}
@@ -406,6 +440,7 @@ const Home = () => {
             <ServicesSection />
             <CapabilitiesSection />
             <TrustedBrandsSection />
+            <TrustedclientsSection />
             <FeaturesSection />
             <SecurityFeaturesSection />
             <ReviewsSection />
