@@ -265,7 +265,7 @@ const Home = () => {
 
     const TrustedclientsSection = () => {
         return (
-            <section className="bg-[#e81d2d] py-6 md:py-10 overflow-hidden">
+            <section className="bg-[#b7162a] py-6 md:py-10 overflow-hidden">
                 <h2 className="text-3xl md:text-4xl font-hbold text-center mb-4 md:mb-8 text-white">
                     CARRYING TRUST OF OUR LOVING CLIENTS  
                 </h2>
