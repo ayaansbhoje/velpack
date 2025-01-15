@@ -32,7 +32,7 @@ const AboutUsPage = () => {
     {
       name: "Bennie Phillips",
       role: "Director",
-      education: "Printing Technology,mJ.J. School of Arts, Mumbai"
+      education: "Printing Technology,J.J. School of Arts, Mumbai"
     },
     {
       name: "Rohan Phillips",
@@ -48,7 +48,7 @@ const AboutUsPage = () => {
       name: "Lyssa Phillips",
       role: "Director",
       education: [
-        "B.A. Economics & Global Studies - U.C.L.A, USA",
+        "B.A. Economics & Global Studies, U.C.L.A, USA",
         "Diploma in Packaging, Indian Institute of Packaging, Mumbai"
       ]
     }
@@ -63,7 +63,7 @@ const AboutUsPage = () => {
         {/* Header */}
         <div className="text-center py-8">
           <h1 className="text-2xl sm:text-4xl font-hbold mb-2">
-            VELPACKS JOURNEY:
+            VELPACK'S JOURNEY
           </h1>
           <h2 className="text-xl sm:text-3xl font-hmed text-red-500">
             Wrapping Responsibly since 1956
