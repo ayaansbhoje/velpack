@@ -67,8 +67,7 @@ const Home = () => {
         );
     };
 
-
-   const AboutUs = () => (
+const AboutUs = () => (
     <motion.section
         variants={fadeIn("up", 0.3)}
         initial="hidden"
@@ -90,9 +89,9 @@ const Home = () => {
                 </button>
             </div>
 
-            {/* Video Section - Modified for full width on mobile */}
-            <div className="w-screen -mx-6 md:mx-0 relative left-1/2 right-1/2 -translate-x-1/2 h-[300px] md:w-[60%] md:h-[500px] bg-white rounded-none md:rounded-lg shadow-2xl flex items-center justify-center 
-                md:absolute md:-bottom-30 md:-right-1/3 md:transform md:-translate-x-1/2 md:scale-75 -mb-6 md:mb-0 mt-6 md:mt-0">
+            {/* Video Section - Modified for mobile */}
+            <div className="w-[calc(100%+3rem)] -mx-6 h-[300px] md:w-[60%] md:h-[500px] bg-white rounded-none md:rounded-lg shadow-2xl flex items-center justify-center 
+                relative md:absolute md:-bottom-30 md:-right-1/3 md:transform md:-translate-x-1/2 md:scale-75 -mb-6 md:mb-0 mt-6 md:mt-0">
                 <iframe
                     className="w-full h-full md:rounded-lg"
                     src="https://www.youtube.com/embed/bpR5jz4PTrA?autoplay=1"
@@ -104,7 +103,7 @@ const Home = () => {
         </div>
     </motion.section>
 );
-
+   
 
 
 
