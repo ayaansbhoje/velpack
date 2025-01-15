@@ -413,72 +413,91 @@ const Home = () => {
         </motion.section>
     );
     const ReviewCard = ({ review, isCenter }) => (
-        <div className={`bg-red-500 rounded-lg p-4 md:p-6 text-white ${isCenter ? 'bg-red-800 shadow-lg transform md:scale-105 z-10' : 'z-0'} w-72 md:w-96 h-auto md:h-74 flex flex-col justify-between`}>
-            <div>
-                <h3 className="text-lg md:text-xl font-bold mb-1 text-center">{review.name}</h3>
-                <p className="text-xs md:text-sm mb-2 text-center">{review.company}</p>
-            </div>
-            <p className="text-xs md:text-sm text-center mb-4 md:mb-16">{review.content}</p>
+    <div className={`bg-red-500 rounded-lg p-4 md:p-6 text-white ${isCenter ? 'bg-red-800 shadow-lg transform md:scale-105 z-10' : 'z-0'} w-72 md:w-96 h-auto md:h-74 flex flex-col justify-between`}>
+        <div>
+            <h3 className="text-lg md:text-xl font-bold mb-1 text-center">{review.name}</h3>
+            <p className="text-xs md:text-sm mb-2 text-center">{review.company}</p>
         </div>
-    );
-    
-    const ReviewsSection = () => {
-        const reviews = [
-            { name: "Name 1", company: "Company 1", content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat." },
-            { name: "Name 2", company: "Company 2", content: "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat." },
-            { name: "Name 3", company: "Company 3", content: "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros." },
-            { name: "Name 4", company: "Company 4", content: "Et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi." },
-        ];
-    
-        const [currentIndex, setCurrentIndex] = useState(1);
-    
-        const nextReview = () => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
-        };
-    
-        const prevReview = () => {
-            setCurrentIndex((prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length);
-        };
-    
-        return (
-            <section className="bg-white py-10 md:py-16">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-2 text-[#e81d2d]">WHAT OUR CLIENTS SAY</h2>
-                    <div className="w-16 h-1 bg-[#e81d2d] mb-8 md:mb-12 mx-auto"></div>
-    
-                    <div className="relative">
-                        <div className="flex justify-center items-center">
-                            <button
-                                onClick={prevReview}
-                                className="absolute left-0 z-20 text-2xl md:text-4xl text-[#000000] hover:text-[#e81d2d] transition"
-                            >
-                                &lt;
-                            </button>
-                            <div className="flex justify-center items-center space-x-2 md:space-x-4 relative">
-                                <div className="w-72 md:w-96 absolute -left-72 md:-left-80 transform scale-90 md:scale-100">
-                                    <ReviewCard review={reviews[(currentIndex - 1 + reviews.length) % reviews.length]} isCenter={false} />
-                                </div>
-                                <div className="w-72 md:w-96 z-10">
-                                    <ReviewCard review={reviews[currentIndex]} isCenter={true} />
-                                </div>
-                                <div className="w-72 md:w-96 absolute -right-72 md:-right-80 transform scale-90 md:scale-100">
-                                    <ReviewCard review={reviews[(currentIndex + 1) % reviews.length]} isCenter={false} />
-                                </div>
-                            </div>
-                            <button
-                                onClick={nextReview}
-                                className="absolute right-0 z-20 text-2xl md:text-4xl text-[#000000] hover:text-[#e81d2d] transition"
-                            >
-                                &gt;
-                            </button>
+        <p className="text-xs md:text-sm text-center mb-4 md:mb-16">{review.content}</p>
+    </div>
+);
+
+const ReviewsSection = () => {
+    const reviews = [
+        { name: "Name 1", company: "Company 1", content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat." },
+        { name: "Name 2", company: "Company 2", content: "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat." },
+        { name: "Name 3", company: "Company 3", content: "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros." },
+        { name: "Name 4", company: "Company 4", content: "Et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi." },
+    ];
+
+    const [currentIndex, setCurrentIndex] = useState(1);
+
+    const nextReview = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+    };
+
+    const prevReview = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length);
+    };
+
+    return (
+        <section className="bg-white py-10 md:py-16">
+            <div className="container mx-auto px-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-2 text-[#e81d2d]">WHAT OUR CLIENTS SAY</h2>
+                <div className="w-16 h-1 bg-[#e81d2d] mb-8 md:mb-12 mx-auto"></div>
+
+                <div className="relative">
+                    {/* Mobile Version */}
+                    <div className="flex md:hidden justify-center items-center relative">
+                        <button
+                            onClick={prevReview}
+                            className="absolute left-0 z-20 text-2xl text-[#000000] hover:text-[#e81d2d] transition"
+                        >
+                            &lt;
+                        </button>
+                        <div className="w-72">
+                            <ReviewCard review={reviews[currentIndex]} isCenter={true} />
                         </div>
+                        <button
+                            onClick={nextReview}
+                            className="absolute right-0 z-20 text-2xl text-[#000000] hover:text-[#e81d2d] transition"
+                        >
+                            &gt;
+                        </button>
+                    </div>
+
+                    {/* Desktop Version - Unchanged */}
+                    <div className="hidden md:flex justify-center items-center">
+                        <button
+                            onClick={prevReview}
+                            className="absolute left-0 z-20 text-4xl text-[#000000] hover:text-[#e81d2d] transition"
+                        >
+                            &lt;
+                        </button>
+                        <div className="flex justify-center items-center space-x-4 relative">
+                            <div className="w-96 absolute -left-80 transform scale-100">
+                                <ReviewCard review={reviews[(currentIndex - 1 + reviews.length) % reviews.length]} isCenter={false} />
+                            </div>
+                            <div className="w-96 z-10">
+                                <ReviewCard review={reviews[currentIndex]} isCenter={true} />
+                            </div>
+                            <div className="w-96 absolute -right-80 transform scale-100">
+                                <ReviewCard review={reviews[(currentIndex + 1) % reviews.length]} isCenter={false} />
+                            </div>
+                        </div>
+                        <button
+                            onClick={nextReview}
+                            className="absolute right-0 z-20 text-4xl text-[#000000] hover:text-[#e81d2d] transition"
+                        >
+                            &gt;
+                        </button>
                     </div>
                 </div>
-            </section>
-        );
-    };
-    
-    
+            </div>
+        </section>
+    );
+};
+        
     return (
         <>
             <Navbar />
