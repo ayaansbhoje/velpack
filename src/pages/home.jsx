@@ -68,42 +68,44 @@ const Home = () => {
     };
 
 
-    const AboutUs = () => (
-        <motion.section
-            variants={fadeIn("up", 0.3)}
-            initial="hidden"
-            whileInView="show"
-            className="my-10 md:my-20 bg-[#b7162a] p-6 text-white relative"
-        >
-            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative">
-                {/* Text Section */}
-                <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4">
-                    <h2 className="text-3xl md:text-4xl font-hbold">WHO ARE WE?</h2>
-                    <div className="w-16 h-1 bg-white"></div>
-                    <p className="text-base md:text-lg font-hmed">
-                        Velpack has been a pioneer in the paper-based packaging
-                        industry since 1956. We specialize in providing high-quality folded
-                        cartons for the pharmaceutical, FMCG and industrial sectors.
-                    </p>
-                    <button className="font-hbold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300">
-                        KNOW MORE
-                    </button>
-                </div>
-    
-                {/* Video Section */}
-                <div className="w-full md:w-[60%] h-[300px] md:h-[500px] bg-white rounded-lg shadow-2xl flex items-center justify-center 
-                    relative md:absolute md:-bottom-30 md:-right-1/3 md:transform md:-translate-x-1/2 scale-75 mt-6 md:mt-0">
-                    <iframe
-                        className="w-full h-full object-cover rounded-lg"
-                        src="https://www.youtube.com/embed/bpR5jz4PTrA?autoplay=1"
-                        title="YouTube Video"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    ></iframe>
-                </div>
+   const AboutUs = () => (
+    <motion.section
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView="show"
+        className="my-10 md:my-20 bg-[#b7162a] p-6 text-white relative"
+    >
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative">
+            {/* Text Section */}
+            <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4">
+                <h2 className="text-3xl md:text-4xl font-hbold">WHO ARE WE?</h2>
+                <div className="w-16 h-1 bg-white"></div>
+                <p className="text-base md:text-lg font-hmed">
+                    Velpack has been a pioneer in the paper-based packaging
+                    industry since 1956. We specialize in providing high-quality folded
+                    cartons for the pharmaceutical, FMCG and industrial sectors.
+                </p>
+                <button className="font-hbold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300">
+                    KNOW MORE
+                </button>
             </div>
-        </motion.section>
-    );
+
+            {/* Video Section - Modified for mobile */}
+            <div className="w-[calc(100%+3rem)] -mx-6 h-[300px] md:w-[60%] md:h-[500px] bg-white rounded-none md:rounded-lg shadow-2xl flex items-center justify-center 
+                relative md:absolute md:-bottom-30 md:-right-1/3 md:transform md:-translate-x-1/2 md:scale-75 -mb-6 md:mb-0 mt-6 md:mt-0">
+                <iframe
+                    className="w-full h-full md:rounded-lg"
+                    src="https://www.youtube.com/embed/bpR5jz4PTrA?autoplay=1"
+                    title="YouTube Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                />
+            </div>
+        </div>
+    </motion.section>
+);
+
+
         
     const ServicesSection = () => (
         <section className="bg-white py-10 md:py-16">
