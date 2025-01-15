@@ -216,12 +216,12 @@ const Home = () => {
                         WE ARE CERTIFIED BY
                     </motion.h3>
                     <div className="flex flex-wrap justify-around items-center space-x-2 md:space-x-4 pb-4">
-                        <img src="/assets/ISO_9001.png" alt="ISO" className="h-8 md:h-14 mb-2 md:mb-0" />
-                        <img src="/assets/PS_9000.png" alt="PS" className="h-8 md:h-14 mb-2 md:mb-0" />
-                        <img src="/assets/BRC_Global_Standard.png" alt="BRC" className="h-8 md:h-14 mb-2 md:mb-0" />
-                        <img src="/assets/sedex.png" alt="Sedex" className="h-8 md:h-14 mb-2 md:mb-0" />
-                        <img src="/assets/PSCI.png" alt="PSCI" className="h-8 md:h-14 mb-2 md:mb-0" />
-                        <img src="/assets/GMI.png" alt="gmi" className="h-8 md:h-14" />
+                        <img src="/assets/ISO_9001.png" alt="ISO" className="h-10 md:h-14 mb-2 md:mb-0" />
+                        <img src="/assets/PS_9000.png" alt="PS" className="h-10 md:h-14 mb-2 md:mb-0" />
+                        <img src="/assets/BRC_Global_Standard.png" alt="BRC" className="h-10 md:h-14 mb-2 md:mb-0" />
+                        <img src="/assets/sedex.png" alt="Sedex" className="h-10 md:h-14 mb-2 md:mb-0" />
+                        <img src="/assets/PSCI.png" alt="PSCI" className="h-10 md:h-14 mb-2 md:mb-0" />
+                        <img src="/assets/GMI.png" alt="gmi" className="h-10 md:h-14" />
                     </div>
                 </motion.div>
 
@@ -268,7 +268,7 @@ const Home = () => {
         return (
             <section className="bg-[#b7162a] py-6 md:py-10 overflow-hidden">
                 <h2 className="text-3xl md:text-4xl font-hbold text-center mb-4 md:mb-8 text-white">
-                    CARRYING TRUST OF OUR LOVING CLIENTS  
+                    PROUD TO BE ASSOCIATED WITH
                 </h2>
                 <div className="relative">
                     <div className="flex animate-scroll bg-white py-4 md:py-6 h-xl">
