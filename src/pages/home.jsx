@@ -236,7 +236,7 @@ const AboutUs = () => (
     const TrustedBrandsSection = () => {
         return (
             <section className="bg-[#e81d2d] py-6 md:py-10 overflow-hidden">
-                <h2 className="text-3xl md:text-4xl font-hbold text-center mb-4 md:mb-8 text-white">
+                <h2 className="text-xl md:text-4xl font-hbold text-center mb-4 md:mb-8 text-white">
                     TRUSTED BY LEADING BRANDS
                 </h2>
                 <div className="relative">
@@ -270,7 +270,7 @@ const AboutUs = () => (
     const TrustedclientsSection = () => {
         return (
             <section className="bg-[#b7162a] py-6 md:py-10 overflow-hidden">
-                <h2 className="text-3xl md:text-4xl font-hbold text-center mb-4 md:mb-8 text-white">
+                <h2 className="text-xl md:text-4xl font-hbold text-center mb-4 md:mb-8 text-white">
                     PROUD TO BE ASSOCIATED WITH
                 </h2>
                 <div className="relative">
