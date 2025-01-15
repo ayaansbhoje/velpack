@@ -215,13 +215,13 @@ const Home = () => {
                     className="text-xl md:text-2xl font-hbold text-center mb-4 text-[#e81d2d]">
                     WE ARE CERTIFIED BY
                 </motion.h3>
-                <div className="grid grid-cols-3 md:flex md:flex-wrap md:justify-around md:items-center md:space-x-2 gap-4 md:gap-0 pb-4">
-                    <img src="/assets/ISO_9001.png" alt="ISO" className="h-14 md:h-20 w-auto mx-auto" />
-                    <img src="/assets/PS_9000.png" alt="PS" className="h-14 md:h-20 w-auto mx-auto" />
-                    <img src="/assets/BRC_Global_Standard.png" alt="BRC" className="h-14 md:h-20 w-auto mx-auto" />
-                    <img src="/assets/sedex.png" alt="Sedex" className="h-14 md:h-20 w-auto mx-auto" />
-                    <img src="/assets/PSCI.png" alt="PSCI" className="h-14 md:h-20 w-auto mx-auto" />
-                    <img src="/assets/GMI.png" alt="gmi" className="h-14 md:h-20 w-auto mx-auto" />
+                <div className="grid grid-cols-3 gap-4 md:flex md:flex-wrap md:justify-around md:items-center md:space-x-2">
+                    <img src="/assets/ISO_9001.png" alt="ISO" className="h-14 md:h-20 w-auto mx-auto md:mx-0 mb-2 md:mb-0" />
+                    <img src="/assets/PS_9000.png" alt="PS" className="h-14 md:h-20 w-auto mx-auto md:mx-0 mb-2 md:mb-0" />
+                    <img src="/assets/BRC_Global_Standard.png" alt="BRC" className="h-14 md:h-20 w-auto mx-auto md:mx-0 mb-2 md:mb-0" />
+                    <img src="/assets/sedex.png" alt="Sedex" className="h-14 md:h-20 w-auto mx-auto md:mx-0 mb-2 md:mb-0" />
+                    <img src="/assets/PSCI.png" alt="PSCI" className="h-14 md:h-20 w-auto mx-auto md:mx-0 mb-2 md:mb-0" />
+                    <img src="/assets/GMI.png" alt="gmi" className="h-14 md:h-20 w-auto mx-auto md:mx-0" />
                 </div>
             </motion.div>
 
