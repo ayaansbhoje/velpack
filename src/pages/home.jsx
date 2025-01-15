@@ -146,89 +146,89 @@ const Home = () => {
     );
 
     const CapabilitiesSection = () => (
-        <motion.section
-            variants={fadeIn("up", 0.3)}
+    <motion.section
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView="show"
+        className="bg-[#b7162a] text-white py-10 md:py-12">
+        <motion.div
+            variants={fadeIn("down", 0.3)}
             initial="hidden"
             whileInView="show"
-            className="bg-[#b7162a] text-white py-10 md:py-12">
-            <motion.div
-                variants={fadeIn("down", 0.3)}
+            className="container mx-auto px-4">
+            <motion.h2
+                variants={fadeIn("up", 0.3)}
                 initial="hidden"
                 whileInView="show"
-                className="container mx-auto px-4">
-                <motion.h2
-                    variants={fadeIn("up", 0.3)}
-                    initial="hidden"
-                    whileInView="show"
-                    className="text-3xl md:text-4xl font-hbold text-center">
-                    OUR CAPABILITIES
-                    <div className="w-16 h-1 bg-white mb-4 md:mb-6 mx-auto mt-3"></div>
-                </motion.h2>
+                className="text-3xl md:text-4xl font-hbold text-center">
+                OUR CAPABILITIES
+                <div className="w-16 h-1 bg-white mb-4 md:mb-6 mx-auto mt-3"></div>
+            </motion.h2>
 
-                <motion.p
-                    variants={fadeIn("up", 0.3)}
-                    initial="hidden"
-                    whileInView="show"
-                    className="text-base md:text-xl text-center mb-6 md:mb-8 px-4">
-                    With state-of-the-art machinery and advanced manufacturing processes, Velpack delivers precision and quality in every product.
-                </motion.p>
+            <motion.p
+                variants={fadeIn("up", 0.3)}
+                initial="hidden"
+                whileInView="show"
+                className="text-base md:text-xl text-center mb-6 md:mb-8 px-4">
+                With state-of-the-art machinery and advanced manufacturing processes, Velpack delivers precision and quality in every product.
+            </motion.p>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                    <motion.div
-                        variants={fadeIn("left", 0.3)}
-                        initial="hidden"
-                        whileInView="show"
-                        className="bg-[#e81d2d] p-4 rounded-lg text-center">
-                        <h3 className="text-lg md:text-xl font-hmed mb-1">Our facility spans</h3>
-                        <p className="text-2xl md:text-4xl font-bold mb-1">42,000 sq. ft.</p>
-                        <p>in Navi Mumbai, India</p>
-                    </motion.div>
-                    <motion.div
-                        variants={fadeIn("up", 0.3)}
-                        initial="hidden"
-                        whileInView="show"
-                        className="bg-[#e81d2d] p-4 rounded-lg text-center">
-                        <h3 className="text-lg md:text-xl font-hmed mb-1">We produce</h3>
-                        <p className="text-2xl md:text-4xl font-bold mb-1">3 million</p>
-                        <p>cartons per day</p>
-                    </motion.div>
-                    <motion.div
-                        variants={fadeIn("right", 0.3)}
-                        initial="hidden"
-                        whileInView="show"
-                        className="bg-[#e81d2d] p-4 rounded-lg text-center">
-                        <h3 className="text-lg md:text-xl font-hmed mb-1">We print</h3>
-                        <p className="text-2xl md:text-4xl font-bold mb-1">1 million</p>
-                        <p>inserts per day</p>
-                    </motion.div>
-                </div>
-
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                 <motion.div
+                    variants={fadeIn("left", 0.3)}
+                    initial="hidden"
+                    whileInView="show"
+                    className="bg-[#e81d2d] p-4 rounded-lg text-center">
+                    <h3 className="text-lg md:text-xl font-hmed mb-1">Our facility spans</h3>
+                    <p className="text-2xl md:text-4xl font-bold mb-1">42,000 sq. ft.</p>
+                    <p>in Navi Mumbai, India</p>
+                </motion.div>
+                <motion.div
+                    variants={fadeIn("up", 0.3)}
+                    initial="hidden"
+                    whileInView="show"
+                    className="bg-[#e81d2d] p-4 rounded-lg text-center">
+                    <h3 className="text-lg md:text-xl font-hmed mb-1">We produce</h3>
+                    <p className="text-2xl md:text-4xl font-bold mb-1">3 million</p>
+                    <p>cartons per day</p>
+                </motion.div>
+                <motion.div
+                    variants={fadeIn("right", 0.3)}
+                    initial="hidden"
+                    whileInView="show"
+                    className="bg-[#e81d2d] p-4 rounded-lg text-center">
+                    <h3 className="text-lg md:text-xl font-hmed mb-1">We print</h3>
+                    <p className="text-2xl md:text-4xl font-bold mb-1">1 million</p>
+                    <p>inserts per day</p>
+                </motion.div>
+            </div>
+
+            <motion.div
+                variants={fadeIn("up", 0.7)}
+                initial="hidden"
+                whileInView="show"
+                className="bg-white text-black p-4 md:p-6 rounded-lg mb-6 md:mb-8">
+                <motion.h3
                     variants={fadeIn("up", 0.7)}
                     initial="hidden"
                     whileInView="show"
-                    className="bg-white text-black p-4 md:p-6 rounded-lg mb-6 md:mb-8">
-                    <motion.h3
-                        variants={fadeIn("up", 0.7)}
-                        initial="hidden"
-                        whileInView="show"
-                        className="text-xl md:text-2xl font-hbold text-center mb-4 text-[#e81d2d]">
-                        WE ARE CERTIFIED BY
-                    </motion.h3>
-                    <div className="flex flex-wrap justify-around items-center space-x-1 md:space-x-2 pb-4">
-                        <img src="/assets/ISO_9001.png" alt="ISO" className="h-14 md:h-18 mb-2 md:mb-0" />
-                        <img src="/assets/PS_9000.png" alt="PS" className="h-14 md:h-18 mb-2 md:mb-0" />
-                        <img src="/assets/BRC_Global_Standard.png" alt="BRC" className="h-14 md:h-18 mb-2 md:mb-0" />
-                        <img src="/assets/sedex.png" alt="Sedex" className="h-14 md:h-18 mb-2 md:mb-0" />
-                        <img src="/assets/PSCI.png" alt="PSCI" className="h-14 md:h-18 mb-2 md:mb-0" />
-                        <img src="/assets/GMI.png" alt="gmi" className="h-14 md:h-18" />
-                    </div>
-                </motion.div>
-
-                <Footprint />
+                    className="text-xl md:text-2xl font-hbold text-center mb-4 text-[#e81d2d]">
+                    WE ARE CERTIFIED BY
+                </motion.h3>
+                <div className="grid grid-cols-3 md:flex md:flex-wrap md:justify-around md:items-center md:space-x-2 gap-4 md:gap-0 pb-4">
+                    <img src="/assets/ISO_9001.png" alt="ISO" className="h-14 md:h-20 w-auto mx-auto" />
+                    <img src="/assets/PS_9000.png" alt="PS" className="h-14 md:h-20 w-auto mx-auto" />
+                    <img src="/assets/BRC_Global_Standard.png" alt="BRC" className="h-14 md:h-20 w-auto mx-auto" />
+                    <img src="/assets/sedex.png" alt="Sedex" className="h-14 md:h-20 w-auto mx-auto" />
+                    <img src="/assets/PSCI.png" alt="PSCI" className="h-14 md:h-20 w-auto mx-auto" />
+                    <img src="/assets/GMI.png" alt="gmi" className="h-14 md:h-20 w-auto mx-auto" />
+                </div>
             </motion.div>
-        </motion.section>
-    );
+
+            <Footprint />
+        </motion.div>
+    </motion.section>
+);
 
     const TrustedBrandsSection = () => {
         return (
