@@ -382,11 +382,12 @@ const Home = () => {
                         className="w-full md:w-1/2 p-4 sm:p-6 md:p-8 lg:p-12"
                     >
                         <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-hbold mb-3 sm:mb-4 lg:mb-6">
-                            Our Commitment
+                            Elevate Your Packaging with Bespoke Designs
                         </h3>
                         <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
-                            At Velpack, we are committed to delivering excellence in every aspect of our packaging solutions. With decades of experience and cutting-edge technology, we ensure that each product meets the highest standards of quality and security. Our dedication to innovation and sustainability drives us to continuously improve and adapt to our clients' evolving needs. We take pride in our ability to provide customized solutions that perfectly align with our clients' requirements while maintaining the highest standards of quality and efficiency.
-                        </p>
+                        We understand that great packaging is not just about functionality but also about making a lasting impression. 
+                        Many of our clients seek tailored label designs and unique branding solutions to stand out in their markets. 
+                        To meet this need, we offer an additional service through our sister organization, Create Cluster. </p>
                     </motion.div>
 
                     {/* Dividing Line - Vertical for MD+ screens */}
@@ -402,11 +403,14 @@ const Home = () => {
                         whileInView="show"
                         className="w-full md:w-1/2 p-4 sm:p-6 md:p-8 lg:p-12"
                     >
-                        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-hbold mb-3 sm:mb-4 lg:mb-6">
+                        {/*   <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-hbold mb-3 sm:mb-4 lg:mb-6">
                             Quality Assurance
-                        </h3>
+                        </h3> */}
+                        
                         <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
-                            Our state-of-the-art quality control processes ensure that every packaging solution meets international standards. Through rigorous testing and continuous monitoring, we maintain the highest level of quality in all our products. Our advanced manufacturing facilities and experienced team work together to deliver packaging solutions that not only meet but exceed industry standards. We understand that quality is paramount in packaging, especially for pharmaceutical and FMCG products, and we make no compromises in maintaining our exceptional quality standards.
+                            Create Cluster specializes in packaging design and branding, 
+                            bringing creativity and strategy together to craft impactful designs that reflect your brand's essence. 
+                            Whether you need a refreshed label design or a complete branding overhaul, our team can help bring your vision to life.
                         </p>
                     </motion.div>
                 </div>
