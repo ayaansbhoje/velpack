@@ -215,13 +215,13 @@ const Home = () => {
                         className="text-xl md:text-2xl font-hbold text-center mb-4 text-[#e81d2d]">
                         WE ARE CERTIFIED BY
                     </motion.h3>
-                    <div className="flex flex-wrap justify-around items-center space-x-2 md:space-x-4 pb-4">
-                        <img src="/assets/ISO_9001.png" alt="ISO" className="h-14 md:h-14 mb-2 md:mb-0" />
-                        <img src="/assets/PS_9000.png" alt="PS" className="h-14 md:h-14 mb-2 md:mb-0" />
-                        <img src="/assets/BRC_Global_Standard.png" alt="BRC" className="h-14 md:h-14 mb-2 md:mb-0" />
-                        <img src="/assets/sedex.png" alt="Sedex" className="h-14 md:h-14 mb-2 md:mb-0" />
-                        <img src="/assets/PSCI.png" alt="PSCI" className="h-14 md:h-14 mb-2 md:mb-0" />
-                        <img src="/assets/GMI.png" alt="gmi" className="h-14 md:h-14" />
+                    <div className="flex flex-wrap justify-around items-center space-x-1 md:space-x-2 pb-4">
+                        <img src="/assets/ISO_9001.png" alt="ISO" className="h-16 md:h-20 mb-2 md:mb-0" />
+                        <img src="/assets/PS_9000.png" alt="PS" className="h-16 md:h-20 mb-2 md:mb-0" />
+                        <img src="/assets/BRC_Global_Standard.png" alt="BRC" className="h-16 md:h-20 mb-2 md:mb-0" />
+                        <img src="/assets/sedex.png" alt="Sedex" className="h-16 md:h-20 mb-2 md:mb-0" />
+                        <img src="/assets/PSCI.png" alt="PSCI" className="h-16 md:h-20 mb-2 md:mb-0" />
+                        <img src="/assets/GMI.png" alt="gmi" className="h-16 md:h-20" />
                     </div>
                 </motion.div>
 
