@@ -366,48 +366,43 @@ const Home = () => {
         </motion.section>
     );
 
-    const DividedInfoSection = () => (
+   const DividedInfoSection = () => (
         <motion.section
             variants={fadeIn("up", 0.3)}
             initial="hidden"
             whileInView="show"
-            className="bg-[#e81d2d] text-white py-8 sm:py-12 md:py-16 lg:py-20">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col md:flex-row items-start justify-center gap-8 md:gap-4 lg:gap-8">
+            className="bg-[#e81d2d] text-white py-6 md:py-10"
+        >
+            <div className="container mx-auto px-4">
+                <div className="flex flex-col md:flex-row items-start justify-center md:gap-4">
                     {/* Left Section */}
                     <motion.div
                         variants={fadeIn("right", 0.3)}
                         initial="hidden"
                         whileInView="show"
-                        className="w-full md:w-1/2 p-4 sm:p-6 md:p-8 lg:p-12"
+                        className="w-full md:w-1/2 p-3 md:p-6"
                     >
-                        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-hbold mb-3 sm:mb-4 lg:mb-6">
+                        <h3 className="text-xl md:text-3xl font-hbold mb-3">
                             Elevate Your Packaging with Bespoke Designs
                         </h3>
-                        <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
-                        We understand that great packaging is not just about functionality but also about making a lasting impression. 
-                        Many of our clients seek tailored label designs and unique branding solutions to stand out in their markets. 
-                        To meet this need, we offer an additional service through our sister organization, Create Cluster. </p>
+                        <p className="text-sm md:text-lg leading-relaxed">
+                            We understand that great packaging is not just about functionality but also about making a lasting impression. 
+                            Many of our clients seek tailored label designs and unique branding solutions to stand out in their markets. 
+                            To meet this need, we offer an additional service through our sister organization, Create Cluster.
+                        </p>
                     </motion.div>
 
-                    {/* Dividing Line - Vertical for MD+ screens */}
-                    <div className="hidden md:block w-px bg-white/30 self-stretch mx-2 lg:mx-4"></div>
-                    
-                    {/* Dividing Line - Horizontal for Mobile */}
-                    <div className="md:hidden w-full h-px bg-white/30 my-6"></div>
+                    {/* Dividing Line - Only for desktop */}
+                    <div className="hidden md:block w-px bg-white/30 self-stretch"></div>
 
                     {/* Right Section */}
                     <motion.div
                         variants={fadeIn("left", 0.3)}
                         initial="hidden"
                         whileInView="show"
-                        className="w-full md:w-1/2 p-4 sm:p-6 md:p-8 lg:p-12"
+                        className="w-full md:w-1/2 p-3 md:p-6 md:pt-16"
                     >
-                        {/*   <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-hbold mb-3 sm:mb-4 lg:mb-6">
-                            Quality Assurance
-                        </h3> */}
-                        
-                        <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                        <p className="text-sm md:text-lg leading-relaxed">
                             Create Cluster specializes in packaging design and branding, 
                             bringing creativity and strategy together to craft impactful designs that reflect your brand's essence. 
                             Whether you need a refreshed label design or a complete branding overhaul, our team can help bring your vision to life.
@@ -417,7 +412,6 @@ const Home = () => {
             </div>
         </motion.section>
     );
-
     const ReviewCard = ({ review, isCenter }) => (
         <div className={`bg-red-500 rounded-lg p-4 md:p-6 text-white ${isCenter ? 'bg-red-800 shadow-lg transform md:scale-105 z-10' : 'z-0'} w-72 md:w-96 h-auto md:h-74 flex flex-col justify-between`}>
             <div>
