@@ -77,7 +77,7 @@ const AboutUs = () => (
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative">
             {/* Text Section */}
             <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4">
-                <h2 className="text-3xl md:text-4xl font-hbold">WHO ARE WE?</h2>
+                <h2 className="text-2xl md:text-4xl font-hbold">WHO ARE WE?</h2>
                 <div className="w-16 h-1 bg-white"></div>
                 <p className="text-base md:text-lg font-hmed">
                     Velpack has been a pioneer in the paper-based packaging
@@ -163,7 +163,7 @@ const AboutUs = () => (
                 variants={fadeIn("up", 0.3)}
                 initial="hidden"
                 whileInView="show"
-                className="text-3xl md:text-4xl font-hbold text-center">
+                className="text-xl md:text-4xl font-hbold text-center">
                 OUR CAPABILITIES
                 <div className="w-16 h-1 bg-white mb-4 md:mb-6 mx-auto mt-3"></div>
             </motion.h2>
@@ -312,7 +312,7 @@ const AboutUs = () => (
                     variants={fadeIn("up", 0.3)}
                     initial="hidden"
                     whileInView="show"
-                    className="text-3xl md:text-4xl font-hbold text-center mb-2 text-[#e81d2d]">OUR FEATURES</motion.h2>
+                    className="text-xl md:text-4xl font-hbold text-center mb-2 text-[#e81d2d]">OUR FEATURES</motion.h2>
                 <div className="w-20 h-1 bg-[#e81d2d] mx-auto mb-8 md:mb-12"></div>
 
                 <motion.div
