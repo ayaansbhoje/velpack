@@ -354,14 +354,14 @@ const AboutUs = () => (
                         variants={fadeIn("left", 0.3)}
                         initial="hidden"
                         whileInView="show"
-                        className="text-xl md:text-2xl text-center font-hbold whitespace-nowrap">
+                        className="text-xl md:text-2xl  font-hbold whitespace-nowrap">
                         SECURITY FEATURES:
                     </motion.h3>
                     <motion.p
                         variants={fadeIn("right", 0.3)}
                         initial="hidden"
                         whileInView="show"
-                        className="text-base md:text-xl text-center">
+                        className="text-base md:text-xl ">
                         Micro Printing | Invisible Ink Printing | Hologram Foil | Coin-Reactive Ink | Tamper-Evident Cartons
                     </motion.p>
                 </div>
