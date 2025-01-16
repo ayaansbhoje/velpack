@@ -223,7 +223,7 @@ const AboutUs = () => (
                     <img src="/assets/PS_9000.png" alt="PS" className="h-14 md:h-20 w-auto mx-auto md:mx-0 mb-2 md:mb-0" />
                     <img src="/assets/BRC_Global_Standard.png" alt="BRC" className="h-14 md:h-20 w-auto mx-auto md:mx-0 mb-2 md:mb-0" />
                     <img src="/assets/sedex.png" alt="Sedex" className="h-14 md:h-20 w-auto mx-auto md:mx-0 mb-2 md:mb-0" />
-                    <img src="/assets/PSCI.png" alt="PSCI" className="h-14 md:h-20 w-auto mx-auto md:mx-0 mb-2 md:mb-0" />
+                    <img src="/assets/PSCI.png" alt="PSCI" className="h-14 md:h-24 w-auto mx-auto md:mx-0 mb-2 md:mb-0" />
                     <img src="/assets/GMI.png" alt="gmi" className="h-14 md:h-20 w-auto mx-auto md:mx-0" />
                 </div>
             </motion.div>
