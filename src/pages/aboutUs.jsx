@@ -32,7 +32,7 @@ const AboutUsPage = () => {
     {
       name: "Bennie Phillips",
       role: "Director",
-      education: "Printing Technology,J.J. School of Arts, Mumbai"
+      education: "Printing Technology, J.J. School of Arts, Mumbai"
     },
     {
       name: "Rohan Phillips",
@@ -119,7 +119,7 @@ const AboutUsPage = () => {
             <h2 className="text-white text-2xl sm:text-4xl font-hbold text-center mb-4">OUR TEAM</h2>
             <div className="w-16 h-1 bg-white mb-6 mx-auto mt-2"></div>
 
-            <p className="text-white text-center mb-12 text-sm sm:text-base">
+            <p className="text-white text-base md:text-xl text-center mb-12 text-sm sm:text-base">
               Combining seasoned expertise with dynamic innovation, our leadership team drives Velpack's success.
             </p>
             
@@ -139,7 +139,7 @@ const AboutUsPage = () => {
               ))}
             </div>
             
-            <p className="text-white text-center mt-12 text-sm sm:text-base">
+            <p className="text-white text-base md:text-xl text-center mt-12 text-sm sm:text-base">
               As a family-owned business, we prioritize integrity, innovation, and excellence in all we do. Our commitment to quality and customer satisfaction sets us apart.
             </p>
           </div>
