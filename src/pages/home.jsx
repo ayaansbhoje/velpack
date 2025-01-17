@@ -68,40 +68,41 @@ const Home = () => {
     };
 
 const AboutUs = () => (
-    <motion.section
-        variants={fadeIn("up", 0.3)}
-        initial="hidden"
-        whileInView="show"
-        className="my-10 md:my-20 bg-[#b7162a] p-6 text-white relative"
-    >
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative">
-            {/* Text Section */}
-            <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4">
-                <h2 className="text-2xl text-centre md:text-4xl font-hbold">WHO ARE WE?</h2>
-                <div className="w-16 h-1 bg-white"></div>
-                <p className="text-base text-centre md:text-lg font-hmed">
-                    Velpack has been a pioneer in the paper-based packaging
-                    industry since 1956. We specialize in providing high-quality folded
-                    cartons for the pharmaceutical, FMCG and industrial sectors.
-                </p>
-                <button className="font-hbold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300">
-                    KNOW MORE
-                </button>
-            </div>
-
-            {/* Video Section - Modified for mobile */}
-            <div className="w-[calc(100%+3rem)] -mx-6 h-[300px] md:w-[60%] md:h-[500px] bg-white rounded-none md:rounded-lg shadow-2xl flex items-center justify-center 
-                relative md:absolute md:-bottom-30 md:-right-1/3 md:transform md:-translate-x-1/2 md:scale-75 -mb-6 md:mb-0 mt-6 md:mt-0">
-                <iframe
-                    className="w-full h-full md:rounded-lg"
-                    src="https://www.youtube.com/embed/bpR5jz4PTrA?autoplay=1"
-                    title="YouTube Video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                />
-            </div>
-        </div>
-    </motion.section>
+  <motion.section
+    variants={fadeIn("up", 0.3)}
+    initial="hidden"
+    whileInView="show"
+    className="my-10 md:my-20 bg-[#b7162a] p-6 text-white relative"
+  >
+    <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative">
+      <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4 flex justify-center items-center flex-col">
+        <h2 className="text-2xl text-center md:text-4xl font-hbold">
+          WHO ARE WE?
+        </h2>
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center bg-white h-1 w-16 relative"></div>
+        <p className="text-base text-center md:text-lg font-hmed">
+          Velpack has been a pioneer in the paper-based packaging industry since
+          1956. We specialize in providing high-quality folded cartons for the
+          pharmaceutical, FMCG and industrial sectors.
+        </p>
+        <button className="font-bold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 flex items-center rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300">
+          KNOW MORE
+        </button>
+      </div>
+      <div
+        className="w-[calc(100%+3rem)] -mx-6 h-[300px] md:w-[60%] md:h-[500px] bg-white rounded-none md:rounded-lg shadow-2xl flex items-center justify-center 
+                relative md:absolute md:-bottom-30 md:-right-1/3 md:transform md:-translate-x-1/2 md:scale-75 -mb-6 md:mb-0 mt-6 md:mt-0"
+      >
+        <iframe
+          className="w-full h-full md:rounded-lg"
+          src="https://www.youtube.com/embed/bpR5jz4PTrA?autoplay=1"
+          title="YouTube Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    </div>
+  </motion.section>
 );
    
 
@@ -302,63 +303,90 @@ const AboutUs = () => (
     };
 
    const FeaturesSection = () => (
-    <motion.section
-        variants={fadeIn("up", 0.3)}
-        initial="hidden"
-        whileInView="show"
-        className="bg-white py-10 md:py-16">
-        <div className="container mx-auto px-4">
-            <motion.h2
-                variants={fadeIn("up", 0.3)}
-                initial="hidden"
-                whileInView="show"
-                className="text-2xl md:text-4xl font-hbold text-center mb-2 text-[#e81d2d]">OUR FEATURES</motion.h2>
-            <div className="w-20 h-1 bg-[#e81d2d] mx-auto mb-8 md:mb-12"></div>
-            <motion.div
-                variants={fadeIn("up", 0.3)}
-                initial="hidden"
-                whileInView="show"
-                className="flex flex-col gap-4 md:gap-8">
-                {/* First Row */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-                    {[
-                        { name: "EMBOSSING", image: "/assets/Embossing.jpg" },
-                        { name: "ACCUBRAILLE", image: "/assets/Accubraille.jpg" },
-                        { name: "SPOT GLOSS", image: "/assets/Spot_Gloss.jpg" },
-                        { name: "FOIL STAMPING", image: "/assets/Foil_Stamping.jpg" },
-                    ].map((feature, index) => (
-                        <div key={index} className="flex flex-col items-center">
-                            <div className="w-full aspect-square bg-gray-200 mb-2 md:mb-4 rounded-lg overflow-hidden">
-                                <img src={feature.image} alt={feature.name} className="w-full h-full object-cover" />
-                            </div>
-                            <p className="text-center font-bold text-sm md:text-base">{feature.name}</p>
-                        </div>
-                    ))}
-                </div>
-                
-                {/* Second Row */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-                    <div className="col-span-2 md:col-span-4 flex justify-center">
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 w-full md:w-3/4">
-                            {[
-                                { name: "TEXTURE UV", image: "/assets/Texture_UV.jpg" },
-                                { name: "Graining", image: "/assets/Graining.jpg" },
-                                { name: "Micro Embossing", image: "/assets/Micro_Embossing.jpg" },
-                            ].map((feature, index) => (
-                                <div key={index} className="flex flex-col items-center">
-                                    <div className="w-full aspect-square bg-gray-200 mb-2 md:mb-4 rounded-lg overflow-hidden">
-                                        <img src={feature.image} alt={feature.name} className="w-full h-full object-cover" />
-                                    </div>
-                                    <p className="text-center font-bold text-sm md:text-base">{feature.name}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </motion.div>
-        </div>
-    </motion.section>
-);
+     <motion.section
+       variants={fadeIn("up", 0.3)}
+       initial="hidden"
+       whileInView="show"
+       className="bg-white py-10 md:py-16"
+     >
+       <div className="container mx-auto px-4">
+         <motion.h2
+           variants={fadeIn("up", 0.3)}
+           initial="hidden"
+           whileInView="show"
+           className="text-2xl md:text-4xl font-hbold text-center mb-2 text-[#e81d2d]"
+         >
+           OUR FEATURES
+         </motion.h2>
+         <div className="w-20 h-1 bg-[#e81d2d] mx-auto mb-8 md:mb-12"></div>
+         <motion.div
+           variants={fadeIn("up", 0.3)}
+           initial="hidden"
+           whileInView="show"
+           className="flex flex-col gap-4 md:gap-8"
+         >
+           {/* First Row */}
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+             {[
+               { name: "EMBOSSING", image: "/assets/Embossing.jpg" },
+               { name: "ACCUBRAILLE", image: "/assets/Accubraille.jpg" },
+               { name: "SPOT GLOSS", image: "/assets/Spot_Gloss.jpg" },
+               { name: "FOIL STAMPING", image: "/assets/Foil_Stamping.jpg" },
+             ].map((feature, index) => (
+               <div key={index} className="flex flex-col items-center">
+                 <div className="w-full aspect-square bg-gray-200 mb-2 md:mb-4 rounded-lg overflow-hidden">
+                   <img
+                     src={feature.image}
+                     alt={feature.name}
+                     className="w-full h-full object-cover"
+                   />
+                 </div>
+                 <p className="text-center font-bold text-sm md:text-base">
+                   {feature.name}
+                 </p>
+               </div>
+             ))}
+           </div>
+
+           {/* Second Row */}
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+             <div className="col-span-2 md:col-span-4 flex justify-center">
+               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 w-full md:w-3/4">
+                 {[
+                   { name: "TEXTURE UV", image: "/assets/Texture_UV.jpg" },
+                   { name: "Graining", image: "/assets/Graining.jpg" },
+                   {
+                     name: "Micro Embossing", 
+                     image: "/assets/Micro_Embossing.jpg",
+                   },
+                 ].map((feature, index, array) => (
+                   <div
+                     key={index}
+                     className={`flex flex-col items-center ${
+                       index === array.length - 1
+                         ? "col-span-2 mx-auto md:col-span-1 md:mx-0 w-1/2 md:w-full"
+                         : ""
+                     }`}
+                   >
+                     <div className="w-full aspect-square bg-gray-200 mb-2 md:mb-4 rounded-lg overflow-hidden">
+                       <img
+                         src={feature.image}
+                         alt={feature.name}
+                         className="w-full h-full object-cover"
+                       />
+                     </div>
+                     <p className="text-center font-bold text-sm md:text-base">
+                       {feature.name}
+                     </p>
+                   </div>
+                 ))}
+               </div>
+             </div>
+           </div>
+         </motion.div>
+       </div>
+     </motion.section>
+   );
     const SecurityFeaturesSection = () => (
         <motion.section
             variants={fadeIn("up", 0.3)}
