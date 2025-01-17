@@ -223,7 +223,7 @@ const AboutUs = () => (
                     <img src="/assets/PS_9000.png" alt="PS" className="h-14 md:h-20 w-auto mx-auto md:mx-0 mb-2 md:mb-0" />
                     <img src="/assets/BRC_Global_Standard.png" alt="BRC" className="h-14 md:h-20 w-auto mx-auto md:mx-0 mb-2 md:mb-0" />
                     <img src="/assets/sedex.png" alt="Sedex" className="h-14 md:h-20 w-auto mx-auto md:mx-0 mb-2 md:mb-0" />
-                    <img src="/assets/PSCI.png" alt="PSCI" className="h-14 md:h-24 w-auto mx-auto md:mx-0 mb-2 md:mb-0" />
+                    <img src="/assets/PSCI.png" alt="PSCI" className="h-18 md:h-24 w-auto mx-auto md:mx-0 mb-2 md:mb-0" />
                     <img src="/assets/GMI.png" alt="gmi" className="h-14 md:h-20 w-auto mx-auto md:mx-0" />
                 </div>
             </motion.div>
@@ -301,7 +301,7 @@ const AboutUs = () => (
         );
     };
 
-    const FeaturesSection = () => (
+   const FeaturesSection = () => (
     <motion.section
         variants={fadeIn("up", 0.3)}
         initial="hidden"
@@ -318,8 +318,9 @@ const AboutUs = () => (
                 variants={fadeIn("up", 0.3)}
                 initial="hidden"
                 whileInView="show"
-                className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-                <div className="col-span-2 md:col-span-4 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                className="flex flex-col gap-4 md:gap-8">
+                {/* First Row */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                     {[
                         { name: "EMBOSSING", image: "/assets/Embossing.jpg" },
                         { name: "ACCUBRAILLE", image: "/assets/Accubraille.jpg" },
@@ -334,20 +335,24 @@ const AboutUs = () => (
                         </div>
                     ))}
                 </div>
-                <div className="col-span-2 md:col-span-4 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-                    <div className="col-span-2 md:col-start-2 md:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
-                        {[
-                            { name: "TEXTURE UV", image: "/assets/Texture_UV.jpg" },
-                            { name: "Graining", image: "/assets/Graining.jpg" },
-                            { name: "Micro Embossing", image: "/assets/Micro_Embossing.jpg" },
-                        ].map((feature, index) => (
-                            <div key={index} className="flex flex-col items-center">
-                                <div className="w-full aspect-square bg-gray-200 mb-2 md:mb-4 rounded-lg overflow-hidden">
-                                    <img src={feature.image} alt={feature.name} className="w-full h-full object-cover" />
+                
+                {/* Second Row */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                    <div className="col-span-2 md:col-span-4 flex justify-center">
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 w-full md:w-3/4">
+                            {[
+                                { name: "TEXTURE UV", image: "/assets/Texture_UV.jpg" },
+                                { name: "Graining", image: "/assets/Graining.jpg" },
+                                { name: "Micro Embossing", image: "/assets/Micro_Embossing.jpg" },
+                            ].map((feature, index) => (
+                                <div key={index} className="flex flex-col items-center">
+                                    <div className="w-full aspect-square bg-gray-200 mb-2 md:mb-4 rounded-lg overflow-hidden">
+                                        <img src={feature.image} alt={feature.name} className="w-full h-full object-cover" />
+                                    </div>
+                                    <p className="text-center font-bold text-sm md:text-base">{feature.name}</p>
                                 </div>
-                                <p className="text-center font-bold text-sm md:text-base">{feature.name}</p>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
             </motion.div>
