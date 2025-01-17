@@ -334,19 +334,21 @@ const AboutUs = () => (
                         </div>
                     ))}
                 </div>
-                <div className="col-span-2 md:col-span-4 grid grid-cols-2 md:grid-cols-12 gap-4 md:gap-8">
-                    {[
-                        { name: "TEXTURE UV", image: "/assets/Texture_UV.jpg" },
-                        { name: "Graining", image: "/assets/Graining.jpg" },
-                        { name: "Micro Embossing", image: "/assets/Micro_Embossing.jpg" },
-                    ].map((feature, index) => (
-                        <div key={index} className="flex flex-col items-center col-span-1 md:col-span-4">
-                            <div className="w-full aspect-square bg-gray-200 mb-2 md:mb-4 rounded-lg overflow-hidden">
-                                <img src={feature.image} alt={feature.name} className="w-full h-full object-cover" />
+                <div className="col-span-2 md:col-span-4 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                    <div className="col-span-2 md:col-start-2 md:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+                        {[
+                            { name: "TEXTURE UV", image: "/assets/Texture_UV.jpg" },
+                            { name: "Graining", image: "/assets/Graining.jpg" },
+                            { name: "Micro Embossing", image: "/assets/Micro_Embossing.jpg" },
+                        ].map((feature, index) => (
+                            <div key={index} className="flex flex-col items-center">
+                                <div className="w-full aspect-square bg-gray-200 mb-2 md:mb-4 rounded-lg overflow-hidden">
+                                    <img src={feature.image} alt={feature.name} className="w-full h-full object-cover" />
+                                </div>
+                                <p className="text-center font-bold text-sm md:text-base">{feature.name}</p>
                             </div>
-                            <p className="text-center font-bold text-sm md:text-base">{feature.name}</p>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </motion.div>
         </div>
