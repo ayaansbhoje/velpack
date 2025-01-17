@@ -302,46 +302,48 @@ const AboutUs = () => (
     };
 
     const FeaturesSection = () => (
-        <motion.section
-            variants={fadeIn("up", 0.3)}
-            initial="hidden"
-            whileInView="show"
-            className="bg-white py-10 md:py-16">
-            <div className="container mx-auto px-4">
-                <motion.h2
-                    variants={fadeIn("up", 0.3)}
-                    initial="hidden"
-                    whileInView="show"
-                    className="text-2xl md:text-4xl font-hbold text-center mb-2 text-[#e81d2d]">OUR FEATURES</motion.h2>
-                <div className="w-20 h-1 bg-[#e81d2d] mx-auto mb-8 md:mb-12"></div>
-
-                <motion.div
-                    variants={fadeIn("up", 0.3)}
-                    initial="hidden"
-                    whileInView="show"
-                    className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-                    {[
-                        { name: "EMBOSSING", image: "/assets/Embossing.jpg" },
-                        { name: "ACCUBRAILLE", image: "/assets/Accubraille.jpg" },
-                        { name: "SPOT GLOSS", image: "/assets/Spot_Gloss.jpg" },
-                        { name: "FOIL STAMPING", image: "/assets/Foil_Stamping.jpg" },
-                        { name: "TEXTURE UV", image: "/assets/Texture_UV.jpg" },
-                        { name: "Graining", image: "/assets/Graining.jpg" },
-                        { name: "Micro Embossing", image: "/assets/Micro_Embossing.jpg" },
-                        
-                    ].map((feature, index) => (
-                        <div key={index} className="flex flex-col items-center">
-                            <div className="w-full aspect-square bg-gray-200 mb-2 md:mb-4 rounded-lg overflow-hidden">
-                                <img src={feature.image} alt={feature.name} className="w-full h-full object-cover" />
-                            </div>
-                            <p className="text-center font-bold text-sm md:text-base">{feature.name}</p>
+    <motion.section
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView="show"
+        className="bg-white py-10 md:py-16">
+        <div className="container mx-auto px-4">
+            <motion.h2
+                variants={fadeIn("up", 0.3)}
+                initial="hidden"
+                whileInView="show"
+                className="text-2xl md:text-4xl font-hbold text-center mb-2 text-[#e81d2d]">OUR FEATURES</motion.h2>
+            <div className="w-20 h-1 bg-[#e81d2d] mx-auto mb-8 md:mb-12"></div>
+            <motion.div
+                variants={fadeIn("up", 0.3)}
+                initial="hidden"
+                whileInView="show"
+                className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                {[
+                    { name: "EMBOSSING", image: "/assets/Embossing.jpg" },
+                    { name: "ACCUBRAILLE", image: "/assets/Accubraille.jpg" },
+                    { name: "SPOT GLOSS", image: "/assets/Spot_Gloss.jpg" },
+                    { name: "FOIL STAMPING", image: "/assets/Foil_Stamping.jpg" },
+                    { name: "TEXTURE UV", image: "/assets/Texture_UV.jpg" },
+                    { name: "Graining", image: "/assets/Graining.jpg" },
+                    { name: "Micro Embossing", image: "/assets/Micro_Embossing.jpg" },
+                    
+                ].map((feature, index) => (
+                    <div 
+                        key={index} 
+                        className={`flex flex-col items-center ${
+                            index >= 4 ? 'col-span-1 md:col-span-2 md:mx-auto md:w-1/2' : ''
+                        }`}>
+                        <div className="w-full aspect-square bg-gray-200 mb-2 md:mb-4 rounded-lg overflow-hidden">
+                            <img src={feature.image} alt={feature.name} className="w-full h-full object-cover" />
                         </div>
-                    ))}
-                </motion.div>
-            </div>
-        </motion.section>
-    );
-
+                        <p className="text-center font-bold text-sm md:text-base">{feature.name}</p>
+                    </div>
+                ))}
+            </motion.div>
+        </div>
+    </motion.section>
+);
     const SecurityFeaturesSection = () => (
         <motion.section
             variants={fadeIn("up", 0.3)}
