@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variant';
-import Link from 'next/link';
 import Navbar from '../components/navbar'
 import Footer from '../components/footer';
 import Footprint from '../components/Footprint';
