@@ -88,11 +88,11 @@ const AboutUs = () => (
           1956. We specialize in providing high-quality folded cartons for the
           pharmaceutical, FMCG and industrial sectors.
         </p>
-        <Link to="/aboutUs">  
+         
         <button className="font-bold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 flex items-center rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300">
           KNOW MORE
         </button>
-        </Link>
+        
       </div>
       <div
         className="w-[calc(100%+3rem)] -mx-6 h-[300px] md:w-[60%] md:h-[500px] bg-white rounded-none md:rounded-lg shadow-2xl flex items-center justify-center 
