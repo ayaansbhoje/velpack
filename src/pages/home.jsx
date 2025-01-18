@@ -51,6 +51,7 @@ const Home = () => {
                         variants={fadeIn("up", 0.3)}
                         initial="hidden"
                         whileInView="show"
+                        onClick={() => window.location.href = '/contactus'}
                         className="px-4 py-2 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold">
                         GET IN TOUCH
                     </motion.button>
