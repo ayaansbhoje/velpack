@@ -46,7 +46,7 @@ const Home = () => {
                         PAPER-BASED PACKAGING SOLUTIONS SINCE 1956
                     </motion.h1>
 
-                    <Link href="/contactus">
+                    
                     <motion.button
                         variants={fadeIn("up", 0.3)}
                         initial="hidden"
@@ -54,7 +54,7 @@ const Home = () => {
                         className="px-4 py-2 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold">
                         GET IN TOUCH
                     </motion.button>
-                    </Link>
+                    
                          
                 </div>
                 <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
