@@ -1,15 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    // Handle scroll effect
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 0);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
     return (
-        <nav className="relative w-full bg-white">
+        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+            isScrolled ? 'bg-white/90 backdrop-blur-sm shadow-sm' : 'bg-white'
+        }`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
@@ -84,7 +97,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="md:hidden" id="mobile-menu">
+                <div className="md:hidden absolute w-full bg-white/90 backdrop-blur-sm shadow-sm" id="mobile-menu">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         <Link 
                             to="/home" 
@@ -132,7 +145,7 @@ const Navbar = () => {
                 </div>
             )}
         </nav>
-    )
-}
+    );
+};
 
 export default Navbar;
