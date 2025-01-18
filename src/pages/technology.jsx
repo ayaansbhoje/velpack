@@ -110,7 +110,7 @@ const Technologypage = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-white text-center mb-16 text-sm sm:text-base"
+            className="text-white text-base md:text-xl text-center mb-16 text-sm sm:text-base"
           >
             With state-of-the-art machinery and advanced manufacturing processes, Velpack delivers precision and quality in every product.
           </motion.p>

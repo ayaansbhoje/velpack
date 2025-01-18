@@ -32,7 +32,7 @@ const AboutUsPage = () => {
     {
       name: "Bennie Phillips",
       role: "Director",
-      education: "Printing Technology,J.J. School of Arts, Mumbai"
+      education: "Printing Technology, J.J. School of Arts, Mumbai"
     },
     {
       name: "Rohan Phillips",
@@ -103,7 +103,7 @@ const AboutUsPage = () => {
               </div>
             </div>
             <div className="w-full bg-stone-300 p-4 shadow-lg">
-              <p className="text-gray-800 text-center text-sm">
+              <p className="text-gray-800 mb-2 text-center text-sm">
                 Founded in 1956, Velpack has grown from a small family business into a global supplier of premium paper-based packaging. Our state-of-the-art facility in Navi Mumbai spans 42,000 sq. ft., enabling us to produce millions of cartons and inserts daily.
               </p>
             </div>
@@ -116,10 +116,10 @@ const AboutUsPage = () => {
         {/* Team Section */}
         <div className="bg-[#b7162a] sm:py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-white text-2xl sm:text-4xl font-hbold text-center mb-4">OUR TEAM</h2>
+            <h2 className="text-white text-2xl sm:text-4xl font-bold text-center pt-6 mb-4 mt-12 sm:mt-0">OUR TEAM</h2>
             <div className="w-16 h-1 bg-white mb-6 mx-auto mt-2"></div>
 
-            <p className="text-white text-center mb-12 text-sm sm:text-base">
+            <p className="text-white text-base md:text-xl text-center mb-12 text-sm sm:text-base">
               Combining seasoned expertise with dynamic innovation, our leadership team drives Velpack's success.
             </p>
             
@@ -139,7 +139,7 @@ const AboutUsPage = () => {
               ))}
             </div>
             
-            <p className="text-white text-center mt-12 text-sm sm:text-base">
+            <p className="text-white text-base md:text-xl text-center mt-8 sm:mt-12 mb-8 pb-4 sm:mb-0 text-sm sm:text-base">
               As a family-owned business, we prioritize integrity, innovation, and excellence in all we do. Our commitment to quality and customer satisfaction sets us apart.
             </p>
           </div>
