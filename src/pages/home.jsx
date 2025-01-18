@@ -54,7 +54,7 @@ const Home = () => {
                         className="px-4 py-2 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold">
                         GET IN TOUCH
                     </motion.button>
-                        </Link>
+                    </Link>
                          
                 </div>
                 <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
@@ -92,7 +92,7 @@ const AboutUs = () => (
         <button className="font-bold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 flex items-center rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300">
           KNOW MORE
         </button>
-          </Link>
+        </Link>
       </div>
       <div
         className="w-[calc(100%+3rem)] -mx-6 h-[300px] md:w-[60%] md:h-[500px] bg-white rounded-none md:rounded-lg shadow-2xl flex items-center justify-center 
