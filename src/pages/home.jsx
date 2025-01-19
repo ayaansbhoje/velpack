@@ -54,9 +54,9 @@ const Home = () => {
                         initial="hidden"
                         whileInView="show"
                         className="px-4 py-2 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold"
-                        onClick={() => window.location.href = '/contactus'}
-                    >
-                        GET IN TOUCH
+                    >    
+                        <Link to="/contactus">GET IN TOUCH</Link>
+
                     </motion.button>
                     
                          
