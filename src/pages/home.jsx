@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variant';
 import Navbar from '../components/navbar'
 import Footer from '../components/footer';
 import Footprint from '../components/Footprint';
+import { useHref } from 'react-router-dom';
+
 
 const Home = () => {
     const HeroSection = () => {
@@ -51,7 +53,9 @@ const Home = () => {
                         variants={fadeIn("up", 0.3)}
                         initial="hidden"
                         whileInView="show"
-                        className="px-4 py-2 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold">
+                        className="px-4 py-2 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold"
+                        onClick={() => window.location.href = '/contactus'}
+                    >
                         GET IN TOUCH
                     </motion.button>
                     
@@ -75,7 +79,7 @@ const AboutUs = () => (
     variants={fadeIn("up", 0.3)}
     initial="hidden"
     whileInView="show"
-    className="my-10 md:my-20 bg-[#b7162a] p-6 text-white relative"
+    className=" md:my-20 bg-[#b7162a] p-6 text-white relative"
   >
     <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative">
       <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4 flex justify-center items-center flex-col">
@@ -89,7 +93,9 @@ const AboutUs = () => (
           pharmaceutical, FMCG and industrial sectors.
         </p>
          
-        <button className="font-bold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 flex items-center rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300">
+        <button className="font-bold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 flex items-center rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300"
+        onClick={() => window.location.href = '/contactus'}
+        >
           KNOW MORE
         </button>
         
@@ -240,72 +246,88 @@ const AboutUs = () => (
 );
 
     const TrustedBrandsSection = () => {
-        return (
-            <section className="bg-[#e81d2d] py-6 md:py-10 overflow-hidden">
-                <h2 className="text-xl md:text-4xl font-hbold text-center mb-4 md:mb-8 text-white">
-                    TRUSTED BY LEADING BRANDS
-                </h2>
-                <div className="relative">
-                    <div className="flex animate-scroll bg-white py-4 md:py-6 h-xl">
-                        <div className="flex shrink-0">
-                            {["Pfizer_1", "abbott", "Marksans","MSD", "Ipca","Torent_Pharma", "usv", "Ajanta_Pharma", "encube", "Lupin", "FDC" , "Franco_1" ,"Piramal", "Encore_1"].map((logo) => (
-                                <img
-                                    key={logo}
-                                    src={`/assets/${logo}.png`}
-                                    alt={`${logo} Logo`}
-                                    className="h-8 md:h-14 mx-4 md:mx-10"
-                                />
-                            ))}
-                        </div>
-                        <div className="flex shrink-0">
-                            {["Pfizer_1", "abbott", "Marksans","MSD", "Ipca","Torent_Pharma", "usv", "Ajanta_Pharma", "encube", "Lupin", "FDC" , "Franco_1" ,"Piramal", "Encore_1"].map((logo) => (
-                                <img
-                                    key={logo}
-                                    src={`/assets/${logo}.png`}
-                                    alt={`${logo} Logo`}
-                                    className="h-8 md:h-14 mx-4 md:mx-10"
-                                />
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-        );
+      const logos = [
+        "Pfizer_1",
+        "abbott",
+        "Marksans",
+        "MSD",
+        "Ipca",
+        "Torent_Pharma",
+        "usv",
+        "Ajanta_Pharma",
+        "encube",
+        "Lupin",
+        "FDC",
+        "Franco_1",
+        "Piramal",
+        "Encore_1",
+      ];
+
+      return (
+        <section className="bg-red-600 py-6 md:py-10">
+          <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-8 text-white">
+            TRUSTED BY LEADING BRANDS
+          </h2>
+          <div className="bg-white py-4 md:py-6 overflow-hidden">
+            <div className="logos-slide">
+              {/* First set of logos */}
+              {logos.map((logo) => (
+                <img
+                  key={logo}
+                  src={`/assets/${logo}.png`}
+                  alt={`${logo} Logo`}
+                  className="inline-block h-8 md:h-14 mx-4 md:mx-10 object-contain"
+                />
+              ))}
+              {/* Second set of logos */}
+              {logos.map((logo) => (
+                <img
+                  key={`${logo}-2`}
+                  src={`/assets/${logo}.png`}
+                  alt={`${logo} Logo`}
+                  className="inline-block h-8 md:h-14 mx-4 md:mx-10 object-contain"
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      );
     };
 
     const TrustedclientsSection = () => {
-        return (
-            <section className="bg-[#b7162a] py-6 md:py-10 overflow-hidden">
-                <h2 className="text-xl md:text-4xl font-hbold text-center mb-4 md:mb-8 text-white">
-                    PROUD TO BE ASSOCIATED WITH
-                </h2>
-                <div className="relative">
-                    <div className="flex animate-scroll bg-white py-4 md:py-6 h-xl">
-                        <div className="flex shrink-0">
-                            {["Marksans", "Lupin", "Piramal", "Ipca", "Indoco"].map((logo) => (
-                                <img
-                                    key={logo}
-                                    src={`/assets/${logo}.png`}
-                                    alt={`${logo} Logo`}
-                                    className="h-8 md:h-14 mx-4 md:mx-10"
-                                />
-                            ))}
-                        </div>
-                        <div className="flex shrink-0">
-                            {["Marksans", "Lupin", "Piramal", "Ipca", "Indoco"].map((logo) => (
-                                <img
-                                    key={logo}
-                                    src={`/assets/${logo}.png`}
-                                    alt={`${logo} Logo`}
-                                    className="h-8 md:h-14 mx-4 md:mx-10"
-                                />
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-        );
+      const logos = ["Marksans", "Lupin", "Piramal", "Ipca", "Indoco"];
+
+      return (
+        <section className="bg-red-800 py-6 md:py-10">
+          <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-8 text-white">
+            PROUD TO BE ASSOCIATED WITH
+          </h2>
+          <div className="bg-white py-4 md:py-6 overflow-hidden">
+            <div className="logos-slide">
+              {/* First set of logos */}
+              {logos.map((logo) => (
+                <img
+                  key={logo}
+                  src={`/assets/${logo}.png`}
+                  alt={`${logo} Logo`}
+                  className="inline-block h-8 md:h-14 mx-4 md:mx-10 object-contain"
+                />
+              ))}
+              {/* Second set of logos */}
+              {logos.map((logo) => (
+                <img
+                  key={`${logo}-2`}
+                  src={`/assets/${logo}.png`}
+                  alt={`${logo} Logo`}
+                  className="inline-block h-8 md:h-14 mx-4 md:mx-10 object-contain"
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      );
     };
+
 
    const FeaturesSection = () => (
      <motion.section

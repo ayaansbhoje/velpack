@@ -2,18 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
+.scroller {
+  overflow: hidden;
+}
+
+.scroller-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: scroll 10s linear infinite;
+}
+
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
-
-.animate-scroll {
-  animation: scroll 20s linear infinite;
-  width: 200%; /* Make the scrolling content twice the width of the viewport */
-}
-
-.animate-scroll:hover {
+/* Optional: Pause animation on hover */
+.scroller:hover .scroller-inner {
   animation-play-state: paused;
+}
+
+/* Ensure smooth animation */
+.scroller-inner > * {
+  flex: 0 0 auto;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.logos-slide {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slide 60s linear infinite;
+  padding-right: 0;
+}
+
+.logos-slide:hover {
+  animation-play-state: paused;
+}
+
+.logos-slide img {
+  transition: all 0.3s ease;
+}
+
+.logos-slide img:hover {
+  transform: scale(1.1);
 }
 
 @font-face {
