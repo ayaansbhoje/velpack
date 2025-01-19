@@ -4,7 +4,7 @@ import { fadeIn } from '../variant';
 import Navbar from '../components/navbar'
 import Footer from '../components/footer';
 import Footprint from '../components/Footprint';
-import { useHref } from 'react-router-dom';
+import { useHref,Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -55,7 +55,7 @@ const Home = () => {
                         whileInView="show"
                         className="px-4 py-2 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold"
                     >    
-                        <Link to="/contactus">GET IN TOUCH</Link>
+                        <Link to="/contactus"> GET IN TOUCH </Link>
 
                     </motion.button>
                     
