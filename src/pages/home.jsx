@@ -93,10 +93,10 @@ const AboutUs = () => (
           pharmaceutical, FMCG and industrial sectors.
         </p>
          
-        <button className="font-bold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 flex items-center rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300"
-        onClick={() => window.location.href = '/contactus'}
-        >
-          KNOW MORE
+        <button className="font-bold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 flex items-center rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300">
+          
+                                    <Link to="/aboutUs"> KNOW MORE </Link>
+
         </button>
         
       </div>
