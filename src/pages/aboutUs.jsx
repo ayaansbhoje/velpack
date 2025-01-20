@@ -60,9 +60,9 @@ const AboutUsPage = () => {
     <>
       <Navbar />
       <div className="bg-white min-h-screen">
-        {/* Header */}
-        <div className="text-center py-8">
-          <h1 className="text-2xl sm:text-4xl font-hbold mb-2">
+        {/* Header with updated spacing */}
+        <div className="text-center py-16 md:py-24 mt-8">
+          <h1 className="text-2xl sm:text-4xl font-hbold mb-4">
             VELPACK'S JOURNEY
           </h1>
           <h2 className="text-xl sm:text-3xl font-hmed text-red-500">
