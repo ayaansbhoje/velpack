@@ -71,7 +71,7 @@ const AboutUsPage = () => {
         </div>
 
         {/* Enhanced Banner/Hero Section */}
-        <div className="relative w-full mt-8">
+        <div className="relative w-full -mt-8">
           {/* Desktop layout */}
           <div className="hidden sm:flex">
             <div className="relative w-4/5">
