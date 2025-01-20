@@ -86,7 +86,7 @@ const AboutUs = () => (
         <h2 className="text-2xl text-center md:text-left md:text-4xl font-hbold">
           WHO ARE WE?
         </h2>
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center md:justify-start bg-white h-1 w-16 relative"></div>
+        <div className="mx-auto md:mx-0 bg-white h-1 w-16"></div>
         <p className="text-base text-center md:text-left md:text-lg font-hmed">
           Velpack has been a pioneer in the paper-based packaging industry since
           1956. We specialize in providing high-quality folded cartons for the
@@ -114,9 +114,7 @@ const AboutUs = () => (
 );
    
 
-
-
-        
+     
     const ServicesSection = () => (
         <section className="bg-white py-10 md:py-16">
             <div className="container mx-auto px-4">
