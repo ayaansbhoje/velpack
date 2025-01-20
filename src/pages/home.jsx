@@ -79,26 +79,23 @@ const AboutUs = () => (
     variants={fadeIn("up", 0.3)}
     initial="hidden"
     whileInView="show"
-    className=" md:my-20 bg-[#b7162a] p-6 text-white relative"
+    className="md:my-20 bg-[#b7162a] p-6 text-white relative"
   >
     <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative">
-      <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4 flex justify-center items-center flex-col">
-        <h2 className="text-2xl text-center md:text-4xl font-hbold">
+      <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4 flex justify-center md:justify-start items-center md:items-start flex-col">
+        <h2 className="text-2xl text-center md:text-left md:text-4xl font-hbold">
           WHO ARE WE?
         </h2>
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center bg-white h-1 w-16 relative"></div>
-        <p className="text-base text-center md:text-lg font-hmed">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center md:justify-start bg-white h-1 w-16 relative"></div>
+        <p className="text-base text-center md:text-left md:text-lg font-hmed">
           Velpack has been a pioneer in the paper-based packaging industry since
           1956. We specialize in providing high-quality folded cartons for the
           pharmaceutical, FMCG and industrial sectors.
         </p>
          
         <button className="font-bold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 flex items-center rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300">
-          
-                                    <Link to="/aboutUs"> KNOW MORE </Link>
-
+          <Link to="/aboutUs"> KNOW MORE </Link>
         </button>
-        
       </div>
       <div
         className="w-[calc(100%+3rem)] -mx-6 h-[300px] md:w-[60%] md:h-[500px] bg-white rounded-none md:rounded-lg shadow-2xl flex items-center justify-center 
