@@ -71,7 +71,7 @@ const AboutUsPage = () => {
         </div>
 
         {/* Enhanced Banner/Hero Section */}
-        <div className="relative w-full -mt-8">
+        <div className="relative w-full -mt-12">
           {/* Desktop layout */}
           <div className="hidden sm:flex">
             <div className="relative w-4/5">
@@ -116,7 +116,7 @@ const AboutUsPage = () => {
         {/* Team Section */}
         <div className="bg-[#b7162a] sm:py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-white text-2xl sm:text-4xl font-bold text-center pt-6 mb-4 mt-12 sm:mt-0">OUR TEAM</h2>
+            <h2 className="text-white text-2xl sm:text-4xl font-bold text-center pt-6 mb-4  sm:mt-0">OUR TEAM</h2>
             <div className="w-16 h-1 bg-white mb-6 mx-auto mt-2"></div>
 
             <p className="text-white text-base md:text-xl text-center mb-12 text-sm sm:text-base">
