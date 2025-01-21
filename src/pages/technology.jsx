@@ -68,7 +68,7 @@ const Technologypage = () => {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-x-hidden">
       <Navbar />
       
       {/* Hero Section with Animation */}

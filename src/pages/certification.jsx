@@ -41,7 +41,7 @@ const CertificationPage = () => {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 overflow-x-hidden" >
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}

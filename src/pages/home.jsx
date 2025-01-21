@@ -29,7 +29,7 @@ const Home = () => {
         variants={fadeIn("up", 0.3)}
         initial="hidden"
         whileInView="show"
-        className="relative h-[60vh] md:h-screen"
+        className="relative h-[60vh] md:h-screen overflow-x-hidden"
       >
         {images.map((img, index) => (
           <img
@@ -81,7 +81,7 @@ const Home = () => {
       variants={fadeIn("up", 0.3)}
       initial="hidden"
       whileInView="show"
-      className="md:my-20 bg-[#b7162a] p-6 text-white relative"
+      className="md:my-20 bg-[#b7162a] p-6 text-white relative overflow-x-hidden"
     >
       <div className="container mx-auto px-0 flex flex-col md:flex-row items-center relative">
         <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4 flex justify-center md:justify-start items-center md:items-start flex-col">
@@ -116,7 +116,7 @@ const Home = () => {
   );
 
   const ServicesSection = () => (
-    <section className="bg-white py-10 md:py-16">
+    <section className="bg-white py-10 md:py-16 overflow-x-hidden">
       <div className="container mx-auto px-4">
         <motion.h2
           variants={fadeIn("up", 0.3)}
@@ -164,7 +164,7 @@ const Home = () => {
       variants={fadeIn("up", 0.3)}
       initial="hidden"
       whileInView="show"
-      className="bg-[#b7162a] text-white py-10 md:py-12"
+      className="bg-[#b7162a] text-white py-10 md:py-12 overflow-x-hidden"
     >
       <motion.div
         variants={fadeIn("down", 0.3)}
