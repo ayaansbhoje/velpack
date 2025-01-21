@@ -83,7 +83,7 @@ const Home = () => {
       whileInView="show"
       className="md:my-20 bg-[#b7162a] p-6 text-white relative"
     >
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative">
+      <div className="container mx-auto px-0 flex flex-col md:flex-row items-center relative">
         <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4 flex justify-center md:justify-start items-center md:items-start flex-col">
           <h2 className="text-2xl text-center md:text-left md:text-4xl font-hbold">
             WHO ARE WE?
@@ -446,46 +446,31 @@ const Home = () => {
       variants={fadeIn("up", 0.3)}
       initial="hidden"
       whileInView="show"
-      className="bg-[#e81d2d] text-white py-6 md:py-10"
+      className="bg-[#e81d2d] text-white w-full overflow-hidden"
     >
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-start justify-center md:gap-4">
-          {/* Left Section */}
+      <div className="container mx-auto">
+        <div className="flex items-start justify-center">
           <motion.div
             variants={fadeIn("right", 0.3)}
             initial="hidden"
             whileInView="show"
-            className="w-full md:w-1/2 p-3 md:p-6"
+            className="w-screen"
           >
-            <h3 className="text-xl md:text-3xl font-hbold mb-3">
-              Elevate Your Packaging with Bespoke Designs
-            </h3>
-            <p className="text-sm md:text-lg leading-relaxed">
-              We understand that great packaging is not just about functionality
-              but also about making a lasting impression. Many of our clients
-              seek tailored label designs and unique branding solutions to stand
-              out in their markets. To meet this need, we offer an additional
-              service through our sister organization, Create Cluster.
-            </p>
-          </motion.div>
+            <div className="">
+              {/* Mobile Image */}
+              <img
+                src="../../public/assets/CC Mobile.png"
+                className="block md:hidden w-full h-auto object-cover"
+                alt="Packaging Facility - Mobile"
+              />
 
-          {/* Dividing Line - Only for desktop */}
-          <div className="hidden md:block w-px bg-white/30 self-stretch"></div>
-
-          {/* Right Section */}
-          <motion.div
-            variants={fadeIn("left", 0.3)}
-            initial="hidden"
-            whileInView="show"
-            className="w-full md:w-1/2 p-3 md:p-6 md:pt-16"
-          >
-            <p className="text-sm md:text-lg leading-relaxed">
-              Create Cluster specializes in packaging design and branding,
-              bringing creativity and strategy together to craft impactful
-              designs that reflect your brand's essence. Whether you need a
-              refreshed label design or a complete branding overhaul, our team
-              can help bring your vision to life.
-            </p>
+              {/* Desktop Image */}
+              <img
+                src="../../public/assets/CC Desktop.png"
+                className="hidden md:block w-full h-auto object-cover"
+                alt="Packaging Facility - Desktop"
+              />
+            </div>
           </motion.div>
         </div>
       </div>
