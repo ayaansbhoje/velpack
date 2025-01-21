@@ -441,41 +441,48 @@ const Home = () => {
     </motion.section>
   );
 
-  const DividedInfoSection = () => (
-    <motion.section
-      variants={fadeIn("up", 0.3)}
-      initial="hidden"
-      whileInView="show"
-      className="bg-[#e81d2d] text-white w-full overflow-hidden"
-    >
-      <div className="container mx-auto">
-        <div className="flex items-start justify-center">
-          <motion.div
-            variants={fadeIn("right", 0.3)}
-            initial="hidden"
-            whileInView="show"
-            className="w-screen"
-          >
-            <div className="">
-              {/* Mobile Image */}
-              <img
-                src="../../public/assets/CC Mobile.png"
-                className="block md:hidden w-full h-auto object-cover"
-                alt="Packaging Facility - Mobile"
-              />
+  const DividedInfoSection = () => {
+    const images = [
+      {
+        name: "Mobile",
+        image: "/assets/CC Mobile.png",
+        className: "block md:hidden w-full h-auto object-cover",
+        alt: "Packaging Facility - Mobile",
+      },
+      {
+        name: "Desktop",
+        image: "/assets/CC Desktop.png",
+        className: "hidden md:block w-full h-auto object-cover",
+        alt: "Packaging Facility - Desktop",
+      },
+    ];
 
-              {/* Desktop Image */}
-              <img
-                src="../../public/assets/CC Desktop.png"
-                className="hidden md:block w-full h-auto object-cover"
-                alt="Packaging Facility - Desktop"
-              />
-            </div>
-          </motion.div>
+    return (
+      <motion.section
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView="show"
+        className="bg-[#e81d2d] text-white w-full overflow-hidden"
+      >
+        <div className="container mx-auto">
+          <div className="flex items-start justify-center">
+            <motion.div
+              variants={fadeIn("right", 0.3)}
+              initial="hidden"
+              whileInView="show"
+              className="w-screen"
+            >
+              <div className="">
+                {images.map(({ name, image, className, alt }) => (
+                  <img key={name} src={image} className={className} alt={alt} />
+                ))}
+              </div>
+            </motion.div>
+          </div>
         </div>
-      </div>
-    </motion.section>
-  );
+      </motion.section>
+    );
+  };
   const ReviewCard = ({ review, isCenter }) => (
     <div
       className={`bg-red-500 rounded-lg p-4 md:p-6 text-white ${
