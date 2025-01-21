@@ -2,19 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
-.animate-scroll {
-  animation: scroll 20s linear infinite;
-  width: 200%; /* Make the scrolling content twice the width of the viewport */
+.logos-slide {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 0;
 }
 
-.animate-scroll:hover {
+.logos-slide:hover {
   animation-play-state: paused;
 }
+
+
 
 @font-face {
   font-family: "hbold";
