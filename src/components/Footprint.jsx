@@ -54,7 +54,7 @@ const Footprint = () => {
   }, [isVisible]);
 
   return (
-    <div ref={sectionRef} className="relative my-10">
+    <div ref={sectionRef} className="relative my-10 w-full max-w-full overflow-hidden">
       <motion.h2
         variants={{
           hidden: { opacity: 0 },
@@ -67,11 +67,11 @@ const Footprint = () => {
         OUR FOOTPRINT
         <div className="w-16 h-1 bg-white mb-6 mx-auto mt-3"></div>
       </motion.h2>
-      <div className="relative px-2">
+      <div className="relative w-full px-1">
         <img 
           src="assets/maps_final.gif" 
           alt="World Map" 
-          className="w-full md:w-[80%] mx-auto" 
+          className="w-[112%] sm:w-[105%] md:w-[80%] mx-auto" 
         />
       </div>
     </div>
