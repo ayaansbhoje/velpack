@@ -145,8 +145,8 @@ const AboutUsPage = () => {
           </div>
         </div>
 
-        {/* Sections Navigation */}
-        <div className="mt-16">
+        {/* Sections Navigation - Added sm:mt-16 for desktop only */}
+        <div className="sm:mt-16">
           <div className="bg-black py-4 flex flex-wrap justify-center px-4 sm:px-32">
             {Object.keys(sections).map((section) => (
               <button
