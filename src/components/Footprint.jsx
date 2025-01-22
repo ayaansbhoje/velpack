@@ -67,11 +67,11 @@ const Footprint = () => {
         OUR FOOTPRINT
         <div className="w-16 h-1 bg-white mb-6 mx-auto mt-3"></div>
       </motion.h2>
-      <div className="relative w-full">
+      <div className="relative w-full px-2">
         <img 
           src="assets/maps_final.gif" 
           alt="World Map" 
-          className="w-[120%] sm:w-[110%] md:w-[80%] max-w-none md:max-w-full mx-auto transform -translate-x-[10%] md:translate-x-0" 
+          className="w-[105%] sm:w-[100%] md:w-[80%] mx-auto" 
         />
       </div>
     </div>
