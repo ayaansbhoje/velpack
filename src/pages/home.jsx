@@ -77,44 +77,47 @@ const Home = () => {
   };
 
   const AboutUs = () => (
-    <motion.section
-      variants={fadeIn("up", 0.3)}
-      initial="hidden"
-      whileInView="show"
-      className="md:my-20 bg-[#b7162a] p-6 text-white relative overflow-x-hidden"
-    >
-      <div className="container mx-auto px-0 flex flex-col md:flex-row items-center relative">
-        <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4 flex justify-center md:justify-start items-center md:items-start flex-col">
-          <h2 className="text-2xl text-center md:text-left md:text-4xl font-hbold">
-            WHO ARE WE?
-          </h2>
-          <div className="mx-auto md:mx-0 bg-white h-1 w-16"></div>
-          <p className="text-base text-center md:text-left md:text-lg font-hmed">
-            Velpack has been a pioneer in the paper-based packaging industry
-            since 1956. We specialize in providing high-quality folded cartons
-            for the pharmaceutical, FMCG and industrial sectors.
-          </p>
+  <motion.section
+    variants={fadeIn("up", 0.3)}
+    initial="hidden"
+    whileInView="show"
+    className=" md:my-20 bg-[#b7162a] p-6 text-white relative"
+  >
+    <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative">
+      <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4 flex justify-center items-center flex-col">
+        <h2 className="text-2xl text-center md:text-4xl font-hbold">
+          WHO ARE WE?
+        </h2>
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center bg-white h-1 w-16 relative"></div>
+        <p className="text-base text-center md:text-lg font-hmed">
+          Velpack has been a pioneer in the paper-based packaging industry since
+          1956. We specialize in providing high-quality folded cartons for the
+          pharmaceutical, FMCG and industrial sectors.
+        </p>
+         
+        <button className="font-bold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 flex items-center rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300">
+          
+                                    <Link to="/aboutUs"> KNOW MORE </Link>
 
-          <button className="font-bold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 flex items-center rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300">
-            <Link to="/aboutUs"> KNOW MORE </Link>
-          </button>
-        </div>
-        <div
-          className="w-[calc(100%+3rem)] -mx-6 h-[300px] md:w-[60%] md:h-[500px] bg-white rounded-none md:rounded-lg shadow-2xl flex items-center justify-center 
-                relative md:absolute md:-bottom-30 md:-right-1/3 md:transform md:-translate-x-1/2 md:scale-75 -mb-6 md:mb-0 mt-6 md:mt-0"
-        >
-          <iframe
-            className="w-full h-full md:rounded-lg"
-            src="https://www.youtube.com/embed/bpR5jz4PTrA?autoplay=1"
-            title="YouTube Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
+        </button>
+        
       </div>
-    </motion.section>
-  );
-
+      <div
+        className="w-[calc(100%+3rem)] -mx-6 h-[300px] md:w-[60%] md:h-[500px] bg-white rounded-none md:rounded-lg shadow-2xl flex items-center justify-center 
+                relative md:absolute md:-bottom-30 md:-right-1/3 md:transform md:-translate-x-1/2 md:scale-75 -mb-6 md:mb-0 mt-6 md:mt-0"
+      >
+        <iframe
+          className="w-full h-full md:rounded-lg"
+          src="https://www.youtube.com/embed/bpR5jz4PTrA?autoplay=1"
+          title="YouTube Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    </div>
+  </motion.section>
+);
+   
   const ServicesSection = () => (
     <section className="bg-white py-10 md:py-16 overflow-x-hidden">
       <div className="container mx-auto px-4">
