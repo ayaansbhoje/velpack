@@ -116,7 +116,7 @@ const AboutUsPage = () => {
         {/* Team Section */}
         <div className="bg-[#b7162a] sm:py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-white text-2xl sm:text-4xl font-bold text-center pt-6 mb-4  sm:mt-0">OUR TEAM</h2>
+            <h2 className="text-white text-2xl sm:text-4xl font-bold text-center pt-6 mb-4 sm:mt-0">OUR TEAM</h2>
             <div className="w-16 h-1 bg-white mb-6 mx-auto mt-2"></div>
 
             <p className="text-white text-base md:text-xl text-center mb-12 text-sm sm:text-base">
@@ -139,14 +139,16 @@ const AboutUsPage = () => {
               ))}
             </div>
             
-            <p className="text-white text-base md:text-xl text-center mt-8 sm:mt-12 mb-8 pb-4 sm:mb-0 text-sm sm:text-base">
+            <p className="text-white text-base md:text-xl text-center mt-8 sm:mt-12 mb-0 sm:mb-0 pb-4 sm:pb-0 text-sm sm:text-base">
               As a family-owned business, we prioritize integrity, innovation, and excellence in all we do. Our commitment to quality and customer satisfaction sets us apart.
             </p>
           </div>
         </div>
 
-        {/* Sections Navigation - Added sm:mt-16 for desktop only */}
-        <div className="sm:mt-16">
+        {/* Sections Navigation */}
+        <div className="hidden sm:mt-16 sm:block"></div>
+        
+        <div>
           <div className="bg-black py-4 flex flex-wrap justify-center px-4 sm:px-32">
             {Object.keys(sections).map((section) => (
               <button
