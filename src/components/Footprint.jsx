@@ -10,7 +10,7 @@ const Footprint = () => {
   const [visibleTicks, setVisibleTicks] = useState([]);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
-
+  
   const tickPositions = [
     { top: "32%", left: "24%" },
     { top: "30%", left: "65%" },
@@ -31,9 +31,11 @@ const Footprint = () => {
       },
       { threshold: 0.2 }
     );
+
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
@@ -60,13 +62,17 @@ const Footprint = () => {
         }}
         initial="hidden"
         animate={isVisible ? "show" : "hidden"}
-        className="text-4xl font-bold text-center mb-4"
+        className="text-2xl md:text-4xl font-bold text-center mb-4"
       >
         OUR FOOTPRINT
         <div className="w-16 h-1 bg-white mb-6 mx-auto mt-3"></div>
       </motion.h2>
       <div className="relative">
-        <img src="assets/maps_final.gif" alt="World Map" className="w-[80%] mx-auto" />
+        <img 
+          src="assets/maps_final.gif" 
+          alt="World Map" 
+          className="w-[95%] md:w-[80%] mx-auto" 
+        />
       </div>
     </div>
   );
