@@ -9,6 +9,17 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
     setDuplicatedLogos([...logos, ...logos]);
   }, [logos]);
 
+  useEffect(() => {
+    if (carouselRef.current) {
+      // Get the scroll width of the carousel element
+      const scrollWidth = carouselRef.current.scrollWidth;
+      const containerWidth = carouselRef.current.offsetWidth;
+
+      // Set the animation duration based on the scroll width and container width
+      carouselRef.current.style.animationDuration = `${(scrollWidth / containerWidth) * speed}s`;
+    }
+  }, [speed, duplicatedLogos]);
+
   return (
     <div className="overflow-hidden bg-white py-2 md:py-6 flex justify-center items-center">
       <style jsx>{`
@@ -17,14 +28,14 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
             transform: translateX(0);
           }
           to {
-            transform: translateX(-50%);
+            transform: translateX(-100%);
           }
         }
         
         .logos-slide {
           display: inline-flex;
           align-items: center;
-          animation: slide ${speed}s linear infinite;
+          animation: slide linear infinite;
           width: max-content;
         }
         
