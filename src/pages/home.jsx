@@ -320,7 +320,7 @@ const Home = () => {
                    "Bells_Healthcare",
                    "Perrigo",
                    "Galderma",
-                   "Dr_Reddy",
+                   "Dr_ Reddys",
                    "Coles",
                    "Bayer",
                    "Mankind",               
