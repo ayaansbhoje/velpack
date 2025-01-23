@@ -7,8 +7,6 @@ import Footprint from '../components/Footprint';
 import { useHref,Link } from 'react-router-dom';
 import LogoCarousel from '../components/LogoCarousel';
 
-
-
 const Home = () => {
   const HeroSection = () => {
     const images = [
