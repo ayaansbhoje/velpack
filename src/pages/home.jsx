@@ -283,58 +283,38 @@ const Home = () => {
 
   // For Trusted By Leading Brands
   const TrustedBrandsSection = () => {
-    const logos = [
-      "Pfizer_1",
-      "abbott",
-      "Marksans",
-      "MSD",
-      "Ipca",
-      "Torent_Pharma",
-      "usv",
-      "Ajanta_Pharma",
-      "encube",
-      "Lupin",
-      "FDC",
-      "Franco_1",
-      "Piramal",
-      "Encore_1",
-    ];
+  const logos = [
+    "Pfizer_1", "abbott", "Marksans", "MSD", "Ipca", "Torent_Pharma", 
+    "usv", "Ajanta_Pharma", "encube", "Lupin", "FDC", "Franco_1", 
+    "Piramal", "Encore_1"
+  ];
 
-    return (
-      <section className="bg-red-600 py-6 md:py-10">
-        <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-8 text-white">
-          TRUSTED BY LEADING BRANDS
-        </h2>
-        <LogoCarousel logos={logos} speed={60} />
-      </section>
-    );
-  };
+  return (
+    <section className="bg-red-600">
+      <h2 className="text-xl md:text-4xl font-bold text-center py-4 md:py-6 text-white">
+        TRUSTED BY LEADING BRANDS
+      </h2>
+      <LogoCarousel logos={logos} speed={30} />
+    </section>
+  );
+};
 
-  // For Proud To Be Associated With
-  const TrustedclientsSection = () => {
-    const logos = ["Walgreens",
-                   "CVS",
-                   "kroger_pharmacy",
-                   "Tesco",
-                   "Sainsburys",
-                   "Bells_Healthcare",
-                   "Perrigo",
-                   "Galderma",
-                   "Dr_ Reddys",
-                   "Coles",
-                   "Bayer",
-                   "Mankind",               
-                  ];
+const TrustedclientsSection = () => {
+  const logos = [
+    "Walgreens", "CVS", "kroger_pharmacy", "Tesco", "Sainsburys", 
+    "Bells_Healthcare", "Perrigo", "Galderma", "Dr_Reddys", "Coles", 
+    "Bayer", "Mankind"
+  ];
 
-    return (
-      <section className="bg-red-800 py-6 md:py-10">
-        <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-8 text-white">
-          PROUD TO BE ASSOCIATED WITH
-        </h2>
-        <LogoCarousel logos={logos} speed={60} />
-      </section>
-    );
-  };
+  return (
+    <section className="bg-red-800">
+      <h2 className="text-xl md:text-4xl font-bold text-center py-4 md:py-6 text-white">
+        PROUD TO BE ASSOCIATED WITH
+      </h2>
+      <LogoCarousel logos={logos} speed={30} />
+    </section>
+  );
+};
 
   const FeaturesSection = () => (
     <motion.section
