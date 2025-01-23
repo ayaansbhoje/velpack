@@ -42,7 +42,7 @@ const Home = () => {
         variants={fadeIn("up", 0.3)}
         initial="hidden"
         whileInView="show"
-        className="relative h-[40vh] md:h-screen overflow-hidden"
+        className="relative h-[70vh] md:h-[90vh] overflow-hidden"
       >
         {/* Background Images */}
         {images.map((imageSet, index) => (
@@ -54,12 +54,12 @@ const Home = () => {
           >
             <img 
               src={imageSet.mobile} 
-              className="block md:hidden w-full h-full object-cover"
+              className="block md:hidden w-full h-full object-contain"
               alt={`Mobile Banner ${index + 1}`}
             />
             <img 
               src={imageSet.desktop} 
-              className="hidden md:block w-full h-full object-cover"
+              className="hidden md:block w-full h-full object-contain"
               alt={`Desktop Banner ${index + 1}`}
             />
           </div>
