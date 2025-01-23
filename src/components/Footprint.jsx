@@ -69,7 +69,7 @@ const Footprint = () => {
       </motion.h2>
       <div className="relative w-full px-1">
         <img 
-          src="assets/maps_final.gif" 
+          src="assets/maps_final_1.gif" 
           alt="World Map" 
           className="w-[112%] sm:w-[105%] md:w-[80%] mx-auto" 
         />
