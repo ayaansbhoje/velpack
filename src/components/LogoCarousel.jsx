@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
-const LogoCarousel = ({ logos, speed = 30 }) => {
+const LogoCarousel = ({ logos, speed = 20 }) => {
   const carouselRef = useRef(null);
 
   useEffect(() => {
