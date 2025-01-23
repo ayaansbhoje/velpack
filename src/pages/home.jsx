@@ -312,7 +312,19 @@ const Home = () => {
 
   // For Proud To Be Associated With
   const TrustedclientsSection = () => {
-    const logos = ["Marksans", "Lupin", "Piramal", "Ipca", "Indoco"];
+    const logos = ["Walgreens",
+                   "CVS",
+                   "Kroger",
+                   "Tesco",
+                   "Sainsburys",
+                   "Bells",
+                   "Perrigo",
+                   "Galderma",
+                   "Dr Reddy",
+                   "Coles",
+                   "Bayer",
+                   "Mankind",               
+                  ];
 
     return (
       <section className="bg-red-800 py-6 md:py-10">
