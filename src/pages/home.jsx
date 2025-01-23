@@ -282,7 +282,7 @@ const Home = () => {
   );
 
   // For Trusted By Leading Brands
-  const TrustedBrandsSection = () => {
+ const TrustedBrandsSection = () => {
   const logos = [
     "Pfizer_1", "abbott", "Marksans", "MSD", "Ipca", "Torent_Pharma", 
     "usv", "Ajanta_Pharma", "encube", "Lupin", "FDC", "Franco_1", 
@@ -290,8 +290,8 @@ const Home = () => {
   ];
 
   return (
-    <section className="bg-red-600">
-      <h2 className="text-xl md:text-4xl font-bold text-center py-4 md:py-6 text-white">
+    <section className="bg-red-600 py-6 md:py-10">
+      <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-8 text-white">
         TRUSTED BY LEADING BRANDS
       </h2>
       <LogoCarousel logos={logos} speed={30} />
@@ -307,15 +307,14 @@ const TrustedclientsSection = () => {
   ];
 
   return (
-    <section className="bg-red-800">
-      <h2 className="text-xl md:text-4xl font-bold text-center py-4 md:py-6 text-white">
+    <section className="bg-red-800 py-6 md:py-10">
+      <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-8 text-white">
         PROUD TO BE ASSOCIATED WITH
       </h2>
       <LogoCarousel logos={logos} speed={30} />
     </section>
   );
 };
-
   const FeaturesSection = () => (
     <motion.section
       variants={fadeIn("up", 0.3)}
