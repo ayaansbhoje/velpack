@@ -7,23 +7,7 @@ import Footprint from '../components/Footprint';
 import { useHref,Link } from 'react-router-dom';
 import LogoCarousel from '../components/LogoCarousel';
 
-import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { fadeIn } from '../variant';
-import Navbar from '../components/navbar'
-import Footer from '../components/footer';
-import Footprint from '../components/Footprint';
-import { useHref,Link } from 'react-router-dom';
-import LogoCarousel from '../components/LogoCarousel';
 
-import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { fadeIn } from '../variant';
-import Navbar from '../components/navbar'
-import Footer from '../components/footer';
-import Footprint from '../components/Footprint';
-import { useHref,Link } from 'react-router-dom';
-import LogoCarousel from '../components/LogoCarousel';
 
 const Home = () => {
   const HeroSection = () => {
