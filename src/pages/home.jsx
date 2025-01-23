@@ -11,7 +11,7 @@ const Home = () => {
   const HeroSection = () => {
     const images = [
       {
-        mobile: "/assets/HP_Banner_Mobile_1.jpg",
+        mobile: "/assets/herobanner_M1.png",
         desktop: "/assets/HP_Banner_1.jpg",
       },
       {
