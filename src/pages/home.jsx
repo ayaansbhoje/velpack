@@ -13,6 +13,7 @@ const Home = () => {
       {
         desktop: "/assets/HP_Banner_1.jpg",
         mobile: "/assets/mob-hero1.png",
+
       },
       {
         desktop: "/assets/Velpack-Banner.jpg",
@@ -56,7 +57,7 @@ const Home = () => {
               src={desktop}
               alt={`Team in packaging facility ${index + 1}`}
               className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? "opacity-100" : "opacity-0"
-                }`}
+                } ${index === currentImageIndex ? "mt-10" : "h-full"}`}
             />
           </picture>
         ))}
