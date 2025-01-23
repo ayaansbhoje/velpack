@@ -10,24 +10,11 @@ import LogoCarousel from '../components/LogoCarousel';
 const Home = () => {
   const HeroSection = () => {
     const images = [
-      {
-        mobile: "/assets/herobanner_M1.png",
-        desktop: "/assets/HP_Banner_1.jpg",
-      },
-      {
-        mobile: "/assets/Velpack-Banner-Mobile.jpg",
-        desktop: "/assets/Velpack-Banner.jpg",
-      },
-      {
-        mobile: "/assets/HP_Banner_Mobile_3.jpg",
-        desktop: "/assets/HP_Banner_3.jpg",
-      },
-      {
-        mobile: "/assets/HP_Banner_Mobile_4.jpg",
-        desktop: "/assets/HP_Banner_4.jpg",
-      }
+      "/assets/HP_Banner_1.jpg",
+      "/assets/Velpack-Banner.jpg",
+      "/assets/HP_Banner_3.jpg",
+      "/assets/HP_Banner_4.jpg",
     ];
-
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     useEffect(() => {
@@ -42,31 +29,20 @@ const Home = () => {
         variants={fadeIn("up", 0.3)}
         initial="hidden"
         whileInView="show"
-        className="relative h-[60vh] md:h-[90vh] overflow-hidden"
+        className="relative h-[60vh] md:h-screen overflow-x-hidden"
       >
-        {/* Background Images */}
-        {images.map((imageSet, index) => (
-          <div 
-            key={index} 
-            className={`absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ${
+        {images.map((img, index) => (
+          <img
+            key={img}
+            src={img}
+            alt={`Team in packaging facility ${index + 1}`}
+            className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${
               index === currentImageIndex ? "opacity-100" : "opacity-0"
             }`}
-          >
-            <img 
-              src={imageSet.mobile} 
-              className="block md:hidden w-full h-full object-cover"
-              alt={`Mobile Banner ${index + 1}`}
-            />
-            <img 
-              src={imageSet.desktop} 
-              className="hidden md:block w-full h-full object-cover"
-              alt={`Desktop Banner ${index + 1}`}
-            />
-          </div>
+          />
         ))}
 
-        {/* Overlay Content */}
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end items-center pb-12 md:pb-24 pointer-events-none">
+        <div className="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-end items-center pb-12 md:pb-24">
           <motion.h1
             variants={fadeIn("left", 1.2)}
             initial="hidden"
@@ -80,13 +56,11 @@ const Home = () => {
             variants={fadeIn("up", 0.3)}
             initial="hidden"
             whileInView="show"
-            className="pointer-events-auto px-4 py-2 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold"
+            className="px-4 py-2 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold"
           >
             <Link to="/contactus"> GET IN TOUCH </Link>
           </motion.button>
         </div>
-
-        {/* Pagination Dots */}
         <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
           {images.map((_, index) => (
             <button
