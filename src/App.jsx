@@ -417,6 +417,7 @@ import CertificationPage from './pages/certification'
 //     </section>
 //   );
 // };
+// fixed
 
 // const Footer = () => (
 // );
