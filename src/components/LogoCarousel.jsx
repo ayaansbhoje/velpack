@@ -26,7 +26,7 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
       `}</style>
       
       <div className="logos-slide">
-        {[...logos, ...logos, ...logos].map((logo, index) => (
+        {[...logos, ...logos, ...logos, ...logos].map((logo, index) => (
           <div 
             key={`${logo}-${index}`} 
             className={`flex items-center justify-center 
