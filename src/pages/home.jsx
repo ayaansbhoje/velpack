@@ -7,6 +7,15 @@ import Footprint from '../components/Footprint';
 import { useHref,Link } from 'react-router-dom';
 import LogoCarousel from '../components/LogoCarousel';
 
+import { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../variant';
+import Navbar from '../components/navbar'
+import Footer from '../components/footer';
+import Footprint from '../components/Footprint';
+import { useHref,Link } from 'react-router-dom';
+import LogoCarousel from '../components/LogoCarousel';
+
 const Home = () => {
   const HeroSection = () => {
     const images = [
@@ -54,9 +63,8 @@ const Home = () => {
           >
             <img 
               src={imageSet.mobile} 
-              className="block md:hidden w-full h-full object-contain"
+              className="block md:hidden w-full h-full object-cover"
               alt={`Mobile Banner ${index + 1}`}
-              style={{ maxWidth: '100%', maxHeight: '100%' }}
             />
             <img 
               src={imageSet.desktop} 
