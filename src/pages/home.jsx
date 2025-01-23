@@ -401,13 +401,22 @@ const TrustedclientsSection = () => {
     </motion.section>
   );
   const SecurityFeaturesSection = () => (
-    <section>
+    <section
+      
+      className="bg-black text-white py-4 md:py-6"
+    >
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4">
-          <h3>
+          <h3
+            
+           className="text-xl md:text-2xl  font-hbold whitespace-nowrap"
+          >
             SECURITY FEATURES:
           </h3>
-          <p>
+          <p
+            
+            className="text-base md:text-xl "
+          >
             Micro Printing | Invisible Ink Printing | Hologram Foil |
             Coin-Reactive Ink | Tamper-Evident Cartons
           </p>
@@ -415,7 +424,6 @@ const TrustedclientsSection = () => {
       </div>
     </section>
   );
-
   const DividedInfoSection = () => {
     const images = [
       {
