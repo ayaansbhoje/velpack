@@ -28,8 +28,11 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
         {[...logos, ...logos].map((logo, index) => (
           <div 
             key={`${logo}-${index}`} 
-            className="flex items-center justify-center mx-4 md:mx-8"
-            style={{ width: '120px', height: '60px' }}
+            className={`flex items-center justify-center mx-4 md:mx-8 ${
+              ['Bells_Healthcare', 'CVS'].includes(logo) 
+                ? 'w-40 h-20' 
+                : 'w-32 h-16'
+            }`}
           >
             <img
               src={`/assets/${logo}.png`}
