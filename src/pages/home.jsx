@@ -4,17 +4,30 @@ import { fadeIn } from '../variant';
 import Navbar from '../components/navbar'
 import Footer from '../components/footer';
 import Footprint from '../components/Footprint';
-import { useHref,Link } from 'react-router-dom';
+import { useHref, Link } from 'react-router-dom';
 import LogoCarousel from '../components/LogoCarousel';
 
 const Home = () => {
   const HeroSection = () => {
     const images = [
-      "/assets/HP_Banner_1.jpg",
-      "/assets/Velpack-Banner.jpg",
-      "/assets/HP_Banner_3.jpg",
-      "/assets/HP_Banner_4.jpg",
+      {
+        desktop: "/assets/HP_Banner_1.jpg",
+        mobile: "/assets/mob-hero1.png",
+      },
+      {
+        desktop: "/assets/Velpack-Banner.jpg",
+        mobile: "/assets/mob-hero2.png",
+      },
+      {
+        desktop: "/assets/HP_Banner_3.jpg",
+        mobile: "/assets/mob-hero3.png",
+      },
+      {
+        desktop: "/assets/HP_Banner_4.jpg",
+        mobile: "/assets/mob-hero4.png",
+      },
     ];
+
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     useEffect(() => {
@@ -31,15 +44,21 @@ const Home = () => {
         whileInView="show"
         className="relative h-[60vh] md:h-screen overflow-x-hidden"
       >
-        {images.map((img, index) => (
-          <img
-            key={img}
-            src={img}
-            alt={`Team in packaging facility ${index + 1}`}
-            className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${
-              index === currentImageIndex ? "opacity-100" : "opacity-0"
-            }`}
-          />
+        {images.map(({ desktop, mobile }, index) => (
+          <picture key={index}>
+            {/* Mobile Image */}
+            <source
+              media="(max-width: 768px)"
+              srcSet={mobile}
+            />
+            {/* Desktop Image */}
+            <img
+              src={desktop}
+              alt={`Team in packaging facility ${index + 1}`}
+              className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? "opacity-100" : "opacity-0"
+                }`}
+            />
+          </picture>
         ))}
 
         <div className="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-end items-center pb-12 md:pb-24">
@@ -66,9 +85,8 @@ const Home = () => {
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
-              className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${
-                index === currentImageIndex ? "bg-white" : "bg-gray-400"
-              }`}
+              className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${index === currentImageIndex ? "bg-white" : "bg-gray-400"
+                }`}
             ></button>
           ))}
         </div>
@@ -76,44 +94,44 @@ const Home = () => {
     );
   };
   const AboutUs = () => (
-  <motion.section
-    variants={fadeIn("up", 0.3)}
-    initial="hidden"
-    whileInView="show"
-    className="md:my-20 bg-[#b7162a] p-6 text-white relative"
-  >
-    <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative">
-      <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4 flex justify-center md:justify-start items-center md:items-start flex-col">
-        <h2 className="text-2xl text-center md:text-left md:text-4xl font-hbold">
-          WHO ARE WE?
-        </h2>
-        <div className="container mx-auto md:mx-0 px-4 flex flex-col md:flex-row items-center justify-center md:justify-start bg-white h-1 w-16 relative"></div>
-        <p className="text-base text-center md:text-left md:text-lg font-hmed">
-          Velpack has been a pioneer in the paper-based packaging industry since
-          1956. We specialize in providing high-quality folded cartons for the
-          pharmaceutical, FMCG and industrial sectors.
-        </p>
-         
-        <button className="font-bold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 flex items-center rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300">
-          <Link to="/aboutUs">KNOW MORE</Link>
-        </button>
-      </div>
-      <div
-        className="w-[calc(100%+3rem)] -mx-6 h-[300px] md:w-[60%] md:h-[500px] bg-white rounded-none md:rounded-lg shadow-2xl flex items-center justify-center 
+    <motion.section
+      variants={fadeIn("up", 0.3)}
+      initial="hidden"
+      whileInView="show"
+      className="md:my-20 bg-[#b7162a] p-6 text-white relative"
+    >
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative">
+        <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4 flex justify-center md:justify-start items-center md:items-start flex-col">
+          <h2 className="text-2xl text-center md:text-left md:text-4xl font-hbold">
+            WHO ARE WE?
+          </h2>
+          <div className="container mx-auto md:mx-0 px-4 flex flex-col md:flex-row items-center justify-center md:justify-start bg-white h-1 w-16 relative"></div>
+          <p className="text-base text-center md:text-left md:text-lg font-hmed">
+            Velpack has been a pioneer in the paper-based packaging industry since
+            1956. We specialize in providing high-quality folded cartons for the
+            pharmaceutical, FMCG and industrial sectors.
+          </p>
+
+          <button className="font-bold bg-transparent border-2 border-white text-white py-2 px-4 md:px-6 flex items-center rounded-md hover:bg-white hover:text-[#b7162a] transition duration-300">
+            <Link to="/aboutUs">KNOW MORE</Link>
+          </button>
+        </div>
+        <div
+          className="w-[calc(100%+3rem)] -mx-6 h-[300px] md:w-[60%] md:h-[500px] bg-white rounded-none md:rounded-lg shadow-2xl flex items-center justify-center 
                 relative md:absolute md:-bottom-30 md:-right-1/3 md:transform md:-translate-x-1/2 md:scale-75 -mb-6 md:mb-0 mt-6 md:mt-0"
-      >
-        <iframe
-          className="w-full h-full md:rounded-lg"
-          src="https://www.youtube.com/embed/bpR5jz4PTrA?autoplay=1"
-          title="YouTube Video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+        >
+          <iframe
+            className="w-full h-full md:rounded-lg"
+            src="https://www.youtube.com/embed/bpR5jz4PTrA?autoplay=1"
+            title="YouTube Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
       </div>
-    </div>
-  </motion.section>
-);
-   
+    </motion.section>
+  );
+
   const ServicesSection = () => (
     <section className="bg-white py-10 md:py-16 overflow-x-hidden">
       <div className="container mx-auto px-4">
@@ -282,39 +300,39 @@ const Home = () => {
   );
 
   // For Trusted By Leading Brands
- const TrustedBrandsSection = () => {
-  const logos = [
-    "Pfizer_1", "abbott", "Marksans", "MSD", "Ipca", "Torent_Pharma", 
-    "usv", "Ajanta_Pharma", "encube", "Lupin", "FDC", "Franco_1", 
-    "Piramal", "Encore_1"
-  ];
+  const TrustedBrandsSection = () => {
+    const logos = [
+      "Pfizer_1", "abbott", "Marksans", "MSD", "Ipca", "Torent_Pharma",
+      "usv", "Ajanta_Pharma", "encube", "Lupin", "FDC", "Franco_1",
+      "Piramal", "Encore_1"
+    ];
 
-  return (
-    <section className="bg-red-600 py-6 md:py-10">
-      <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-8 text-white">
-        TRUSTED BY LEADING BRANDS
-      </h2>
-      <LogoCarousel logos={logos} speed={30} />
-    </section>
-  );
-};
+    return (
+      <section className="bg-red-600 py-6 md:py-10">
+        <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-8 text-white">
+          TRUSTED BY LEADING BRANDS
+        </h2>
+        <LogoCarousel logos={logos} speed={30} />
+      </section>
+    );
+  };
 
-const TrustedclientsSection = () => {
-  const logos = [
-    "Walgreens", "CVS", "kroger_pharmacy", "Tesco", "Sainsburys", 
-    "Bells_Healthcare", "Perrigo", "Galderma", "Dr_ Reddys", "Coles", 
-    "Bayer", "Mankind"
-  ];
+  const TrustedclientsSection = () => {
+    const logos = [
+      "Walgreens", "CVS", "kroger_pharmacy", "Tesco", "Sainsburys",
+      "Bells_Healthcare", "Perrigo", "Galderma", "Dr_ Reddys", "Coles",
+      "Bayer", "Mankind"
+    ];
 
-  return (
-    <section className="bg-red-800 py-6 md:py-10">
-      <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-8 text-white">
-        PROUD TO BE ASSOCIATED WITH
-      </h2>
-      <LogoCarousel logos={logos} speed={30} />
-    </section>
-  );
-};
+    return (
+      <section className="bg-red-800 py-6 md:py-10">
+        <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-8 text-white">
+          PROUD TO BE ASSOCIATED WITH
+        </h2>
+        <LogoCarousel logos={logos} speed={30} />
+      </section>
+    );
+  };
   const FeaturesSection = () => (
     <motion.section
       variants={fadeIn("up", 0.3)}
@@ -375,11 +393,10 @@ const TrustedclientsSection = () => {
                 ].map((feature, index, array) => (
                   <div
                     key={index}
-                    className={`flex flex-col items-center ${
-                      index === array.length - 1
+                    className={`flex flex-col items-center ${index === array.length - 1
                         ? "col-span-2 mx-auto md:col-span-1 md:mx-0 w-1/2 md:w-full"
                         : ""
-                    }`}
+                      }`}
                   >
                     <div className="w-full aspect-square bg-gray-200 mb-2 md:mb-4 rounded-lg overflow-hidden">
                       <img
@@ -402,19 +419,19 @@ const TrustedclientsSection = () => {
   );
   const SecurityFeaturesSection = () => (
     <section
-      
+
       className="bg-black text-white py-4 md:py-6"
     >
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4">
           <h3
-            
-           className="text-xl md:text-2xl  font-hbold whitespace-nowrap"
+
+            className="text-xl md:text-2xl  font-hbold whitespace-nowrap"
           >
             SECURITY FEATURES:
           </h3>
           <p
-            
+
             className="text-base md:text-xl "
           >
             Micro Printing | Invisible Ink Printing | Hologram Foil |
@@ -468,9 +485,8 @@ const TrustedclientsSection = () => {
   };
   const ReviewCard = ({ review, isCenter }) => (
     <div
-      className={`bg-red-500 rounded-lg p-4 md:p-6 text-white ${
-        isCenter ? "bg-red-800 shadow-lg transform md:scale-105 z-10" : "z-0"
-      } w-72 md:w-96 h-auto md:h-74 flex flex-col justify-between`}
+      className={`bg-red-500 rounded-lg p-4 md:p-6 text-white ${isCenter ? "bg-red-800 shadow-lg transform md:scale-105 z-10" : "z-0"
+        } w-72 md:w-96 h-auto md:h-74 flex flex-col justify-between`}
     >
       <div>
         <h3 className="text-lg md:text-xl font-bold mb-1 text-center">
@@ -565,7 +581,7 @@ const TrustedclientsSection = () => {
                   <ReviewCard
                     review={
                       reviews[
-                        (currentIndex - 1 + reviews.length) % reviews.length
+                      (currentIndex - 1 + reviews.length) % reviews.length
                       ]
                     }
                     isCenter={false}
