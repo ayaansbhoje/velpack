@@ -401,34 +401,19 @@ const TrustedclientsSection = () => {
     </motion.section>
   );
   const SecurityFeaturesSection = () => (
-    <motion.section
-      variants={fadeIn("up", 0.3)}
-      initial="hidden"
-      whileInView="show"
-      className="bg-black text-white py-4 md:py-6"
-    >
+    <section>
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4">
-          <motion.h3
-            variants={fadeIn("left", 0.3)}
-            initial="hidden"
-            whileInView="show"
-            className="text-xl md:text-2xl  font-hbold whitespace-nowrap"
-          >
+          <h3>
             SECURITY FEATURES:
           </motion.h3>
-          <motion.p
-            variants={fadeIn("right", 0.3)}
-            initial="hidden"
-            whileInView="show"
-            className="text-base md:text-xl "
-          >
+          <p>
             Micro Printing | Invisible Ink Printing | Hologram Foil |
             Coin-Reactive Ink | Tamper-Evident Cartons
-          </motion.p>
+          </p>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 
   const DividedInfoSection = () => {
