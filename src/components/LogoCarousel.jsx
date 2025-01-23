@@ -2,7 +2,7 @@ import React from "react";
 
 const LogoCarousel = ({ logos, speed = 30 }) => {
   return (
-    <div className="overflow-hidden bg-white py-4 md:py-6">
+    <div className="overflow-hidden bg-white py-4 md:py-6 flex justify-center items-center">
       <style jsx>{`
         @keyframes slide {
           from {
@@ -15,6 +15,7 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
         
         .logos-slide {
           display: inline-flex;
+          align-items: center;
           animation: slide ${speed}s linear infinite;
           width: max-content;
         }
@@ -45,5 +46,4 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
     </div>
   );
 };
-
 export default LogoCarousel;
