@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from 'react';
 
 const LogoCarousel = ({ logos, speed = 30 }) => {
+  const [duplicatedLogos, setDuplicatedLogos] = useState([]);
+  const carouselRef = useRef(null);
+
+  useEffect(() => {
+    // Duplicate logos to create a seamless loop
+    setDuplicatedLogos([...logos, ...logos]);
+  }, [logos]);
+
   return (
     <div className="overflow-hidden bg-white py-2 md:py-6 flex justify-center items-center">
       <style jsx>{`
@@ -25,11 +33,14 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
         }
       `}</style>
       
-      <div className="logos-slide">
-        {[...logos, ...logos].map((logo, index) => (
+      <div 
+        ref={carouselRef}
+        className="logos-slide w-full overflow-hidden"
+      >
+        {duplicatedLogos.map((logo, index) => (
           <div 
             key={`${logo}-${index}`} 
-            className={`flex items-center justify-center 
+            className={`flex-shrink-0 flex items-center justify-center 
               mx-2 md:mx-4 lg:mx-8 
               ${['Bells_Healthcare', 'CVS'].includes(logo) 
                 ? 'w-24 md:w-40 lg:w-56 h-14 md:h-24 lg:h-28' 
