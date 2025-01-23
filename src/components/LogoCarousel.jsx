@@ -1,13 +1,7 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 const LogoCarousel = ({ logos, speed = 30 }) => {
-  const [duplicatedLogos, setDuplicatedLogos] = useState([]);
   const carouselRef = useRef(null);
-
-  useEffect(() => {
-    // Duplicate logos to create a seamless loop
-    setDuplicatedLogos([...logos, ...logos]);
-  }, [logos]);
 
   useEffect(() => {
     if (carouselRef.current) {
@@ -18,7 +12,7 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
       // Set the animation duration based on the scroll width and container width
       carouselRef.current.style.animationDuration = `${(scrollWidth / containerWidth) * speed}s`;
     }
-  }, [speed, duplicatedLogos]);
+  }, [speed]);
 
   return (
     <div className="overflow-hidden bg-white py-2 md:py-6 flex justify-center items-center">
@@ -48,7 +42,7 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
         ref={carouselRef}
         className="logos-slide w-full overflow-hidden"
       >
-        {duplicatedLogos.map((logo, index) => (
+        {[...logos, ...logos].map((logo, index) => (
           <div 
             key={`${logo}-${index}`} 
             className={`flex-shrink-0 flex items-center justify-center 
