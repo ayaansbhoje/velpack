@@ -406,7 +406,7 @@ const TrustedclientsSection = () => {
         <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4">
           <h3>
             SECURITY FEATURES:
-          </motion.h3>
+          </h3>
           <p>
             Micro Printing | Invisible Ink Printing | Hologram Foil |
             Coin-Reactive Ink | Tamper-Evident Cartons
