@@ -302,7 +302,7 @@ const Home = () => {
 const TrustedclientsSection = () => {
   const logos = [
     "Walgreens", "CVS", "kroger_pharmacy", "Tesco", "Sainsburys", 
-    "Bells_Healthcare", "Perrigo", "Galderma", "Dr_Reddys", "Coles", 
+    "Bells_Healthcare", "Perrigo", "Galderma", "Dr_ Reddys", "Coles", 
     "Bayer", "Mankind"
   ];
 
