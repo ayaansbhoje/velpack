@@ -30,7 +30,7 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
             key={`${logo}-${index}`} 
             className={`flex items-center justify-center mx-4 md:mx-8 ${
               ['Bells_Healthcare', 'CVS'].includes(logo) 
-                ? 'w-40 h-20' 
+                ? 'w-56 h-28' 
                 : 'w-32 h-16'
             }`}
           >
