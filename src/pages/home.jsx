@@ -44,7 +44,7 @@ const Home = () => {
         variants={fadeIn("up", 0.3)}
         initial="hidden"
         whileInView="show"
-        className="relative h-[60vh] md:h-screen overflow-hidden"
+        className="relative h-[55vh] md:h-screen overflow-hidden"
       >
         {/* Background Images */}
         {images.map((imageSet, index) => (
@@ -56,7 +56,7 @@ const Home = () => {
           >
             <img 
               src={imageSet.mobile} 
-              className="block md:hidden w-full h-full object-contain bg-black"
+              className="block md:hidden w-full h-full object-cover"
               alt={`Mobile Banner ${index + 1}`}
             />
             <img 
@@ -103,6 +103,7 @@ const Home = () => {
       </motion.div>
     );
   };
+
   const AboutUs = () => (
     <motion.section
       variants={fadeIn("up", 0.3)}
