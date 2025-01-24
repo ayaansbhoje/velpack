@@ -8,8 +8,7 @@ import { useHref, Link } from 'react-router-dom';
 import LogoCarousel from '../components/LogoCarousel';
 
 const Home = () => {
-
-const HeroSection = () => {
+  const HeroSection = () => {
   const images = [
     {
       desktop: "/assets/HP_Banner_1.jpg",
