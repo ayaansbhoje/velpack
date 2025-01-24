@@ -13,19 +13,19 @@ const HeroSection = () => {
   const images = [
     {
       desktop: "/assets/HP_Banner_1.jpg",
-      mobile: "/assets/mob-hero1.png",
+      mobile: "/assets/mobile1.png",
     },
     {
       desktop: "/assets/Velpack-Banner.jpg",
-      mobile: "/assets/mob-hero2.png",
+      mobile: "/assets/mobile2.png",
     },
     {
       desktop: "/assets/HP_Banner_3.jpg",
-      mobile: "/assets/mob-hero3.png",
+      mobile: "/assets/mobile3.png",
     },
     {
       desktop: "/assets/HP_Banner_4.jpg",
-      mobile: "/assets/mob-hero4.png",
+      mobile: "/assets/mobile4.png",
     },
   ];
 
