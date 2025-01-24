@@ -44,7 +44,7 @@ const Home = () => {
         variants={fadeIn("up", 0.3)}
         initial="hidden"
         whileInView="show"
-        className="relative h-[55vh] md:h-screen overflow-hidden"
+        className="relative h-[60vh] md:h-screen overflow-hidden"
       >
         {/* Background Images */}
         {images.map((imageSet, index) => (
@@ -56,8 +56,9 @@ const Home = () => {
           >
             <img 
               src={imageSet.mobile} 
-              className="block md:hidden w-full h-full object-cover"
+              className="block md:hidden w-full h-full object-contain"
               alt={`Mobile Banner ${index + 1}`}
+              style={{ maxWidth: '100%', maxHeight: '100%' }}
             />
             <img 
               src={imageSet.desktop} 
