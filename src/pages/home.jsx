@@ -43,7 +43,7 @@ const HeroSection = () => {
       variants={fadeIn("up", 0.3)}
       initial="hidden"
       whileInView="show"
-      className="relative h-[45vh] md:h-screen overflow-hidden mt-4 md:mt-0"  // Added mt-8 for mobile, md:mt-0 to reset for desktop
+      className="relative h-[45vh] md:h-screen overflow-hidden  md:mt-0"  // Added mt-8 for mobile, md:mt-0 to reset for desktop
     >
       {/* Background Images */}
       {images.map((imageSet, index) => (
@@ -55,7 +55,7 @@ const HeroSection = () => {
         >
           <img 
             src={imageSet.mobile} 
-            className="block md:hidden w-full h-full object-cover pt-16"
+            className="block md:hidden w-full h-full object-cover pt-4"
             alt={`Mobile Banner ${index + 1}`}
           />
           <img 
