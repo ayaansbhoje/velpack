@@ -42,7 +42,7 @@ const HeroSection = () => {
       variants={fadeIn("up", 0.3)}
       initial="hidden"
       whileInView="show"
-      className="relative h-screen w-full overflow-hidden"
+      className="relative h-[60vh] md:h-screen w-full overflow-hidden"
     >
       {images.map(({ desktop, mobile }, index) => (
         <picture key={index} className="absolute top-0 left-0 w-full h-full">
@@ -55,7 +55,7 @@ const HeroSection = () => {
           <img
             src={desktop}
             alt={`Team in packaging facility ${index + 1}`}
-            className={`w-full h-full object-contain transition-opacity duration-1000 ${
+            className={`w-full h-full object-cover transition-opacity duration-1000 ${
               index === currentImageIndex ? "opacity-100" : "opacity-0"
             }`}
           />
