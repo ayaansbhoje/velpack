@@ -43,7 +43,7 @@ const Home = () => {
       variants={fadeIn("up", 0.3)}
       initial="hidden"
       whileInView="show"
-      className="relative h-[40vh] md:h-screen overflow-hidden"
+      className="relative h-[50vh] md:h-screen overflow-hidden"  // Changed from h-[40vh] to h-[50vh] for mobile
     >
       {/* Background Images */}
       {images.map((imageSet, index) => (
