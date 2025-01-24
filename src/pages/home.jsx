@@ -132,7 +132,7 @@ const HeroSection = () => {
         >
           <iframe
             className="w-full h-full md:rounded-lg"
-            src="https://youtu.be/yIMcuOvgNAc"
+            src="https://www.youtube.com/embed/bpR5jz4PTrA?autoplay=1"
             title="YouTube Video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
