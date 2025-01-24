@@ -42,10 +42,10 @@ const Home = () => {
       variants={fadeIn("up", 0.3)}
       initial="hidden"
       whileInView="show"
-      className="relative h-screen md:h-screen overflow-hidden"
+      className="relative h-[60vh] md:h-screen overflow-x-hidden"
     >
       {images.map(({ desktop, mobile }, index) => (
-        <picture key={index} className="block">
+        <picture key={index}>
           {/* Mobile Image */}
           <source
             media="(max-width: 768px)"
@@ -53,9 +53,19 @@ const Home = () => {
           />
           {/* Desktop Image */}
           <img
-            src={index === currentImageIndex ? (window.innerWidth < 768 ? mobile : desktop) : desktop}
+            src={desktop}
             alt={`Team in packaging facility ${index + 1}`}
-            className={`absolute top-0 left-0 w-full h-full object-contain md:object-cover transition-opacity duration-1000 ${
+            className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${
+              index === currentImageIndex ? "opacity-100" : "opacity-0"
+            } ${
+              index === currentImageIndex ? "mt-10" : "h-full"
+            }`}
+          />
+          {/* Mobile Image */}
+          <img
+            src={mobile}
+            alt={`Team in packaging facility ${index + 1}`}
+            className={`absolute w-full h-full object-contain md:hidden transition-opacity duration-1000 ${
               index === currentImageIndex ? "opacity-100" : "opacity-0"
             }`}
           />
