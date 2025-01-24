@@ -43,7 +43,7 @@ const HeroSection = () => {
       variants={fadeIn("up", 0.3)}
       initial="hidden"
       whileInView="show"
-      className="relative h-[45vh] md:h-screen overflow-hidden mt-4 md:mt-0"
+      className="relative h-[45vh] md:h-screen overflow-hidden mt-8 mb-6 md:mt-0"
     >
       {/* Background Images */}
       {images.map((imageSet, index) => (
@@ -55,7 +55,7 @@ const HeroSection = () => {
         >
           <img 
             src={imageSet.mobile} 
-            className="block md:hidden w-full h-full object-contain pt-12"
+            className="block md:hidden w-full h-full object-cover pt-4"
             alt={`Mobile Banner ${index + 1}`}
           />
           <img 
@@ -72,7 +72,7 @@ const HeroSection = () => {
           variants={fadeIn("left", 1.2)}
           initial="hidden"
           whileInView="show"
-          className="text-2xl md:text-4xl mb-4 text-white text-center tracking-wider md:tracking-[0.14em] font-hmed leading-tight md:leading-[38px] px-4"
+          className="text-xl md:text-4xl mb-4 text-white text-center tracking-wider md:tracking-[0.14em] font-hmed leading-tight md:leading-[38px] px-4"
         >
           PAPER-BASED PACKAGING SOLUTIONS SINCE 1956
         </motion.h1>
@@ -81,7 +81,7 @@ const HeroSection = () => {
           variants={fadeIn("up", 0.3)}
           initial="hidden"
           whileInView="show"
-          className="pointer-events-auto px-4 py-2 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold"
+          className="pointer-events-auto px-3 py-1 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold text-sm md:text-base"
         >
           <Link to="/contactus"> GET IN TOUCH </Link>
         </motion.button>
