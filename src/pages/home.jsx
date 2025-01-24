@@ -9,93 +9,100 @@ import LogoCarousel from '../components/LogoCarousel';
 
 const Home = () => {
 
-const HeroSection = () => {
-  const images = [
-    {
-      desktop: "/assets/HP_Banner_1.jpg",
-      mobile: "/assets/mob-hero1.png",
-    },
-    {
-      desktop: "/assets/Velpack-Banner.jpg",
-      mobile: "/assets/mob-hero2.png",
-    },
-    {
-      desktop: "/assets/HP_Banner_3.jpg",
-      mobile: "/assets/mob-hero3.png",
-    },
-    {
-      desktop: "/assets/HP_Banner_4.jpg",
-      mobile: "/assets/mob-hero4.png",
-    },
-  ];
+const Home = () => {
+  const HeroSection = () => {
+    const images = [
+      {
+        mobile: "/assets/mob-hero1.png",
+        desktop: "/assets/HP_Banner_1.jpg",
+      },
+      {
+        mobile: "/assets/mob-hero3.png",
+        desktop: "/assets/Velpack-Banner.jpg",
+      },
+      {
+        mobile: "/assets/mob-hero2.png",
+        desktop: "/assets/HP_Banner_3.jpg",
+      },
+      {
+        mobile: "/assets/mob-hero4.png",
+        desktop: "/assets/HP_Banner_4.jpg",
+      }
+    ];
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(timer);
-  }, []);
+    useEffect(() => {
+      const timer = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 3000);
+      return () => clearInterval(timer);
+    }, []);
 
-  return (
-    <motion.div
-      variants={fadeIn("up", 0.3)}
-      initial="hidden"
-      whileInView="show"
-      className="relative h-auto md:h-screen w-full overflow-hidden"
-    >
-      {images.map(({ desktop, mobile }, index) => (
-        <picture key={index} className="absolute top-0 left-0 w-full">
-          {/* Mobile Image */}
-          <source
-            media="(max-width: 768px)"
-            srcSet={mobile}
-          />
-          {/* Desktop Image */}
-          <img
-            src={desktop}
-            alt={`Team in packaging facility ${index + 1}`}
-            className={`w-full md:h-full md:object-cover object-contain transition-opacity duration-1000 ${
+    return (
+      <motion.div
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView="show"
+        className="relative h-[60vh] md:h-screen overflow-hidden"
+      >
+        {/* Background Images */}
+        {images.map((imageSet, index) => (
+          <div 
+            key={index} 
+            className={`absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ${
               index === currentImageIndex ? "opacity-100" : "opacity-0"
             }`}
-          />
-        </picture>
-      ))}
-
-      <div className="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-end items-center pb-12 md:pb-24">
-        <motion.h1
-          variants={fadeIn("left", 1.2)}
-          initial="hidden"
-          whileInView="show"
-          className="text-2xl md:text-4xl mb-4 text-white text-center tracking-wider md:tracking-[0.14em] font-hmed leading-tight md:leading-[38px] px-4"
-        >
-          PAPER-BASED PACKAGING SOLUTIONS SINCE 1956
-        </motion.h1>
-
-        <motion.button
-          variants={fadeIn("up", 0.3)}
-          initial="hidden"
-          whileInView="show"
-          className="px-4 py-2 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold"
-        >
-          <Link to="/contactus"> GET IN TOUCH </Link>
-        </motion.button>
-      </div>
-      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentImageIndex(index)}
-            className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${
-              index === currentImageIndex ? "bg-white" : "bg-gray-400"
-            }`}
-          ></button>
+          >
+            <img 
+              src={imageSet.mobile} 
+              className="block md:hidden w-full h-full object-contain bg-black"
+              alt={`Mobile Banner ${index + 1}`}
+            />
+            <img 
+              src={imageSet.desktop} 
+              className="hidden md:block w-full h-full object-cover"
+              alt={`Desktop Banner ${index + 1}`}
+            />
+          </div>
         ))}
-      </div>
-    </motion.div>
-  );
-};
+
+        {/* Overlay Content */}
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end items-center pb-12 md:pb-24 pointer-events-none">
+          <motion.h1
+            variants={fadeIn("left", 1.2)}
+            initial="hidden"
+            whileInView="show"
+            className="text-2xl md:text-4xl mb-4 text-white text-center tracking-wider md:tracking-[0.14em] font-hmed leading-tight md:leading-[38px] px-4"
+          >
+            PAPER-BASED PACKAGING SOLUTIONS SINCE 1956
+          </motion.h1>
+
+          <motion.button
+            variants={fadeIn("up", 0.3)}
+            initial="hidden"
+            whileInView="show"
+            className="pointer-events-auto px-4 py-2 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold"
+          >
+            <Link to="/contactus"> GET IN TOUCH </Link>
+          </motion.button>
+        </div>
+
+        {/* Pagination Dots */}
+        <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImageIndex(index)}
+              className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${
+                index === currentImageIndex ? "bg-white" : "bg-gray-400"
+              }`}
+            ></button>
+          ))}
+        </div>
+      </motion.div>
+    );
+  };
   const AboutUs = () => (
     <motion.section
       variants={fadeIn("up", 0.3)}
