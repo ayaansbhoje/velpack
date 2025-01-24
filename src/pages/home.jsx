@@ -13,6 +13,7 @@ const Home = () => {
       {
         desktop: "/assets/HP_Banner_1.jpg",
         mobile: "/assets/mob-hero1.png",
+
       },
       {
         desktop: "/assets/Velpack-Banner.jpg",
@@ -42,10 +43,10 @@ const Home = () => {
         variants={fadeIn("up", 0.3)}
         initial="hidden"
         whileInView="show"
-        className="relative h-auto md:h-screen overflow-x-hidden"
+        className="relative h-[60vh] md:h-screen overflow-x-hidden"
       >
         {images.map(({ desktop, mobile }, index) => (
-          <picture key={index} className="block">
+          <picture key={index}>
             {/* Mobile Image */}
             <source
               media="(max-width: 768px)"
@@ -55,15 +56,8 @@ const Home = () => {
             <img
               src={desktop}
               alt={`Team in packaging facility ${index + 1}`}
-              className={`
-                w-full 
-                md:absolute 
-                object-cover 
-                transition-opacity 
-                duration-1000 
-                ${index === currentImageIndex ? "opacity-100" : "opacity-0"}
-                ${index === currentImageIndex ? "" : "md:mt-10"}
-              `}
+              className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? "opacity-100" : "opacity-0"
+                } ${index === currentImageIndex ? "mt-10" : "h-full"}`}
             />
           </picture>
         ))}
@@ -92,7 +86,8 @@ const Home = () => {
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
-              className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${index === currentImageIndex ? "bg-white" : "bg-gray-400"}`}
+              className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${index === currentImageIndex ? "bg-white" : "bg-gray-400"
+                }`}
             ></button>
           ))}
         </div>
