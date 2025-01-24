@@ -9,7 +9,7 @@ import LogoCarousel from '../components/LogoCarousel';
 
 const Home = () => {
 
-const Home = () => {
+
   const HeroSection = () => {
     const images = [
       {
