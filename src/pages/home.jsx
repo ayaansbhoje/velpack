@@ -67,7 +67,7 @@ const HeroSection = () => {
       ))}
 
       {/* Overlay Content */}
-      <div className="absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-end items-center pb-12 md:pb-24 pointer-events-none">
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end items-center pb-12 md:pb-24 pointer-events-none">
         <motion.h1
           variants={fadeIn("left", 1.2)}
           initial="hidden"
