@@ -1,6 +1,6 @@
 import React from "react";
 
-const LogoCarousel = ({ logos, speed = 30 }) => {
+const LogoCarousel = ({ logos, speed = 40 }) => {
   return (
     <div className="overflow-hidden bg-white py-2 md:py-6 flex justify-center items-center">
       <style jsx>{`
