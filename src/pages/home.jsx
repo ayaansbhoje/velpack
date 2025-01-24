@@ -45,7 +45,6 @@ const HeroSection = () => {
       whileInView="show"
       className="relative h-[45vh] md:h-screen overflow-hidden mt-4 md:mt-0"  // Added mt-8 for mobile, md:mt-0 to reset for desktop
     >
-      {/* Rest of the component remains the same */}
       {/* Background Images */}
       {images.map((imageSet, index) => (
         <div 
@@ -56,7 +55,7 @@ const HeroSection = () => {
         >
           <img 
             src={imageSet.mobile} 
-            className="block md:hidden w-full h-full object-cover"
+            className="block md:hidden w-full h-full object-cover pt-16"
             alt={`Mobile Banner ${index + 1}`}
           />
           <img 
