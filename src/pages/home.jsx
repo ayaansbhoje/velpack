@@ -43,7 +43,7 @@ const Home = () => {
         variants={fadeIn("up", 0.3)}
         initial="hidden"
         whileInView="show"
-        className="relative h-[40vh] md:h-screen overflow-hidden pt-16 md:pt-0"
+        className="relative h-[40vh] md:h-screen overflow-hidden"
       >
         {/* Background Images */}
         {images.map((imageSet, index) => (
@@ -102,7 +102,6 @@ const Home = () => {
       </motion.div>
     );
   };
-
 
   const AboutUs = () => (
     <motion.section
