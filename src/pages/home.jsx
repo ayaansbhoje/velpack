@@ -10,25 +10,11 @@ import LogoCarousel from '../components/LogoCarousel';
 const Home = () => {
   const HeroSection = () => {
     const images = [
-      {
-        desktop: "/assets/HP_Banner_1.jpg",
-        mobile: "/assets/mob-hero1.png",
-
-      },
-      {
-        desktop: "/assets/Velpack-Banner.jpg",
-        mobile: "/assets/mob-hero2.png",
-      },
-      {
-        desktop: "/assets/HP_Banner_3.jpg",
-        mobile: "/assets/mob-hero3.png",
-      },
-      {
-        desktop: "/assets/HP_Banner_4.jpg",
-        mobile: "/assets/mob-hero4.png",
-      },
+      "/assets/HP_Banner_1.jpg",
+      "/assets/Velpack-Banner.jpg",
+      "/assets/HP_Banner_3.jpg",
+      "/assets/HP_Banner_4.jpg",
     ];
-
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     useEffect(() => {
@@ -45,21 +31,15 @@ const Home = () => {
         whileInView="show"
         className="relative h-[60vh] md:h-screen overflow-x-hidden"
       >
-        {images.map(({ desktop, mobile }, index) => (
-          <picture key={index}>
-            {/* Mobile Image */}
-            <source
-              media="(max-width: 768px)"
-              srcSet={mobile}
-            />
-            {/* Desktop Image */}
-            <img
-              src={desktop}
-              alt={`Team in packaging facility ${index + 1}`}
-              className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? "opacity-100" : "opacity-0"
-                } ${index === currentImageIndex ? "mt-10" : "h-full"}`}
-            />
-          </picture>
+        {images.map((img, index) => (
+          <img
+            key={img}
+            src={img}
+            alt={`Team in packaging facility ${index + 1}`}
+            className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${
+              index === currentImageIndex ? "opacity-100" : "opacity-0"
+            }`}
+          />
         ))}
 
         <div className="absolute inset-0 bg-black bg-opacity-0 flex flex-col justify-end items-center pb-12 md:pb-24">
@@ -86,8 +66,9 @@ const Home = () => {
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
-              className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${index === currentImageIndex ? "bg-white" : "bg-gray-400"
-                }`}
+              className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${
+                index === currentImageIndex ? "bg-white" : "bg-gray-400"
+              }`}
             ></button>
           ))}
         </div>
