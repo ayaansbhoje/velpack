@@ -54,7 +54,7 @@ const HeroSection = () => {
         >
           <img 
             src={imageSet.mobile} 
-            className="block md:hidden w-full h-full object-contain pt-16"
+            className="block md:hidden w-full h-full object-contain pt-3"
             alt={`Mobile Banner ${index + 1}`}
           />
           <img 
