@@ -24,27 +24,6 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
         .logos-slide:hover {
           animation-play-state: paused;
         }
-
-        .logos-container::before,
-        .logos-container::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          width: 50px;
-          background: linear-gradient(to right, white 0%, transparent 100%);
-          z-index: 2;
-          pointer-events: none;
-        }
-
-        .logos-container::before {
-          left: 0;
-          transform: rotate(180deg);
-        }
-
-        .logos-container::after {
-          right: 0;
-        }
       `}</style>
       
       <div className="logos-container relative w-full overflow-hidden">
