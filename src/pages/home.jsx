@@ -7,9 +7,7 @@ import Footprint from '../components/Footprint';
 import { useHref, Link } from 'react-router-dom';
 import LogoCarousel from '../components/LogoCarousel';
 
-const Home = () => {
-
-  const HeroSection = () => {
+const HeroSection = () => {
   const images = [
     {
       desktop: "/assets/HP_Banner_1.jpg",
@@ -43,8 +41,9 @@ const Home = () => {
       variants={fadeIn("up", 0.3)}
       initial="hidden"
       whileInView="show"
-      className="relative h-[50vh] md:h-screen overflow-hidden"  // Changed from h-[40vh] to h-[50vh] for mobile
+      className="relative h-[45vh] md:h-screen overflow-hidden mt-4 md:mt-0"  // Added mt-8 for mobile, md:mt-0 to reset for desktop
     >
+      {/* Rest of the component remains the same */}
       {/* Background Images */}
       {images.map((imageSet, index) => (
         <div 
