@@ -466,7 +466,6 @@ const HeroSection = () => {
         alt: "Packaging Facility - Desktop",
       },
     ];
-
     return (
       <motion.section
         variants={fadeIn("up", 0.3)}
@@ -484,7 +483,14 @@ const HeroSection = () => {
             >
               <div className="">
                 {images.map(({ name, image, className, alt }) => (
-                  <img key={name} src={image} className={className} alt={alt} />
+                  <a 
+                    key={name}
+                    href="https://createcluster.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={image} className={className} alt={alt} />
+                  </a>
                 ))}
               </div>
             </motion.div>
