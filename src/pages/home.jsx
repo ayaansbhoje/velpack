@@ -452,21 +452,19 @@ const HeroSection = () => {
       </div>
     </section>
   );
- const DividedInfoSection = () => {
+  const DividedInfoSection = () => {
     const images = [
       {
         name: "Mobile",
         image: "/assets/CC Mobile.png",
-        className: "block md:hidden w-full h-auto object-cover cursor-pointer",
+        className: "block md:hidden w-full h-auto object-cover",
         alt: "Packaging Facility - Mobile",
-        link: "https://createcluster.com/"
       },
       {
         name: "Desktop",
         image: "/assets/CC Desktop.png",
-        className: "hidden md:block w-full h-auto object-cover cursor-pointer",
+        className: "hidden md:block w-full h-auto object-cover",
         alt: "Packaging Facility - Desktop",
-        link: "https://createcluster.com/"
       },
     ];
 
@@ -486,19 +484,8 @@ const HeroSection = () => {
               className="w-screen"
             >
               <div className="">
-                {images.map(({ name, image, className, alt, link }) => (
-                  <a 
-                    key={name} 
-                    href={link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <img 
-                      src={image} 
-                      className={className} 
-                      alt={alt} 
-                    />
-                  </a>
+                {images.map(({ name, image, className, alt }) => (
+                  <img key={name} src={image} className={className} alt={alt} />
                 ))}
               </div>
             </motion.div>
