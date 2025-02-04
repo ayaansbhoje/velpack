@@ -13,19 +13,19 @@ const HeroSection = () => {
   const images = [
     {
       desktop: "/assets/HP_Banner_1.jpg",
-      mobile: "/assets/mobile1.png",
+      mobile: "/assets/mob-hero1.png",
     },
     {
       desktop: "/assets/Velpack-Banner.jpg",
-      mobile: "/assets/mobile2.png",
+      mobile: "/assets/mob-hero2.png",
     },
     {
       desktop: "/assets/HP_Banner_3.jpg",
-      mobile: "/assets/mobile3.png",
+      mobile: "/assets/mob-hero3.png",
     },
     {
       desktop: "/assets/HP_Banner_4.jpg",
-      mobile: "/assets/mobile4.png",
+      mobile: "/assets/mob-hero4.png",
     },
   ];
 
@@ -43,7 +43,7 @@ const HeroSection = () => {
       variants={fadeIn("up", 0.3)}
       initial="hidden"
       whileInView="show"
-      className="relative h-[45vh] md:h-screen overflow-hidden mt-8  md:mt-0"
+      className="relative h-[45vh] md:h-screen overflow-hidden mt-8 mb-6 md:mt-0"
     >
       {/* Background Images */}
       {images.map((imageSet, index) => (
@@ -131,13 +131,12 @@ const HeroSection = () => {
                 relative md:absolute md:-bottom-30 md:-right-1/3 md:transform md:-translate-x-1/2 md:scale-75 -mb-6 md:mb-0 mt-6 md:mt-0"
         >
           <iframe
-          className="w-full h-full md:rounded-lg"
-          src="https://www.youtube.com/embed/yIMcvOvgNAc?rel=0"
-          title="Velpack Introduction"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        />
+            className="w-full h-full md:rounded-lg"
+            src="https://www.youtube.com/embed/yIMcuOvgNAc?si=jOC_CgRbQExFXew2"
+            title="YouTube Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
         </div>
       </div>
     </motion.section>
