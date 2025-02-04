@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/navbar'
 import Footer from '../components/footer';
 
-
-
 const ContactusPage = () => {
   return (
     <div className="bg-white">
@@ -73,12 +71,16 @@ const ContactusPage = () => {
         <div className="flex flex-col md:flex-row gap-8">
           {/* Map */}
           <div className="w-full md:w-1/2">
-            <div className="bg-gray-200 w-full h-64 rounded-lg">
-              {/* Replace this div with actual Google Map implementation */}
-              <div className="w-full h-full flex items-center justify-center text-gray-600">
-                Google map location
-              </div>
-            </div>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.616790517668!2d72.99509761491719!3d19.086388987078534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c0e936892ec7%3A0x69bc6eb3f6a36a46!2sVELPACK%20PVT.%20LTD.!5e0!3m2!1sen!2sin!4v1707026849727!5m2!1sen!2sin"
+              width="100%"
+              height="256"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-lg"
+            ></iframe>
           </div>
           
           {/* Contact Details */}
