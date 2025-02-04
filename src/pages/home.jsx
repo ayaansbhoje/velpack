@@ -493,7 +493,7 @@ const HeroSection = () => {
       </motion.section>
     );
   };
-  const ReviewCard = ({ review, isCenter }) => (
+  {/* const ReviewCard = ({ review, isCenter }) => (
     <div
       className={`bg-red-500 rounded-lg p-4 md:p-6 text-white ${isCenter ? "bg-red-800 shadow-lg transform md:scale-105 z-10" : "z-0"
         } w-72 md:w-96 h-auto md:h-74 flex flex-col justify-between`}
@@ -559,7 +559,7 @@ const HeroSection = () => {
           <div className="w-16 h-1 bg-[#e81d2d] mb-8 md:mb-12 mx-auto"></div>
 
           <div className="relative">
-            {/* Mobile Version */}
+           // 
             <div className="flex md:hidden justify-center items-center relative">
               <button
                 onClick={prevReview}
@@ -578,7 +578,7 @@ const HeroSection = () => {
               </button>
             </div>
 
-            {/* Desktop Version - Unchanged */}
+            
             <div className="hidden md:flex justify-center items-center">
               <button
                 onClick={prevReview}
@@ -618,7 +618,7 @@ const HeroSection = () => {
         </div>
       </section>
     );
-  };
+  }; */}
 
   return (
     <>
@@ -632,7 +632,7 @@ const HeroSection = () => {
       <FeaturesSection />
       <SecurityFeaturesSection />
       <DividedInfoSection />
-      <ReviewsSection />
+      <ReviewsSection /> 
       <Footer />
     </>
   );
