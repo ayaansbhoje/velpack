@@ -632,7 +632,7 @@ const HeroSection = () => {
       <FeaturesSection />
       <SecurityFeaturesSection />
       <DividedInfoSection />
-      <ReviewsSection /> 
+       {/*  <ReviewsSection /> */}
       <Footer />
     </>
   );
