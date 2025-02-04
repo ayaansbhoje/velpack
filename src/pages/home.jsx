@@ -452,48 +452,61 @@ const HeroSection = () => {
       </div>
     </section>
   );
-  const DividedInfoSection = () => {
-    const images = [
-      {
-        name: "Mobile",
-        image: "/assets/CC Mobile.png",
-        className: "block md:hidden w-full h-auto object-cover",
-        alt: "Packaging Facility - Mobile",
-      },
-      {
-        name: "Desktop",
-        image: "/assets/CC Desktop.png",
-        className: "hidden md:block w-full h-auto object-cover",
-        alt: "Packaging Facility - Desktop",
-      },
-    ];
+ const DividedInfoSection = () => {
+  const images = [
+    {
+      name: "Mobile",
+      image: "/assets/CC Mobile.png",
+      className: "block md:hidden w-full h-auto object-cover cursor-pointer",
+      alt: "Packaging Facility - Mobile",
+      link: "https://www.createcluster.com" // Add your desired URL here
+    },
+    {
+      name: "Desktop",
+      image: "/assets/CC Desktop.png",
+      className: "hidden md:block w-full h-auto object-cover cursor-pointer",
+      alt: "Packaging Facility - Desktop",
+      link: "https://www.createcluster.com" // Add your desired URL here
+    },
+  ];
 
-    return (
-      <motion.section
-        variants={fadeIn("up", 0.3)}
-        initial="hidden"
-        whileInView="show"
-        className="bg-[#e81d2d] text-white w-full overflow-hidden"
-      >
-        <div className="container mx-auto">
-          <div className="flex items-start justify-center">
-            <motion.div
-              variants={fadeIn("right", 0.3)}
-              initial="hidden"
-              whileInView="show"
-              className="w-screen"
-            >
-              <div className="">
-                {images.map(({ name, image, className, alt }) => (
-                  <img key={name} src={image} className={className} alt={alt} />
-                ))}
-              </div>
-            </motion.div>
-          </div>
+  return (
+    <motion.section
+      variants={fadeIn("up", 0.3)}
+      initial="hidden"
+      whileInView="show"
+      className="bg-[#e81d2d] text-white w-full overflow-hidden"
+    >
+      <div className="container mx-auto">
+        <div className="flex items-start justify-center">
+          <motion.div
+            variants={fadeIn("right", 0.3)}
+            initial="hidden"
+            whileInView="show"
+            className="w-screen"
+          >
+            <div className="">
+              {images.map(({ name, image, className, alt, link }) => (
+                <a 
+                  key={name} 
+                  href={link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <img 
+                    src={image} 
+                    className={className} 
+                    alt={alt} 
+                  />
+                </a>
+              ))}
+            </div>
+          </motion.div>
         </div>
-      </motion.section>
-    );
-  };
+      </div>
+    </motion.section>
+  );
+};
   const ReviewCard = ({ review, isCenter }) => (
     <div
       className={`bg-red-500 rounded-lg p-4 md:p-6 text-white ${isCenter ? "bg-red-800 shadow-lg transform md:scale-105 z-10" : "z-0"
