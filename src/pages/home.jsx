@@ -329,8 +329,8 @@ const HeroSection = () => {
 
   const TrustedclientsSection = () => {
     const logos = [
-      "Walgreens", "CVS", "kroger_pharmacy", "Tesco", "Sainsburys",
-      "Bells_Healthcare", "Perrigo", "Galderma", "Dr_ Reddys", "Coles",
+      "Walgreens_1", "CVS", "kroger_pharmacy", "Tesco", "Sainsburys",
+      "Bells_Healthcare", "Perrigo", "Galderma", "Dr_Reddys_1", "Coles",
       "Bayer", "Mankind"
     ];
 
