@@ -89,8 +89,7 @@ const ContactusPage = () => {
             <h2 className="text-xl font-bold text-gray-800">Velpack Pvt. Ltd.</h2>
             <p className="text-gray-600">
               A-233, TTC Area, MIDC,<br />
-              Mahape,<br />
-              Navi Mumbai 400 710, India
+              Mahape, Navi Mumbai 400 710, India
             </p>
             <p className="text-gray-600">
               <a href="mailto:info@velpack.com" className="hover:text-red-700">
