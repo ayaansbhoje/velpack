@@ -12,7 +12,7 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
     }
     
     // Medium-large logos
-    if (['Galderma', 'walgreen_1','Perrigo' 'Dr._Reddys_Laboratories_y'].includes(logo)) {
+    if (['Galderma', 'walgreen_1','Perrigo_logo', 'Dr._Reddys_Laboratories_y'].includes(logo)) {
       return {
         container: 'w-24 md:w-36 lg:w-48 h-12 md:h-20 lg:h-24',
         image: 'max-h-full max-w-full object-contain scale-100'
