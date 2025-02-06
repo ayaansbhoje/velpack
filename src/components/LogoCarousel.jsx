@@ -49,21 +49,25 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
         .logos-slide {
           display: inline-flex;
           align-items: center;
+          justify-content: space-between;
           animation: slide ${speed}s linear infinite;
           animation-iteration-count: infinite;
           width: max-content;
-          gap: 2rem;
+        }
+        
+        .logo-wrapper {
+          padding: 0 1.5rem;  /* 24px padding on each side */
         }
         
         @media (min-width: 768px) {
-          .logos-slide {
-            gap: 3rem;
+          .logo-wrapper {
+            padding: 0 2rem;  /* 32px padding on each side for md screens */
           }
         }
         
         @media (min-width: 1024px) {
-          .logos-slide {
-            gap: 4rem;
+          .logo-wrapper {
+            padding: 0 2.5rem;  /* 40px padding on each side for lg screens */
           }
         }
         
@@ -80,13 +84,15 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
             return (
               <div 
                 key={`${logo}-${index}`} 
-                className={`flex items-center justify-center inline-block ${sizes.container}`}
+                className="logo-wrapper"
               >
-                <img
-                  src={`/assets/${logo}.png`}
-                  alt={`${logo} Logo`}
-                  className={`${sizes.image} hover:scale-120 transition-transform duration-300`}
-                />
+                <div className={`flex items-center justify-center inline-block ${sizes.container}`}>
+                  <img
+                    src={`/assets/${logo}.png`}
+                    alt={`${logo} Logo`}
+                    className={`${sizes.image} hover:scale-120 transition-transform duration-300`}
+                  />
+                </div>
               </div>
             );
           })}
