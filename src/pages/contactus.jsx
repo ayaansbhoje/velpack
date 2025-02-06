@@ -26,13 +26,11 @@ const ContactusPage = () => {
     e.preventDefault();
     setLoading(true);
 
-    // Replace these with your EmailJS credentials
     const serviceID = 'service_13a21sn';
     const templateID = 'template_ql2a4mf';
     const userID = 'D657UTjw5X10klAOi';
 
     try {
-      // Send the email using EmailJS
       const response = await emailjs.send(serviceID, templateID, formData, userID);
 
       if (response.status === 200) {
@@ -59,11 +57,11 @@ const ContactusPage = () => {
     <div className="bg-white">
       <Navbar />
 
-      {/* Contact Form Section with fixed mobile spacing */}
+      {/* Contact Form Section with increased spacing */}
       <div 
         className="bg-[#b7162a] text-white py-12 md:py-16" 
         id='contact'
-        style={{ marginTop: '96px' }} // Fixed 96px spacing for all screens
+        style={{ marginTop: '120px' }} // Increased base margin for mobile
       >
         <div className="container mx-auto px-4 flex justify-center">
           <div className="w-full max-w-2xl">
