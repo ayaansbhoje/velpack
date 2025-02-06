@@ -59,8 +59,11 @@ const ContactusPage = () => {
     <div className="bg-white">
       <Navbar />
 
-      {/* Contact Form Section with increased top margin */}
-      <div className="bg-[#b7162a] text-white py-8 md:py-16 mt-16 md:mt-24" id='contact'>
+      {/* Spacer div with increased height for both mobile and desktop */}
+      <div className="h-24 md:h-32"></div>
+
+      {/* Contact Form Section */}
+      <div className="bg-[#b7162a] text-white py-12 md:py-16" id='contact'>
         <div className="container mx-auto px-4 flex justify-center">
           <div className="w-full max-w-2xl">
             <h1 className="text-3xl font-bold mb-8">We Would Love to Hear from You.</h1>
