@@ -1,10 +1,51 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import Navbar from '../components/navbar'
+import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
 const ContactusPage = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    mobile: '',
+    email: '',
+    query: '',
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Replace these with your EmailJS credentials
+    const serviceID = 'service_13a21sn';
+    const templateID = 'template_ql2a4mf';
+    const userID = 'D657UTjw5X10klAOi';
+
+    try {
+      // Send the email using EmailJS
+      const response = await emailjs.send(serviceID, templateID, formData, userID);
+
+      if (response.status === 200) {
+        alert('Message sent successfully!');
+        setFormData({
+          name: '',
+          mobile: '',
+          email: '',
+          query: '',
+        });
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Failed to send message. Please try again.');
+    }
+  };
+
   return (
     <div className="bg-white">
       <Navbar />
@@ -15,14 +56,17 @@ const ContactusPage = () => {
           <div className="w-full max-w-2xl">
             <h1 className="text-3xl font-bold mb-8 ">We Would Love to Hear from You.</h1>
 
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="name" className="block mb-2">Your name</label>
                   <input
                     type="text"
                     id="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     className="w-full p-2 rounded bg-transparent border border-white placeholder-white text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white"
+                    required
                   />
                 </div>
                 <div>
@@ -30,7 +74,10 @@ const ContactusPage = () => {
                   <input
                     type="tel"
                     id="mobile"
+                    value={formData.mobile}
+                    onChange={handleChange}
                     className="w-full p-2 rounded bg-transparent border border-white placeholder-white text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white"
+                    required
                   />
                 </div>
               </div>
@@ -40,7 +87,10 @@ const ContactusPage = () => {
                 <input
                   type="email"
                   id="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="w-full p-2 rounded bg-transparent border border-white placeholder-white text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white"
+                  required
                 />
               </div>
 
@@ -49,7 +99,10 @@ const ContactusPage = () => {
                 <textarea
                   id="query"
                   rows={6}
+                  value={formData.query}
+                  onChange={handleChange}
                   className="w-full p-2 rounded bg-transparent border border-white placeholder-white text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white"
+                  required
                 ></textarea>
               </div>
 
@@ -70,19 +123,17 @@ const ContactusPage = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="flex flex-col md:flex-row gap-8">
           {/* Map */}
-            <div className="w-full h-64 rounded-lg overflow-hidden lg:ml-44 sm:ml-0 md:ml-0">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3411.517548594197!2d73.02005617466614!3d19.11424765077173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c0e936892ec7%3A0x69bc6eb3f6a36a46!2sVELPACK%20PVT.%20LTD.!5e1!3m2!1sen!2sin!4v1738696677473!5m2!1sen!2sin"
-                width="1200"
-                height="450"
-                style={{ border: 0 }}  // ✅ This is the correct way in React
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-
-
-            </div>
+          <div className="w-full h-64 rounded-lg overflow-hidden lg:ml-44 sm:ml-0 md:ml-0">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3411.517548594197!2d73.02005617466614!3d19.11424765077173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c0e936892ec7%3A0x69bc6eb3f6a36a46!2sVELPACK%20PVT.%20LTD.!5e1!3m2!1sen!2sin!4v1738696677473!5m2!1sen!2sin"
+              width="1200"
+              height="450"
+              style={{ border: 0 }}  // ✅ This is the correct way in React
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
 
           {/* Contact Details */}
           <div className="w-full md:w-1/2 space-y-4">
