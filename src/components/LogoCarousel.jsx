@@ -11,11 +11,11 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
       };
     }
     
-    // Slightly smaller large logos
+    // Medium-large logos (further reduced)
     if (['Galderma', 'walgreen_1'].includes(logo)) {
       return {
-        container: 'w-28 md:w-40 lg:w-56 h-14 md:h-24 lg:h-28',
-        image: 'max-h-full max-w-full object-contain scale-105'
+        container: 'w-24 md:w-36 lg:w-48 h-12 md:h-20 lg:h-24',
+        image: 'max-h-full max-w-full object-contain scale-100'
       };
     }
     
@@ -27,7 +27,7 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
   };
 
   return (
-    <div className="overflow-hidden bg-white py-2 md:py-6 flex justify-center items-center relative w-full">
+    <div className="overflow-hidden bg-white py-1 md:py-4 flex justify-center items-center relative w-full">
       <style jsx>{`
         @keyframes slide {
           0% {
@@ -59,12 +59,12 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
             return (
               <div 
                 key={`${logo}-${index}`} 
-                className={`flex items-center justify-center mx-2 md:mx-4 lg:mx-8 inline-block ${sizes.container}`}
+                className={`flex items-center justify-center mx-1 md:mx-3 lg:mx-6 inline-block ${sizes.container}`}
               >
                 <img
                   src={`/assets/${logo}.png`}
                   alt={`${logo} Logo`}
-                  className={`${sizes.image} hover:scale-125 transition-transform duration-300`}
+                  className={`${sizes.image} hover:scale-120 transition-transform duration-300`}
                 />
               </div>
             );
