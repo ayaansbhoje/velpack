@@ -4,15 +4,15 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
   // Helper function to determine logo size
   const getLogoSize = (logo) => {
     // Largest logos
-    if (['Bells_Healthcare', 'Dr._Reddys_Laboratories_y', 'CVS'].includes(logo)) {
+    if (['Bells_Healthcare', 'CVS'].includes(logo)) {
       return {
         container: 'w-32 md:w-48 lg:w-64 h-16 md:h-28 lg:h-32',
         image: 'max-h-full max-w-full object-contain scale-110'
       };
     }
     
-    // Medium-large logos (further reduced)
-    if (['Galderma', 'walgreen_1'].includes(logo)) {
+    // Medium-large logos
+    if (['Galderma', 'walgreen_1', 'Dr._Reddys_Laboratories_y'].includes(logo)) {
       return {
         container: 'w-24 md:w-36 lg:w-48 h-12 md:h-20 lg:h-24',
         image: 'max-h-full max-w-full object-contain scale-100'
