@@ -3,7 +3,7 @@ import React from "react";
 const LogoCarousel = ({ logos, speed = 30 }) => {
   // Helper function to determine logo size
   const getLogoSize = (logo) => {
-    const largerLogos = ['Bells_Healthcare', 'Dr._Reddy's_Laboratories_2', 'Galderma', 'walgreen_1', 'CVS'];
+    const largerLogos = ['Bells_Healthcare', 'Dr._Reddys_Laboratories_2.png', 'Galderma', 'walgreen_1', 'CVS'];
     
     if (largerLogos.includes(logo)) {
       return {
