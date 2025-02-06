@@ -12,7 +12,7 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
     }
     
     // Medium-large logos
-    if (['Galderma', 'walgreen_1', 'Dr._Reddys_Laboratories_y'].includes(logo)) {
+    if (['Galderma', 'walgreen_1', 'Dr._Reddy's_Laboratories_2'].includes(logo)) {
       return {
         container: 'w-24 md:w-36 lg:w-48 h-12 md:h-20 lg:h-24',
         image: 'max-h-full max-w-full object-contain scale-100'
@@ -44,6 +44,19 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
           animation: slide ${speed}s linear infinite;
           animation-iteration-count: infinite;
           width: max-content;
+          gap: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+          .logos-slide {
+            gap: 3rem;
+          }
+        }
+        
+        @media (min-width: 1024px) {
+          .logos-slide {
+            gap: 4rem;
+          }
         }
         
         .logos-slide:hover {
@@ -59,7 +72,7 @@ const LogoCarousel = ({ logos, speed = 30 }) => {
             return (
               <div 
                 key={`${logo}-${index}`} 
-                className={`flex items-center justify-center mx-1 md:mx-3 lg:mx-6 inline-block ${sizes.container}`}
+                className={`flex items-center justify-center inline-block ${sizes.container}`}
               >
                 <img
                   src={`/assets/${logo}.png`}
