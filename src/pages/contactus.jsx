@@ -11,6 +11,9 @@ const ContactusPage = () => {
     query: '',
   });
 
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prevState) => ({
@@ -21,6 +24,7 @@ const ContactusPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     // Replace these with your EmailJS credentials
     const serviceID = 'service_13a21sn';
@@ -32,17 +36,22 @@ const ContactusPage = () => {
       const response = await emailjs.send(serviceID, templateID, formData, userID);
 
       if (response.status === 200) {
-        alert('Message sent successfully!');
-        setFormData({
-          name: '',
-          mobile: '',
-          email: '',
-          query: '',
-        });
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormData({
+            name: '',
+            mobile: '',
+            email: '',
+            query: '',
+          });
+        }, 2000); // Show "Submitted" message for 2 seconds before resetting the form
       }
     } catch (error) {
       console.error('Error sending email:', error);
       alert('Failed to send message. Please try again.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -51,7 +60,7 @@ const ContactusPage = () => {
       <Navbar />
 
       {/* Contact Form Section */}
-      <div className="bg-[#b7162a] text-white mt-16 py-16" id='contact'>
+      <div className="bg-[#b7162a] text-white py-16" id='contact'>
         <div className="container mx-auto px-4 flex justify-center">
           <div className="w-full max-w-2xl">
             <h1 className="text-3xl font-bold mb-8 ">We Would Love to Hear from You.</h1>
@@ -86,79 +95,88 @@ const ContactusPage = () => {
                 <label htmlFor="email" className="block mb-2">Email address</label>
                 <input
                   type="email"
-                  id="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full p-2 rounded bg-transparent border border-white placeholder-white text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white"
-                  required
-                />
-              </div>
+                    id="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full p-2 rounded bg-transparent border border-white placeholder-white text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white"
+                    required
+                  />
+                </div>
 
-              <div className="mb-6">
-                <label htmlFor="query" className="block mb-2">Your query</label>
-                <textarea
-                  id="query"
-                  rows={6}
-                  value={formData.query}
-                  onChange={handleChange}
-                  className="w-full p-2 rounded bg-transparent border border-white placeholder-white text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white"
-                  required
-                ></textarea>
-              </div>
+                <div className="mb-6">
+                  <label htmlFor="query" className="block mb-2">Your query</label>
+                  <textarea
+                    id="query"
+                    rows={6}
+                    value={formData.query}
+                    onChange={handleChange}
+                    className="w-full p-2 rounded bg-transparent border border-white placeholder-white text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white"
+                    required
+                  ></textarea>
+                </div>
 
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="border border-white text-white px-8 py-2 rounded hover:bg-white hover:text-red-700 transition-colors"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
+                <div className="text-center">
+                  <button
+                    type="submit"
+                    className="border border-white text-white px-8 py-2 rounded hover:bg-white hover:text-red-700 transition-colors"
+                    disabled={loading}
+                  >
+                    {loading ? (
+                      <div className="flex items-center justify-center">
+                        <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white"></div>
+                      </div>
+                    ) : submitted ? (
+                      'Submitted'
+                    ) : (
+                      'Submit'
+                    )}
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Map and Contact Details Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="flex flex-col md:flex-row gap-8">
-          {/* Map */}
-          <div className="w-full h-64 rounded-lg overflow-hidden lg:ml-44 sm:ml-0 md:ml-0">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3411.517548594197!2d73.02005617466614!3d19.11424765077173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c0e936892ec7%3A0x69bc6eb3f6a36a46!2sVELPACK%20PVT.%20LTD.!5e1!3m2!1sen!2sin!4v1738696677473!5m2!1sen!2sin"
-              width="1200"
-              height="450"
-              style={{ border: 0 }}  // ✅ This is the correct way in React
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+        {/* Map and Contact Details Section */}
+        <div className="container mx-auto px-4 py-16">
+          <div className="flex flex-col md:flex-row gap-8">
+            {/* Map */}
+            <div className="w-full h-64 rounded-lg overflow-hidden lg:ml-44 sm:ml-0 md:ml-0">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3411.517548594197!2d73.02005617466614!3d19.11424765077173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c0e936892ec7%3A0x69bc6eb3f6a36a46!2sVELPACK%20PVT.%20LTD.!5e1!3m2!1sen!2sin!4v1738696677473!5m2!1sen!2sin"
+                width="1200"
+                height="450"
+                style={{ border: 0 }}  // ✅ This is the correct way in React
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
 
-          {/* Contact Details */}
-          <div className="w-full md:w-1/2 space-y-4">
-            <h2 className="text-xl font-bold text-gray-800">Velpack Pvt. Ltd.</h2>
-            <p className="text-gray-600">
-              A-233, TTC Area, MIDC,<br />
-              Mahape, Navi Mumbai 400 710, India
-            </p>
-            <p className="text-gray-600">
-              <a href="mailto:info@velpack.com" className="hover:text-red-700">
-                info@velpack.com
-              </a>
-            </p>
-            <p className="text-gray-600">
-              <a href="tel:+912227781277" className="hover:text-red-700">
-                +91 22 2778 1277
-              </a>
-            </p>
+            {/* Contact Details */}
+            <div className="w-full md:w-1/2 space-y-4">
+              <h2 className="text-xl font-bold text-gray-800">Velpack Pvt. Ltd.</h2>
+              <p className="text-gray-600">
+                A-233, TTC Area, MIDC,<br />
+                Mahape, Navi Mumbai 400 710, India
+              </p>
+              <p className="text-gray-600">
+                <a href="mailto:info@velpack.com" className="hover:text-red-700">
+                  info@velpack.com
+                </a>
+              </p>
+              <p className="text-gray-600">
+                <a href="tel:+912227781277" className="hover:text-red-700">
+                  +91 22 2778 1277
+                </a>
+              </p>
+            </div>
           </div>
         </div>
+
+        <Footer />
       </div>
+    );
+  };
 
-      <Footer />
-    </div>
-  );
-};
-
-export default ContactusPage;
+  export default ContactusPage;
