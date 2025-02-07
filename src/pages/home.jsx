@@ -43,7 +43,7 @@ const HeroSection = () => {
       variants={fadeIn("up", 0.3)}
       initial="hidden"
       whileInView="show"
-      className="relative h-[45vh] md:h-screen overflow-hidden mt-8 mb-6 md:mt-0"
+      className="relative h-[45vh] md:h-screen overflow-hidden mt-8 mb-0 md:mb-6 md:mt-0"
     >
       {/* Background Images */}
       {images.map((imageSet, index) => (
