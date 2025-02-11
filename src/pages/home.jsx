@@ -297,7 +297,7 @@ const HeroSection = () => {
               className="h-16 md:h-28 w-auto mx-auto md:mx-0 mb-2 md:mb-0"
             />
             <img
-              src="/assets/GMI.png"
+              src="/assets/gmi.png"
               alt="gmi"
               className="h-14 md:h-20 w-auto mx-auto md:mx-0"
             />
