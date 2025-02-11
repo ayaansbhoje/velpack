@@ -33,7 +33,7 @@ const CertificationPage = () => {
       description: "A coalition of healthcare companies committed to excellence in safety, environmental, and social outcomes."
     },
     {
-      image: "/assets/gmi.png",
+      image: "/assets/GMI.png",
       title: "GMI",
       description: "A certification that holds packaging suppliers accountable to established brand owner standards."
     }
