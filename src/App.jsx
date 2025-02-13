@@ -1,4 +1,3 @@
-// import React from 'react';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from './variant';
@@ -8,7 +7,8 @@ import Home from './pages/home';
 import Technologypage from './pages/technology';
 import ContactusPage from './pages/contactus';
 import ServicesPage from './pages/ourservices';
-import CertificationPage from './pages/certification'
+import CertificationPage from './pages/certification';
+import ScrollToTop from './components/ScrollToTop';
 
 // const Navbar = () => (
 // );
