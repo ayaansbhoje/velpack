@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
-
 const CertificationPage = () => {
   const certifications = [
     {
@@ -38,15 +37,16 @@ const CertificationPage = () => {
       description: "A certification that holds packaging suppliers accountable to established brand owner standards."
     }
   ];
+
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <div className="container mx-auto px-4 py-8 overflow-x-hidden" >
+      <div className="container mx-auto px-4 pt-16 pb-8 overflow-x-hidden">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-2xl md:text-3xl font-bold text-center mb-8 text-[#e81d2d]"
+          className="text-2xl md:text-3xl font-bold text-center mb-8 mt-8 text-[#e81d2d]"
         >
           Our Certifications
         </motion.h1>
@@ -77,7 +77,8 @@ const CertificationPage = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
+
 export default CertificationPage;
